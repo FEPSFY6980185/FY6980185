@@ -1,198 +1,252 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <Title>
-      FEPS 26/27 Conference paper
-    </Title>
-    <img src="download.png" alt="Banner" style="max-width: 75%; height: auto;">
-    <h1><b>ENG0018 Computer Laboratory 2026/27</b></h1>
-    <h2>Student URN: 6980185</h2>
-  <hr>
-  <h2 style=”font-family:calibri:”><b>Conference paper: The Reuseability Paradox - Why Surviving Hypersonic Flight Is Not Enough</b></h2>
-  <hr>
-    <!style for table>
-      <style>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>FEPS 26/27 Conference Paper</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
         table {
-          font-family: arial, sans-serif;
-          border-collapse: collapse;
-          width:30%
-          
+            font-family: Arial, sans-serif;
+            border-collapse: collapse;
+            width: 30%;
         }
-        
-        td,th{
-          border:1px solid #dddddd
-          text-align:left;
-          padding:8px;
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
         }
 
         tr:nth-child(even) {
-          background-color: #dddddd
+            background-color: #dddddd;
         }
 
+        p.ex1 {
+            margin-left: 250px;
+        }
 
-
-        
-      </style>
-      
-    <style>
-  p.ex1 {
-  	margin-left: 250px;
-  }
-  </style>
-    </head>
-      
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet"href="https://www.w3schools.com/w3css/4/w3.css">
-    <style>
-    .mySlides {display:none;}
+        .mySlides {
+            display: none;
+        }
     </style>
+</head>
 
-<table>
-  <tr>
-    <th><h3>Table of contents </h3> </th>
-  </tr>
-  <tr>
-    <td><a href="#Abstract">Abstract</td>
-  </tr>
-  <tr>
-    <td><a href="#Introduction">Introduction</td>
-  </tr>
-  <tr>
-    <td><a href="#Analysis and discussion">Analysis and discussion</td>
-  </tr>
+<body>
 
-  <tr>
-    <td><a href="#References">References</td>
-  </tr>
-</table>
-  
-      <hr>
-      <h3 id="Abstract">Abstract</h3>
-    <p class="ex1">
+    <img src="download.png" alt="Banner" style="max-width:75%; height:auto;">
+
+    <h1><b>ENG0018 Computer Laboratory 2026/27</b></h1>
+    <h2>Student URN: 6980185</h2>
+
+    <hr>
+
+    <h2 style="font-family:Calibri;">
+        <b>Conference Paper: The Reusability Paradox - Why Surviving Hypersonic Flight Is Not Enough</b>
+    </h2>
+
+    <hr>
+
+    <!-- Table of Contents -->
+    <table>
+        <tr>
+            <th>
+                <h3>Table of Contents</h3>
+            </th>
+        </tr>
+        <tr>
+            <td><a href="#abstract">Abstract</a></td>
+        </tr>
+        <tr>
+            <td><a href="#intro">Introduction</a></td>
+        </tr>
+        <tr>
+            <td><a href="#analysis">Analysis and Discussion</a></td>
+        </tr>
+        <tr>
+            <td><a href="#references">References</a></td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- Abstract -->
+    <h3 id="abstract">Abstract</h3>
+
     <pre>
-      This paper presents a novel adaptive active learning strategy. The most accurate classification model from a heterogeneous
-      classifer pool is selected at each learning epoch. Our goal is to achieve greater incremental improvement in accuracy, compared
-      to using a single type of classification model throughout the process. The strategy is evaluated on benchmark data sets.
-      We further consider an application to texture classification problems in sonar mosaic imagery and compare it with non-adaptive
-      active learning and traditional machine learning approaches. Our results show that .. We conclude that..
+This paper presents a novel adaptive active learning strategy. The most accurate
+classification model from a heterogeneous classifier pool is selected at each
+learning epoch. Our goal is to achieve greater incremental improvement in
+accuracy, compared to using a single type of classification model throughout
+the process. The strategy is evaluated on benchmark data sets.
+
+We further consider an application to texture classification problems in sonar
+mosaic imagery and compare it with non-adaptive active learning and traditional
+machine learning approaches. Our results show that... We conclude that...
     </pre>
-      <hr>
-      <h3 id="Introduction">Indroduction</h3>
-    <p class="ex1">
-      <pre>
-       Active Learning (Angluin, 1988, Cohn et al., 1994) is a paradigm where a concept is learnt by an
-       intelligent machine through the interaction of an oracle with the machine system, over a sequence of
-       learning epochs. A distinctive component in an active system is the querying strategy, used to sample
-       candidate training instances from a pool and evaluate them for informativeness, i.e., their potential
-       to improve the classification model. Various strategies have been proposed including; Query by
-       Committee (Seung et al., 1992), Monte Carlo estimation (Roy and McCallum, 2001), uncertainty
-       sampling (Lewis and Gale, 1994) and version space reduction (margin sampling) (Tong and Koller,
-       2001). Irrespective of how the most informative pattern instances are chosen at each epoch they are
-       presented for labeling, to a machine (database) or human oracle that has knowledge of the class
-       labels. After adding the newly labeled instances to the current training set, a revised model is
-       subsequently induced. A goal of this process is to achieve an efficient, incremental advancement of
-       learning at each epoch. The process is continued until some stopping criterion has been met, such as
-       reaching a stage where information from the selected instances is contrary to the model, causing the
-       classifier confidence to drop, as in Vlachos (2008).
-      </pre>
-  <h3 id="Analysis and discussion">Analysis and discussion</h3>
-      <p>Bridge deck repair durability is the subject of much recent research such as <a href=”https://www.icevirtuallibrary.com/doi/full/10.1680/jbren.21.00034”>Toshihiko et al(2023).</a> Table 1: Data on cost and lifespan of bridge repairs </p>
-  <table>
-    <tr>
-      <th>£ Cost of repairs</th>
-      <th>Lifespan of repairs (years)</th>
-    </tr>
-    <tr>
-      <td>0.7m</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <td>3.3m</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <td>2.6m</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <td>17.4m</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <td>8.8m</td>
-      <td>9</td>
-    </tr>
-  </table>
-  <head>
-<title>MathML Example</title>
-<p>Formatting some equations using MathML</p>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-<msup><mi>x</mi><mn>2</mn></msup>
-<mo>+</mo><mi>4</mi><mo>&InvisibleTimes;</mo><mi>x</mi>
-<mo>+</mo><mi>4</mi>
-<mo>=</mo>
-<mi>0</mi>
-</p>
 
-<h3 id="References">References</h3>
+    <hr>
 
-<p>
-  <pre>
-    references go here
-  </pre>
-</p>
-  
-</html>
+    <!-- Introduction -->
+    <h3 id="intro">Introduction</h3>
 
-<html>
-<div id="last-updated">Loading last update time...</div>
+    <pre>
+Active Learning (Angluin, 1988; Cohn et al., 1994) is a paradigm where a concept
+is learnt by an intelligent machine through the interaction of an oracle with
+the machine system over a sequence of learning epochs.
 
-<!-- Verify Button -->
-<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
-  Verify Last Modified Time
-</button>
+A distinctive component in an active system is the querying strategy used to
+sample candidate training instances from a pool and evaluate them for
+informativeness.
 
-<script>
-async function getLastUpdatedTime() {
-    const username = "n0025";
-    const repo = "FY0025";
+Various strategies have been proposed including Query by Committee,
+Monte Carlo estimation, uncertainty sampling and version space reduction.
 
-    const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+The process is continued until some stopping criterion has been met, such as
+reaching a stage where information from the selected instances is contrary to
+the model, causing the classifier confidence to drop.
+    </pre>
 
-    try {
-        const response = await fetch(url, {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/vnd.github.v3+json',
+    <!-- Analysis -->
+    <h3 id="analysis">Analysis and Discussion</h3>
+
+    <p>
+        Bridge deck repair durability is the subject of much recent research such as
+        <a href="https://www.icevirtuallibrary.com/doi/full/10.1680/jbren.21.00034" target="_blank">
+            Toshihiko et al. (2023)
+        </a>.
+    </p>
+
+    <p><b>Table 1: Data on Cost and Lifespan of Bridge Repairs</b></p>
+
+    <table>
+        <tr>
+            <th>Cost of Repairs (£)</th>
+            <th>Lifespan of Repairs (Years)</th>
+        </tr>
+        <tr>
+            <td>0.7m</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3.3m</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>2.6m</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>17.4m</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>8.8m</td>
+            <td>9</td>
+        </tr>
+    </table>
+
+    <h4>MathML Example</h4>
+
+    <p>Formatting some equations using MathML:</p>
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <msup>
+            <mi>x</mi>
+            <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <mn>4</mn>
+        <mo>&InvisibleTimes;</mo>
+        <mi>x</mi>
+        <mo>+</mo>
+        <mn>4</mn>
+        <mo>=</mo>
+        <mn>0</mn>
+    </math>
+
+    <!-- References -->
+    <h3 id="references">References</h3>
+
+    <pre>
+References go here.
+    </pre>
+
+    <hr>
+
+    <!-- Last Updated Section -->
+    <div id="last-updated">Loading last update time...</div>
+
+    <button onclick="verifyLastUpdatedTime()"
+        style="display:block; margin:10px auto; padding:8px 16px;">
+        Verify Last Modified Time
+    </button>
+
+    <script>
+        async function getLastUpdatedTime() {
+
+            const username = "sa05228";   // Replace with your GitHub username
+            const repo = "FY6980185";      // Replace with your repository name
+
+            const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+
+            try {
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error(
+                        `Error fetching data: ${response.status} - ${response.statusText}`
+                    );
+                }
+
+                const commits = await response.json();
+
+                if (commits && commits.length > 0) {
+
+                    const lastCommitDate = new Date(
+                        commits[0].commit.committer.date
+                    );
+
+                    document.getElementById('last-updated').innerText =
+                        `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+
+                } else {
+
+                    document.getElementById('last-updated').innerText =
+                        'No commits found in the repository.';
+                }
+
+            } catch (error) {
+
+                console.error(error);
+
+                document.getElementById('last-updated').innerText =
+                    'Error fetching update time. Please check the repository details.';
             }
-        });
-
-        if (!response.ok) {
-            throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
         }
 
-        const commits = await response.json();
-        if (commits && commits.length > 0) {
-            const lastCommitDate = new Date(commits[0].commit.committer.date);
+        async function verifyLastUpdatedTime() {
 
-            // Displaying the time on load
-            document.getElementById('last-updated').innerText =
-                `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
-        } else {
-            document.getElementById('last-updated').innerText =
-                'No commits found in the repository.';
+            document.getElementById('last-updated').innerText = 'Verifying...';
+
+            await getLastUpdatedTime();
+
+            alert('Last modified time has been successfully verified from GitHub API.');
         }
-    } catch (error) {
-        console.error('Error fetching the last updated time:', error);
-        document.getElementById('last-updated').innerText =
-            'Error fetching update time. Please check the repository details.';
-    }
-}
 
-// Function to verify the last update time by re-fetching it from the API
-async function verifyLastUpdatedTime() {
-    document.getElementById('last-updated').innerText = 'Verifying...';
-    await getLastUpdatedTime();
-    alert('Last modified time has been successfully verified from GitHub API.');
-}
+        window.onload = getLastUpdatedTime;
+    </script>
+
+</body>
+
 </html>
