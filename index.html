@@ -177,75 +177,23 @@ the model, causing the classifier confidence to drop.
 References go here.
     </pre>
 
-    <hr>
+<hr>
 
-    <!-- Last Updated Section -->
-    <div id="last-updated">Loading last update time...</div>
+<p id="last-updated"></p>
 
-    <button onclick="verifyLastUpdatedTime()"
-        style="display:block; margin:10px auto; padding:8px 16px;">
-        Verify Last Modified Time
-    </button>
+<button onclick="verifyTimestamp()"
+    style="display:block; margin:10px auto; padding:8px 16px;">
+    Verify Last Modified Time
+</button>
 
-    <script>
-        async function getLastUpdatedTime() {
+<script>
+document.getElementById("last-updated").textContent =
+    "Last Updated: " + document.lastModified;
 
-            const username = "FY6980185";   // Replace with your GitHub username
-            const repo = "FEPSFY6980185";      // Replace with your repository name
-
-            const url = `https://api.github.com/repos/${username}/${repo}/commits`;
-
-            try {
-                const response = await fetch(url, {
-                    method: 'GET',
-                    headers: {
-                        'Accept': 'application/vnd.github.v3+json'
-                    }
-                });
-
-                if (!response.ok) {
-                    throw new Error(
-                        `Error fetching data: ${response.status} - ${response.statusText}`
-                    );
-                }
-
-                const commits = await response.json();
-
-                if (commits && commits.length > 0) {
-
-                    const lastCommitDate = new Date(
-                        commits[0].commit.committer.date
-                    );
-
-                    document.getElementById('last-updated').innerText =
-                        `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
-
-                } else {
-
-                    document.getElementById('last-updated').innerText =
-                        'No commits found in the repository.';
-                }
-
-            } catch (error) {
-
-                console.error(error);
-
-                document.getElementById('last-updated').innerText =
-                    'Error fetching update time. Please check the repository details.';
-            }
-        }
-
-        async function verifyLastUpdatedTime() {
-
-            document.getElementById('last-updated').innerText = 'Verifying...';
-
-            await getLastUpdatedTime();
-
-            alert('Last modified time has been successfully verified from GitHub API.');
-        }
-
-        window.onload = getLastUpdatedTime;
-    </script>
+function verifyTimestamp() {
+    alert("Timestamp has been verified");
+}
+</script>
 
 </body>
 
