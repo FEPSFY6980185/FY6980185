@@ -187,12 +187,17 @@ References go here.
 </button>
 
 <script>
-document.getElementById("last-updated").textContent =
-    "Last Updated: " + document.lastModified;
+function updateTimestamp() {
+    document.getElementById("last-updated").textContent =
+        "Last Updated: " + document.lastModified;
+}
 
 function verifyTimestamp() {
+    updateTimestamp();
     alert("Timestamp has been verified");
 }
+
+updateTimestamp();
 </script>
 
 </body>
