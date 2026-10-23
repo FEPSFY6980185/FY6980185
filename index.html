@@ -77,7 +77,6 @@
 
     <!-- Abstract -->
     <h3 id="abstract">Abstract</h3>
-
     <pre>
 This paper presents a novel adaptive active learning strategy. The most accurate
 classification model from a heterogeneous classifier pool is selected at each
@@ -94,67 +93,64 @@ machine learning approaches. Our results show that... We conclude that...
 
     <!-- Introduction -->
     <h3>Introduction</h3>
-    <pre id="intro">
-    <pre>
-Active Learning (Angluin, 1988; Cohn et al., 1994) is a paradigm where a concept
-is learnt by an intelligent machine through the interaction of an oracle with
-the machine system over a sequence of learning epochs.
-
-A distinctive component in an active system is the querying strategy used to
-sample candidate training instances from a pool and evaluate them for
-informativeness.
-
-Various strategies have been proposed including Query by Committee,
-Monte Carlo estimation, uncertainty sampling and version space reduction.
-
-The process is continued until some stopping criterion has been met, such as
-reaching a stage where information from the selected instances is contrary to
-the model, causing the classifier confidence to drop.
-    </pre>
-    </pre>
+    <div id="intro">
+        <p>Active Learning (Angluin, 1988; Cohn et al., 1994) is a paradigm where a concept
+        is learnt by an intelligent machine through the interaction of an oracle with
+        the machine system over a sequence of learning epochs.</p>
+        
+        <p>A distinctive component in an active system is the querying strategy used to
+        sample candidate training instances from a pool and evaluate them for
+        informativeness.</p>
+        
+        <p>Various strategies have been proposed including Query by Committee,
+        Monte Carlo estimation, uncertainty sampling and version space reduction.</p>
+        
+        <p>The process is continued until some stopping criterion has been met, such as
+        reaching a stage where information from the selected instances is contrary to
+        the model, causing the classifier confidence to drop.</p>
+    </div>
 
     <!-- Analysis -->
     <h3>Analysis and Discussion</h3>
     <div id="analysis">
-    <p>
-        Bridge deck repair durability is the subject of much recent research such as
-        <a href="https://www.icevirtuallibrary.com/doi/full/10.1680/jbren.21.00034
-" target="_blank">
-            Toshihiko et al. (2023)
-        </a>.
-    </p>
+        <p>
+            Bridge deck repair durability is the subject of much recent research such as
+            <a href="https://www.icevirtuallibrary.com/doi/full/10.1680/jbren.21.00034"Download PDF target="_blank">
+                Toshihiko et al. (2023)
+            </a>.
+        </p>
 
-    <p><b>Table 1: Data on Cost and Lifespan of Bridge Repairs</b></p>
+        <h3><b>Table 1: Data on Cost and Lifespan of Bridge Repairs</b></h3>
 
-    <table>
-        <tr>
-            <th>Cost of Repairs (£)</th>
-            <th>Lifespan of Repairs (Years)</th>
-        </tr>
-        <tr>
-            <td>0.7m</td>
-            <td>2</td>
-        </tr>
-        <tr>
-            <td>3.3m</td>
-            <td>4</td>
-        </tr>
-        <tr>
-            <td>2.6m</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>17.4m</td>
-            <td>7</td>
-        </tr>
-        <tr>
-            <td>8.8m</td>
-            <td>9</td>
-        </tr>
-    </table>
+        <table>
+            <tr>
+                <th>Cost of Repairs (£)</th>
+                <th>Lifespan of Repairs (Years)</th>
+            </tr>
+            <tr>
+                <td>0.7m</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3.3m</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>2.6m</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>17.4m</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>8.8m</td>
+                <td>9</td>
+            </tr>
+        </table>
     </div>
-    <h4>MathML Example</h4>
 
+    <h4>MathML Example</h4>
     <p>Formatting some equations using MathML:</p>
 
     <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -174,182 +170,167 @@ the model, causing the classifier confidence to drop.
 
     <!-- References -->
     <h3 id="references">References</h3>
-
     <pre>
 References go here.
     </pre>
 
-<hr>
+    <hr>
 
-<div id="last-updated">Loading last update time...</div>
+    <div id="last-updated">Loading last update time...</div>
 
-<button onclick="verifyLastUpdatedTime()"
-    style="display:block; margin:10px auto; padding:8px 16px;">
-    Verify Last Modified Time
-</button>
+    <button onclick="verifyLastUpdatedTime()" style="display:block; margin:10px auto; padding:8px 16px;">
+        Verify Last Modified Time
+    </button>
 
-<script>
-async function getLastUpdatedTime() {
+    <script>
+    async function getLastUpdatedTime() {
+        const username = "FEPSFY6980185";
+        const repo = "FY6980185";
+        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
 
-    const username = "FEPSFY6980185";
-    const repo = "FY6980185";
+        try {
+            const response = await fetch(url, {
+                method: "GET",
+                headers: {
+                    "Accept": "application/vnd.github.v3+json"
+                }
+            });
 
-    const url = `https://api.github.com/repos/${username}/${repo}/commits`;
-
-    try {
-
-        const response = await fetch(url, {
-            method: "GET",
-            headers: {
-                "Accept": "application/vnd.github.v3+json"
+            if (!response.ok) {
+                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
             }
-        });
 
-        if (!response.ok) {
-            throw new Error(
-                `Error fetching data: ${response.status} - ${response.statusText}`
-            );
-        }
+            const commits = await response.json();
 
-        const commits = await response.json();
-
-        if (commits && commits.length > 0) {
-
-            const lastCommitDate =
-                new Date(commits[0].commit.committer.date);
-
+            if (commits && commits.length > 0) {
+                const lastCommitDate = new Date(commits[0].commit.committer.date);
+                document.getElementById("last-updated").innerText =
+                    `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+            } else {
+                document.getElementById("last-updated").innerText =
+                    "No commits found in the repository.";
+            }
+        } catch (error) {
+            console.error("Error fetching timestamp:", error);
             document.getElementById("last-updated").innerText =
-                `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
-
-        } else {
-
-            document.getElementById("last-updated").innerText =
-                "No commits found in the repository.";
-
+                "Error fetching update time. Check repository details.";
         }
-
-    } catch (error) {
-
-        console.error("Error fetching timestamp:", error);
-
-        document.getElementById("last-updated").innerText =
-            "Error fetching update time. Check repository details.";
-
     }
-}
 
-async function verifyLastUpdatedTime() {
+    async function verifyLastUpdatedTime() {
+        document.getElementById("last-updated").innerText = "Verifying...";
+        await getLastUpdatedTime();
+        alert("Last modified time has been successfully verified from GitHub API.");
+    }
 
-    document.getElementById("last-updated").innerText =
-        "Verifying...";
+    window.addEventListener('load', getLastUpdatedTime);
+    </script>
 
-    await getLastUpdatedTime();
+    <h3>My Daily Activities</h3>
+    <div id="chart_div" style="width:900px; height:500px;"></div>
 
-    alert(
-        "Last modified time has been successfully verified from GitHub API."
-    );
-}
+    <h3>Age vs Salary</h3>
+    <div id="scatter_div" style="width:900px; height:500px;"></div>
 
-window.addEventListener('load', getLastUpdatedTime);
-</script>
-<h3>My Daily Activities</h3>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+    google.charts.load('current', {
+        packages: ['corechart']
+    });
 
-<div id="chart_div" style="width:900px; height:500px;"></div>
+    google.charts.setOnLoadCallback(drawPieChart);
+    google.charts.setOnLoadCallback(drawScatterChart);
 
-<h3>Age vs Salary</h3>
+    function drawPieChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Work', 8],
+            ['Sleep', 8],
+            ['Eat', 2],
+            ['Study', 4],
+            ['Exercise', 2]
+        ]);
 
-<div id="scatter_div" style="width:900px; height:500px;"></div>
+        var options = {
+            title: 'My Daily Activities'
+        };
 
-<script src="https://www.gstatic.com/charts/loader.js"></script>
+        var chart = new google.visualization.PieChart(
+            document.getElementById('chart_div')
+        );
 
-<script>
-google.charts.load('current', {
-    packages: ['corechart']
-});
+        chart.draw(data, options);
+    }
 
-google.charts.setOnLoadCallback(drawPieChart);
-google.charts.setOnLoadCallback(drawScatterChart);
+    function drawScatterChart() {
+        var data = new google.visualization.DataTable();
 
-function drawPieChart() {
+        data.addColumn('number', 'Age');
+        data.addColumn('number', 'Salary');
 
-    var data = google.visualization.arrayToDataTable([
-        ['Task', 'Hours per Day'],
-        ['Work', 8],
-        ['Sleep', 8],
-        ['Eat', 2],
-        ['Study', 4],
-        ['Exercise', 2]
-    ]);
+        data.addRows([
+            [25, 40000],
+            [30, 50000],
+            [35, 60000],
+            [40, 75000],
+            [45, 80000],
+            [50, 90000]
+        ]);
 
-    var options = {
-        title: 'My Daily Activities'
-    };
+        var options = {
+            title: 'Age vs Salary',
+            hAxis: {
+                title: 'Age'
+            },
+            vAxis: {
+                title: 'Salary (£)'
+            },
+            legend: 'none'
+        };
 
-    var chart = new google.visualization.PieChart(
-        document.getElementById('chart_div')
-    );
+        var chart = new google.visualization.ScatterChart(
+            document.getElementById('scatter_div')
+        );
 
-    chart.draw(data, options);
-}
+        chart.draw(data, options);
+    }
+    </script>
 
-function drawScatterChart() {
+    <p id="totalWordCount"></p>
+    <hr>
+        
+    <script>
+        // Function to calculate word count only from text paragraphs within the specified section
+        function displayWordCount(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (!section) return 0;
+            
+            // Collect text only from paragraph tags to avoid counting table data or headers
+            const paragraphs = section.querySelectorAll('p');
+            let text = '';
+            paragraphs.forEach(p => {
+                text += p.textContent + ' ';
+            });
+            
+            // Fallback if no paragraph tags exist
+            if (paragraphs.length === 0) {
+                text = section.textContent;
+            }
 
-    var data = new google.visualization.DataTable();
+            const wordArray = text.trim() ? text.trim().split(/\s+/) : [];
+            return wordArray.length;
+        }
 
-    data.addColumn('number', 'Age');
-    data.addColumn('number', 'Salary');
+        function displayTotalWordCount() {
+            const IntroductionCount = displayWordCount("intro");
+            const AnalysisCount = displayWordCount("analysis");
 
-    data.addRows([
-        [25, 40000],
-        [30, 50000],
-        [35, 60000],
-        [40, 75000],
-        [45, 80000],
-        [50, 90000]
-    ]);
+            const totalWordCount = IntroductionCount + AnalysisCount;
 
-    var options = {
-        title: 'Age vs Salary',
-        hAxis: {
-            title: 'Age'
-        },
-        vAxis: {
-            title: 'Salary (£)'
-        },
-        legend: 'none'
-    };
+            document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+        }
 
-    var chart = new google.visualization.ScatterChart(
-        document.getElementById('scatter_div')
-    );
-
-    chart.draw(data, options);
-}
-</script>
+        window.addEventListener('load', displayTotalWordCount);
+    </script>
 </body>
-<p id="totalWordCount"></p>
-
-<hr>
-    
-<script>
-    //Function to calculate and display word count for a specified section
-    function displayWordCount(sectionId, outputId) {
-        const text = document.getElementById(sectionId).textContent;
-        const wordArray = text.trim().split(/\s+/);
-        const wordCount = wordArray.length;
-        return wordCount;
-    }
-
-    function displayTotalWordCount() {
-        const IntroductionCount = displayWordCount("intro");
-        const AnalysisCount = displayWordCount("analysis");
-
-        const totalWordCount = IntroductionCount + AnalysisCount;
-
-        document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
-    }
-
-    window.addEventListener('load', displayTotalWordCount);
-</script>    
-</p>
 </html>
