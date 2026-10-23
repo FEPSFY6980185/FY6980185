@@ -192,10 +192,34 @@ document.getElementById("last-updated").textContent =
     "Last Updated: " + document.lastModified;
 
 function verifyTimestamp() {
-    alert("Timestamp has been verified");
+    alert("Timestamp has been verified to" + document.lastModified);
 }
 </script>
-
+<h3>My Daily Activities</h3>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<div id="chart_div" style="width: 900px; height: 500px;"></div>
+<script type="text/javascript">
+    google.charts.load('current', {
+        packages: ['corechart']
+    });
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Work', 8],
+            ['Sleep', 8],
+            ['Eat', 2],
+            ['Study', 4],
+            ['Exercise', 2]
+        ]);
+        var options = {
+            title: 'My Daily Activities'
+        };
+        var chart = new google.visualization.PieChart(
+            document.getElementById('chart_div')
+        );
+        chart.draw(data, options);
+    }
+</script>
 </body>
-
 </html>
