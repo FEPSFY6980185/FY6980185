@@ -93,8 +93,8 @@ machine learning approaches. Our results show that... We conclude that...
     <hr>
 
     <!-- Introduction -->
-    <h3 id="intro">Introduction</h3>
-
+    <h3>Introduction</h3>
+    <pre id="intro">
     <pre>
 Active Learning (Angluin, 1988; Cohn et al., 1994) is a paradigm where a concept
 is learnt by an intelligent machine through the interaction of an oracle with
@@ -111,10 +111,11 @@ The process is continued until some stopping criterion has been met, such as
 reaching a stage where information from the selected instances is contrary to
 the model, causing the classifier confidence to drop.
     </pre>
+    </pre>
 
     <!-- Analysis -->
-    <h3 id="analysis">Analysis and Discussion</h3>
-
+    <h3>Analysis and Discussion</h3>
+    <div id="analysis">
     <p>
         Bridge deck repair durability is the subject of much recent research such as
         <a href="https://www.icevirtuallibrary.com/doi/full/10.1680/jbren.21.00034
@@ -151,7 +152,7 @@ the model, causing the classifier confidence to drop.
             <td>9</td>
         </tr>
     </table>
-
+    </div>
     <h4>MathML Example</h4>
 
     <p>Formatting some equations using MathML:</p>
@@ -249,7 +250,7 @@ async function verifyLastUpdatedTime() {
     );
 }
 
-window.onload = getLastUpdatedTime;
+window.addEventListener('load', getLastUpdatedTime);
 </script>
 <h3>My Daily Activities</h3>
 
@@ -326,4 +327,29 @@ function drawScatterChart() {
 }
 </script>
 </body>
+<p id="totalWordCount"></p>
+
+<hr>
+    
+<script>
+    //Function to calculate and display word count for a specified section
+    function displayWordCount(sectionId, outputId) {
+        const text = document.getElementById(sectionId).textContent;
+        const wordArray = text.trim().split(/\s+/);
+        const wordCount = wordArray.length;
+        return wordCount;
+    }
+
+    function displayTotalWordCount() {
+        const IntroductionCount = displayWordCount("intro");
+        const AnalysisCount = displayWordCount("analysis");
+
+        const totalWordCount = IntroductionCount + AnalysisCount;
+
+        document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+    }
+
+    window.addEventListener('load', displayTotalWordCount);
+</script>    
+</p>
 </html>
