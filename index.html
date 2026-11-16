@@ -4,182 +4,325 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>FEPS 26/27 Conference Paper</title>
-
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        .page-container {
+            max-width: 960px;
+            margin: 24px auto;
+            background-color: #ffffff;
+            padding: 32px 40px;
+            border: 1px solid #dddddd;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: Calibri, Arial, sans-serif;
+            color: #111;
+        }
+
+        .header-banner {
+            display: block;
+            max-width: 65%;
+            height: auto;
+            margin-bottom: 16px;
+        }
+
+        /* Horizontal Single-Row Table of Contents with Divider Bars */
+        .toc-bar {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #f4f4f4;
+            border: 1px solid #dddddd;
+            padding: 6px 12px;
+            margin: 16px 0;
+        }
+
+        .toc-btn {
+            display: inline-block;
+            padding: 6px 12px;
+            color: #222;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 3px;
+            transition: background-color 0.15s ease;
+        }
+
+        .toc-btn:hover {
+            background-color: #e2e2e2;
+            color: #000;
+        }
+
+        .toc-divider {
+            color: #bbbbbb;
+            padding: 0 4px;
+            user-select: none;
+            font-weight: normal;
+        }
+
         table {
             font-family: Arial, sans-serif;
             border-collapse: collapse;
-            width: 30%;
+            width: 100%;
+            margin: 16px 0;
         }
 
-        td,
-        th {
+        td, th {
             border: 1px solid #dddddd;
             text-align: left;
-            padding: 8px;
+            padding: 10px 12px;
+        }
+
+        th {
+            background-color: #f0f0f0;
         }
 
         tr:nth-child(even) {
-            background-color: #dddddd;
+            background-color: #f7f7f7;
         }
 
-        p.ex1 {
-            margin-left: 250px;
+        .abstract-box {
+            background-color: #f4f6f8;
+            border-left: 4px solid #555;
+            padding: 14px 18px;
+            margin: 12px 0;
         }
 
-        .mySlides {
-            display: none;
+        .section-block {
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+
+        .chart-container {
+            width: 100%;
+            max-width: 850px;
+            height: 420px;
+            margin: 16px 0;
+            border: 1px solid #eeeeee;
+        }
+
+        .math-box {
+            background-color: #fafafa;
+            border: 1px solid #e0e0e0;
+            padding: 12px 16px;
+            margin: 12px 0;
+            display: inline-block;
+        }
+
+        .footer-meta {
+            background-color: #f4f4f4;
+            padding: 16px;
+            border: 1px solid #dddddd;
+            margin-top: 24px;
         }
     </style>
 </head>
 
 <body>
 
-    <img src="download.png" alt="Banner" style="max-width:75%; height:auto;">
+<div class="page-container">
+
+    <!-- Header & Student Info -->
+    <img src="download.png" alt="Banner" class="header-banner">
 
     <h1><b>ENG0018 Computer Laboratory 2026/27</b></h1>
-    <h2>Student URN: 6980185</h2>
+    <h4>Student URN: 6980185</h4>
 
     <hr>
 
-    <h2 style="font-family:Calibri;">
-        <b>Conference Paper: The Reusability Paradox - Why Surviving Hypersonic Flight Is Not Enough</b>
+    <h2>
+        <b>Conference Paper: The Reusability Paradox — Why Surviving Hypersonic Flight Is Not Enough</b>
     </h2>
 
     <hr>
 
-    <!-- Table of Contents -->
-    <table>
-        <tr>
-            <th>
-                <h3>Table of Contents</h3>
-            </th>
-        </tr>
-        <tr>
-            <td><a href="#abstract">Abstract</a></td>
-        </tr>
-        <tr>
-            <td><a href="#intro">Introduction</a></td>
-        </tr>
-        <tr>
-            <td><a href="#analysis">Analysis and Discussion</a></td>
-        </tr>
-        <tr>
-            <td><a href="#references">References</a></td>
-        </tr>
-    </table>
+    <!-- Single-Row Table of Contents with Divider Bars -->
+    <nav class="toc-bar" aria-label="Table of Contents">
+        <a href="#abstract" class="toc-btn">Abstract</a>
+        <span class="toc-divider">|</span>
+        <a href="#intro" class="toc-btn">Introduction & Background</a>
+        <span class="toc-divider">|</span>
+        <a href="#analysis" class="toc-btn">Analysis and Discussion</a>
+        <span class="toc-divider">|</span>
+        <a href="#visuals" class="toc-btn">Data Visualisations</a>
+        <span class="toc-divider">|</span>
+        <a href="#references" class="toc-btn">References</a>
+    </nav>
 
     <hr>
 
     <!-- Abstract -->
-    <h3 id="abstract">Abstract</h3>
-    <pre>
-Hypersonic flight is a bold and novel strategy for the future of aerospace. The ability for humanity to achieve greater speeds on our earth than ever before presents brilliant new ideas for logistics, transportation and the advancement of humanity into the 22nd century.
-However, the engineering needed to achieve this is currently out of reach for many nations worldwide; the ones who can develop these technologies are closely guarding how they do it. As its their partial answer to one of the biggest paradox's in aerospace engineering. How do you exactly survive
-3000 degree plasma on a rapid turnaround basis?
-
-In this paper, we also further consider the application of this new type of technology on future reuseable's such as the that of the SpaceX Starship, Dreamchaser and so forth. Which may revolutionise the way humanity reaches space. We conclude that it may be a reasonable expectation for this paradox to be 
-overcome in the coming future, however there are significant milestones remaining to achieve that goal.
-    </pre>
+    <div class="section-block">
+        <h3 id="abstract"><b>1. Abstract</b></h3>
+        <div class="abstract-box">
+            <p>
+                Hypersonic flight is a bold and novel strategy for the future of aerospace. The ability for humanity to achieve greater speeds on Earth than ever before presents brilliant new ideas for logistics, transportation, and the advancement of humanity into the 22nd century. However, the engineering needed to achieve this is currently out of reach for many nations worldwide; the ones who can develop these technologies are closely guarding how they do it, as it represents their partial answer to one of the biggest paradoxes in aerospace engineering: how do you survive 3000-degree plasma on a rapid turnaround basis?
+            </p>
+            <p>
+                In this paper, we further consider the application of this technology on future reusable vehicles such as SpaceX Starship, Sierra Space Dream Chaser, and next-generation lifting bodies, which may revolutionise the way humanity reaches space. We conclude that while overcoming this paradox is a reasonable expectation in the coming decades, significant materials and operational milestones remain to achieve rapid reusability.
+            </p>
+        </div>
+    </div>
 
     <hr>
 
-    <!-- Introduction -->
-    <h3>Introduction</h3>
-    <div id="intro">
-        <p>Active Learning (Angluin, 1988; Cohn et al., 1994) is a paradigm where a concept
-        is learnt by an intelligent machine through the interaction of an oracle with
-        the machine system over a sequence of learning epochs.</p>
-        
-        <p>A distinctive component in an active system is the querying strategy used to
-        sample candidate training instances from a pool and evaluate them for
-        informativeness.</p>
-        
-        <p>Various strategies have been proposed including Query by Committee,
-        Monte Carlo estimation, uncertainty sampling and version space reduction.</p>
-        
-        <p>The process is continued until some stopping criterion has been met, such as
-        reaching a stage where information from the selected instances is contrary to
-        the model, causing the classifier confidence to drop.</p>
+    <!-- Introduction (Paragraphs here are counted by your JS word counter) -->
+    <div class="section-block">
+        <h3><b>2. Introduction & Background</b></h3>
+        <div id="intro">
+            <h4>2.1 Defining the Reusability Paradox</h4>
+            <p>
+                [Insert paragraph explaining the core conflict: traditional Thermal Protection Systems (TPS) like ablatives survive extreme heat by sacrificing mass, which prevents rapid turnaround, whereas reusable ceramic tiles require intensive post-flight inspection.]
+            </p>
+
+            <h4>2.2 The Aerothermodynamic Environment</h4>
+            <p>
+                [Insert paragraph describing shock-layer heating at Mach 5+, dissociation/ionisation of air into plasma, and why sustained atmospheric hypersonic cruise differs from brief ballistic re-entry.]
+            </p>
+
+            <h4>2.3 Scope of Paper</h4>
+            <p>
+                [Insert paragraph outlining what this paper evaluates: material degradation limits, turnaround maintenance bottlenecks, and comparative vehicle architectures.]
+            </p>
+        </div>
     </div>
 
-    <!-- Analysis -->
-    <h3>Analysis and Discussion</h3>
-    <div id="analysis">
-        <p>
-            Bridge deck repair durability is the subject of much recent research such as
-            <a href="https://www.icevirtuallibrary.com/doi/full/10.1680/jbren.21.00034"Download PDF target="_blank">
-                Toshihiko et al. (2023)
-            </a>.
-        </p>
+    <hr>
 
-        <h3><b>Table 1: Data on Cost and Lifespan of Bridge Repairs</b></h3>
+    <!-- Analysis and Discussion (Paragraphs here are also counted by your JS word counter) -->
+    <div class="section-block">
+        <h3><b>3. Analysis and Discussion</b></h3>
+        <div id="analysis">
+            <h4>3.1 Thermal Protection System (TPS) Trade-offs</h4>
+            <p>
+                [Insert analysis comparing reinforced carbon-carbon (RCC), silica tiles, metallic TPS, and Ultra-High Temperature Ceramics (UHTCs) such as ZrB2-SiC.]
+            </p>
 
-        <table>
-            <tr>
-                <th>Cost of Repairs (£)</th>
-                <th>Lifespan of Repairs (Years)</th>
-            </tr>
-            <tr>
-                <td>0.7m</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>3.3m</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td>2.6m</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>17.4m</td>
-                <td>7</td>
-            </tr>
-            <tr>
-                <td>8.8m</td>
-                <td>9</td>
-            </tr>
-        </table>
+            <h4>3.2 Turnaround Time vs. Structural Fatigue</h4>
+            <p>
+                [Insert discussion on cyclic thermal shock, micro-cracking, oxidation, and why surviving a single flight does not equal commercial or operational viability without non-destructive evaluation (NDE).]
+            </p>
+
+            <h4><b>Table 1: Comparison of Reusable Hypersonic & Re-entry Architectures</b></h4>
+            <table>
+                <tr>
+                    <th>Vehicle / System</th>
+                    <th>Primary TPS Material</th>
+                    <th>Peak Operating Temp (°C)</th>
+                    <th>Turnaround Bottleneck</th>
+                </tr>
+                <tr>
+                    <td>Space Shuttle Orbiter</td>
+                    <td>LI-900 Silica Tiles & RCC</td>
+                    <td>~1,650 °C</td>
+                    <td>Tile-by-tile inspection & waterproofing (months)</td>
+                </tr>
+                <tr>
+                    <td>SpaceX Starship</td>
+                    <td>Hexagonal TUFROC / Silica Tiles</td>
+                    <td>~1,400–1,600 °C</td>
+                    <td>Tile attachment integrity & plasma gap heating</td>
+                </tr>
+                <tr>
+                    <td>Dream Chaser</td>
+                    <td>TUFROC & Silica-based Tiles</td>
+                    <td>~1,650 °C</td>
+                    <td>Leading-edge thermal stress & seal refurbishment</td>
+                </tr>
+                <tr>
+                    <td>Next-Gen Hypersonic Glide</td>
+                    <td>UHTC Composites (ZrB<sub>2</sub>–SiC)</td>
+                    <td>>2,500 °C</td>
+                    <td>Brittle fracture resistance & manufacturing cost</td>
+                </tr>
+            </table>
+
+            <h4>3.3 Governing Stagnation Heating Equation (MathML)</h4>
+            <p>
+                Convective stagnation-point heat flux scales steeply with freestream velocity, making sustained hypersonic flight orders of magnitude more demanding than supersonic flight:
+            </p>
+
+            <div class="math-box">
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <msub>
+                        <mi>q</mi>
+                        <mi>s</mi>
+                    </msub>
+                    <mo>=</mo>
+                    <mi>k</mi>
+                    <msqrt>
+                        <mfrac>
+                            <msub>
+                                <mi>ρ</mi>
+                                <mi>∞</mi>
+                            </msub>
+                            <msub>
+                                <mi>R</mi>
+                                <mi>n</mi>
+                            </msub>
+                        </mfrac>
+                    </msqrt>
+                    <msup>
+                        <msub>
+                            <mi>V</mi>
+                            <mi>∞</mi>
+                        </msub>
+                        <mn>3</mn>
+                    </msup>
+                </math>
+            </div>
+        </div>
     </div>
 
-    <h4>MathML Example</h4>
-    <p>Formatting some equations using MathML:</p>
+    <hr>
 
-    <math xmlns="http://www.w3.org/1998/Math/MathML">
-        <msup>
-            <mi>x</mi>
-            <mn>2</mn>
-        </msup>
-        <mo>+</mo>
-        <mn>4</mn>
-        <mo>⁢</mo>
-        <mi>x</mi>
-        <mo>+</mo>
-        <mn>4</mn>
-        <mo>=</mo>
-        <mn>0</mn>
-    </math>
+    <!-- Charts Section -->
+    <div class="section-block" id="visuals">
+        <h3><b>4. Data Visualisations</b></h3>
+
+        <h4>Figure 1: Post-Flight Turnaround Time Breakdown</h4>
+        <div id="chart_div" class="chart-container"></div>
+
+        <h4>Figure 2: Mach Number vs. Stagnation Temperature</h4>
+        <div id="scatter_div" class="chart-container"></div>
+    </div>
+
+    <hr>
 
     <!-- References -->
-    <h3 id="references">References</h3>
-    <pre>
-References go here.
-    </pre>
+    <div class="section-block">
+        <h3 id="references"><b>5. References</b></h3>
+        <ol>
+            <li>Anderson, J. D. (2019). <i>Hypersonic and High-Temperature Gas Dynamics</i> (3rd ed.). AIAA Education Series.</li>
+            <li>Fahrenholtz, W. G., & Hilmas, G. E. (2017). Ultra-high temperature ceramics: Materials for extreme environments. <i>Scripta Materialia</i>, 129, 94–99.</li>
+            <li>[Add your additional journal articles, NASA reports, or conference papers here]</li>
+        </ol>
+    </div>
 
     <hr>
 
-    <div id="last-updated">Loading last update time...</div>
+    <!-- Footer: Word Count & GitHub Last Modified Check -->
+    <div class="footer-meta">
+        <p id="totalWordCount"><b>Total word count:</b> Calculating...</p>
+        <div id="last-updated">Loading last update time...</div>
+        <button class="w3-button w3-dark-grey w3-small" onclick="verifyLastUpdatedTime()" style="margin-top:10px;">
+            Verify Last Modified Time
+        </button>
+    </div>
 
-    <button onclick="verifyLastUpdatedTime()" style="display:block; margin:10px auto; padding:8px 16px;">
-        Verify Last Modified Time
-    </button>
+</div>
 
-    <script>
+<!-- GitHub API Script -->
+<script>
     async function getLastUpdatedTime() {
         const username = "FEPSFY6980185";
         const repo = "FY6980185";
@@ -221,113 +364,89 @@ References go here.
     }
 
     window.addEventListener('load', getLastUpdatedTime);
-    </script>
+</script>
 
-    <h3>My Daily Activities</h3>
-    <div id="chart_div" style="width:900px; height:500px;"></div>
-
-    <h3>Age vs Salary</h3>
-    <div id="scatter_div" style="width:900px; height:500px;"></div>
-
-    <script src="https://www.gstatic.com/charts/loader.js"></script>
-    <script>
-    google.charts.load('current', {
-        packages: ['corechart']
-    });
-
+<!-- Google Charts Script -->
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+    google.charts.load('current', { packages: ['corechart'] });
     google.charts.setOnLoadCallback(drawPieChart);
     google.charts.setOnLoadCallback(drawScatterChart);
 
     function drawPieChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Task', 'Hours per Day'],
-            ['Work', 8],
-            ['Sleep', 8],
-            ['Eat', 2],
-            ['Study', 4],
-            ['Exercise', 2]
+            ['Turnaround Phase', 'Percentage of Time'],
+            ['TPS Tile Inspection & NDE', 45],
+            ['Tile Replacement & Re-bonding', 25],
+            ['Propulsion & Engine Checks', 15],
+            ['Avionics & Structural Checks', 10],
+            ['Refueling & Payload Integration', 5]
         ]);
 
         var options = {
-            title: 'My Daily Activities'
+            title: 'Estimated Reusable Hypersonic Turnaround Bottlenecks (Replace with your data)'
         };
 
-        var chart = new google.visualization.PieChart(
-            document.getElementById('chart_div')
-        );
-
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
         chart.draw(data, options);
     }
 
     function drawScatterChart() {
-        var data = new google.visualization.DataTable();
-
-        data.addColumn('number', 'Age');
-        data.addColumn('number', 'Salary');
+        var data = google.visualization.DataTable();
+        data.addColumn('number', 'Mach Number');
+        data.addColumn('number', 'Stagnation Temp (K)');
 
         data.addRows([
-            [25, 40000],
-            [30, 50000],
-            [35, 60000],
-            [40, 75000],
-            [45, 80000],
-            [50, 90000]
+            [5, 1300],
+            [8, 2600],
+            [10, 3500],
+            [15, 5500],
+            [20, 7200],
+            [25, 8500]
         ]);
 
         var options = {
-            title: 'Age vs Salary',
-            hAxis: {
-                title: 'Age'
-            },
-            vAxis: {
-                title: 'Salary (£)'
-            },
+            title: 'Mach Number vs. Approximate Stagnation Temperature (Replace with your data)',
+            hAxis: { title: 'Mach Number' },
+            vAxis: { title: 'Stagnation Temperature (K)' },
             legend: 'none'
         };
 
-        var chart = new google.visualization.ScatterChart(
-            document.getElementById('scatter_div')
-        );
-
+        var chart = new google.visualization.ScatterChart(document.getElementById('scatter_div'));
         chart.draw(data, options);
     }
-    </script>
+</script>
 
-    <p id="totalWordCount"></p>
-    <hr>
-        
-    <script>
-        // Function to calculate word count only from text paragraphs within the specified section
-        function displayWordCount(sectionId) {
-            const section = document.getElementById(sectionId);
-            if (!section) return 0;
-            
-            // Collect text only from paragraph tags to avoid counting table data or headers
-            const paragraphs = section.querySelectorAll('p');
-            let text = '';
-            paragraphs.forEach(p => {
-                text += p.textContent + ' ';
-            });
-            
-            // Fallback if no paragraph tags exist
-            if (paragraphs.length === 0) {
-                text = section.textContent;
-            }
+<!-- Word Count Script -->
+<script>
+    function displayWordCount(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (!section) return 0;
 
-            const wordArray = text.trim() ? text.trim().split(/\s+/) : [];
-            return wordArray.length;
+        const paragraphs = section.querySelectorAll('p');
+        let text = '';
+        paragraphs.forEach(p => {
+            text += p.textContent + ' ';
+        });
+
+        if (paragraphs.length === 0) {
+            text = section.textContent;
         }
 
-        function displayTotalWordCount() {
-            const IntroductionCount = displayWordCount("intro");
-            const AnalysisCount = displayWordCount("analysis");
+        const wordArray = text.trim() ? text.trim().split(/\s+/) : [];
+        return wordArray.length;
+    }
 
-            const totalWordCount = IntroductionCount + AnalysisCount;
+    function displayTotalWordCount() {
+        const IntroductionCount = displayWordCount("intro");
+        const AnalysisCount = displayWordCount("analysis");
+        const totalWordCount = IntroductionCount + AnalysisCount;
 
-            document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
-        }
+        document.getElementById("totalWordCount").innerHTML = `<b>Total word count:</b> ${totalWordCount}`;
+    }
 
-        window.addEventListener('load', displayTotalWordCount);
-    </script>
+    window.addEventListener('load', displayTotalWordCount);
+</script>
+
 </body>
 </html>
