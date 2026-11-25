@@ -161,11 +161,13 @@
     <nav class="toc-bar" aria-label="Table of Contents">
         <a href="#abstract" class="toc-btn">Abstract</a>
         <span class="toc-divider">|</span>
-        <a href="#intro" class="toc-btn">Introduction & Background</a>
+        <a href="#intro-heading" class="toc-btn">Introduction & Background</a>
         <span class="toc-divider">|</span>
-        <a href="#analysis" class="toc-btn">Analysis and Discussion</a>
+        <a href="#analysis-heading" class="toc-btn">Analysis and Discussion</a>
         <span class="toc-divider">|</span>
         <a href="#visuals" class="toc-btn">Data Visualisations</a>
+        <span class="toc-divider">|</span>
+        <a href="#conclusion-heading" class="toc-btn">Conclusion</a>
         <span class="toc-divider">|</span>
         <a href="#references" class="toc-btn">References</a>
     </nav>
@@ -177,10 +179,10 @@
         <h3 id="abstract"><b>1. Abstract</b></h3>
         <div class="abstract-box">
             <p>
-                Hypersonic flight represents a major leap forward for aerospace, offering unprecedented speeds that could transform global travel, logistics, and access to space. However, the engineering required to sustain these speeds remains out of reach for most nations, and the few leading the field closely guard their breakthroughs. At the center of this race is a fundamental engineering paradox: how do you build a vehicle that can survive 3,000-degree superheated plasma and fly again almost immediately?
+                Hypersonic flight represents a major leap forward for aerospace, offering unprecedented speeds that could transform global travel, logistics, and access to space. However, the engineering required to sustain these speeds remains out of reach for most nations, and the few leading the field closely guard their breakthroughs. At the centre of this race is a fundamental engineering paradox: how do you build a vehicle that can survive superheated gas at temperatures approaching 3,000 &deg;C and fly again almost immediately?
             </p>
             <p>
-                This paper examines how emerging hypersonic technologies apply to next-generation reusable spacecraft, including SpaceX Starship, Sierra Space Dream Chaser, and future advanced wingless "lifting-body" designs. The argument that simply surviving the extreme heat of reentry is no longer enough to make spaceflight practical. While solving this reusability paradox is realistic within the coming decades with the advancement of technology, achieving rapid, airline-style turnaround will require major breakthroughs in heat-resistant materials and logistical maintenance.
+                This paper uses a literature-based comparative analysis to examine how emerging hypersonic technologies apply to next-generation reusable spacecraft, including SpaceX Starship, Sierra Space Dream Chaser, and future advanced wingless "lifting-body" designs. It argues that simply surviving the extreme heat of re-entry is no longer enough to make spaceflight practical, because a vehicle must also be quick to inspect and repair. Solving this reusability paradox appears realistic within the coming decades with the advancement of technology, but achieving rapid, airline-style turnaround will require major breakthroughs in heat-resistant materials and maintenance logistics.
             </p>
         </div>
     </div>
@@ -189,30 +191,36 @@
 
     <!-- Introduction (Paragraphs here are counted by your JS word counter) -->
     <div class="section-block">
-        <h3><b>2. Introduction & Background</b></h3>
+        <h3 id="intro-heading"><b>2. Introduction & Background</b></h3>
         <div id="intro">
             <h4>2.1 Defining the Reusability Paradox</h4>
             <p>
-                The "Space Race" was a pivotal moment in the history of aerospace, locking both the United States and the USSR in a fierce competition to reach the Moon first. When Apollo 4 returned from an uncrewed orbital test flight in 1967 after surviving temperatures approaching 3,000 °C, maintenance engineers immediately noticed something critical: the entire heat shield had essentially burned away (Glass and Camarda, 2001). Sacrificing expensive shielding in a single manoeuvre was acceptable to a determined government in the 1960s to win a race, but throwing away a heat shield after every single flight is unsustainable in an era transitioning toward commercial spaceflight and space tourism (Garwood and Bowles, 2012). Yet when NASA later introduced permanent ceramic tiles on the Space Shuttle to avoid rebuilding the shield after each flight, technicians still had to spend months inspecting and repairing thousands of fragile tiles between flights (Curry and Synofzik, 1983; Heppenheimer, 2002). Even a single damaged thermal panel let plasma into the airframe, disintegrating the Space Shuttle Columbia within seconds and leaving no survivors (Jenkins, 2001). The reinforced carbon-carbon leading-edge panels of the left wing, represented by the mockup in Figure 1, protect the most heavily heated part of the wing. This is the core of the reusability paradox: surviving the extreme heat of hypersonic flight is no longer the hardest part. Doing so without crippling maintenance delays is.
+                The "Space Race" was a pivotal moment in the history of aerospace, locking both the United States and the USSR in a fierce competition to reach the Moon first. When the uncrewed Apollo 4 capsule returned from its 1967 test flight at lunar-return speed, its heat shield reached about 5,000 &deg;F (roughly 2,760 &deg;C) and was left visibly charred, having worn away as designed (Manned Spacecraft Center, 1968). That ablative shield was deliberately sacrificial, which was acceptable to a determined government in the 1960s trying to win a race, but throwing away a heat shield after every single flight is unsustainable in an era transitioning toward commercial spaceflight and space tourism (Glass and Camarda, 2001; Garwood and Bowles, 2012). Yet when NASA later introduced reusable ceramic tiles on the Space Shuttle to avoid rebuilding the shield after each flight, technicians still had to carry out extensive inspection and repair work on thousands of fragile tiles between flights (Curry and Synofzik, 1983; Heppenheimer, 2002). The cost of an undetected fault became clear in 2003, when a piece of insulating foam broke off Columbia's external tank during launch and damaged a reinforced carbon-carbon (RCC) panel on the leading edge of the left wing. During re-entry, superheated air entered through the breach and progressively melted the wing's aluminium structure until the orbiter broke apart, killing all seven crew (Columbia Accident Investigation Board, 2003). RCC panels like these, represented by the mockup in Figure 1, protect the hottest parts of the wing. Columbia shows that a reusable vehicle can only be trusted if its heat shield can be thoroughly checked after every flight. This is the core of the reusability paradox: surviving the extreme heat of hypersonic flight is no longer the hardest part. Doing so while staying quick to inspect, repair and fly again is.
             </p>
 
             <figure>
                 <img src="columbia-rcc-panels.jpg"
                      alt="Row of white mobile stands holding a mockup of the leading edge of Space Shuttle Columbia's left wing, with transparent panels showing the wing's internal structure"
-                     style="max-width:40%; height:auto;">
+                     style="max-width:100%; height:auto;">
                 <figcaption>
-                    <b>Figure 1:</b> Mockup of the leading edge of Space Shuttle Columbia's left wing, built during the accident investigation and displayed in the Vehicle Assembly Building, Kennedy Space Center. Source: NASA (2003), image KSC-03pd2767.
+                    <b>Figure 1:</b> Mockup of the leading edge of Space Shuttle Columbia's left wing, displayed in the Vehicle Assembly Building, Kennedy Space Center, following the accident. Source: NASA (2003), image KSC-03pd2767.
                 </figcaption>
             </figure>
 
             <h4>2.2 The Aerothermodynamic Environment</h4>
             <p>
-                At hypersonic speeds, the aerial bow shock on the vehicle's nose starts to convert much of the kinetic energy of the vehicle into thermal energy within the shock layer itself (Anderson, 2019; Hayes and Probstein, 1959). Above roughly Mach 5, the temperatures reached are high enough that air starts to dissociate nitrogen and oxygen molecules, and at even higher energies the atoms themselves ionise, forming a partially ionised plasma around the nosecone. (Vincenti and Kruger, 1965; Bertin, 1994). Heat reaches the vehicle's surface in two main ways. The first is direct contact with the extremely hot plasma flowing over it. The second is chemical: the intense heat splits air molecules into individual atoms, and when these atoms touch the cooler surface and recombine, they release their stored energy as extra heat. This is why the surface material can change how much heating a vehicle experiences (Fay and Riddell, 1958; Kemp, Rose and Detra, 1959). The heating is most severe at the point where the air hits head-on, usually the nose, where it increases with the cube of the vehicle's speed. Doubling the speed hence raises the heating roughly eightfold, while a more rounded nose reduces it (Sutton and Graves, 1977), as set out later in Section 3.3. Brief re-entry and sustained hypersonic flight also stress a vehicle in different ways to each other. A capsule falling back to Earth endures a short, intense burst of heat lasting only 8-15 minutes. A winged vehicle that glides or cruises must withstand high temperatures for far longer (usually hours), so the total heat absorbed and the gradual damage to the surface from reacting with oxygen matter as much as the peak temperature (Hankey, 1988; Bertin, 1994).
+                At hypersonic speeds, generally taken as above about Mach 5, the bow shock ahead of a vehicle's nose compresses and heats the air so violently that much of the vehicle's kinetic energy is converted into thermal energy in the thin shock layer around it (Anderson, 2019; Hayes and Probstein, 1959). At these temperatures air no longer behaves like a simple gas. At higher speeds, oxygen and then nitrogen molecules split into atoms, and at the extreme speeds of a return from orbit or the Moon some atoms ionise, forming a partially ionised plasma around the nose (Vincenti and Kruger, 1965; Bertin, 1994). Figure 3 shows how sharply the temperature of the air at the nose climbs with speed.
+            </p>
+            <p>
+                Heat reaches the vehicle's surface in two main ways. The first is direct contact with the very hot gas flowing over it. The second is chemical: the intense heat splits air molecules into individual atoms, and when these atoms touch the cooler surface and recombine, they release their stored energy as extra heat. This is why the surface material can change how much heating a vehicle experiences (Fay and Riddell, 1958; Kemp, Rose and Detra, 1959). At very high speeds, such as Apollo's return from the Moon, the glowing shock layer also radiates heat onto the vehicle (Anderson, 2019). The heating is most severe at the point where the air hits head-on, usually the nose, where, all else being equal, it increases with the cube of the vehicle's speed. Doubling the speed therefore raises the heating roughly eightfold, while a more rounded nose reduces it (Sutton and Graves, 1971), as set out later in Section 3.3.
+            </p>
+            <p>
+                Brief ballistic re-entry and sustained hypersonic flight also stress a vehicle in different ways. A capsule falling back to Earth endures a short, intense burst of heat lasting only minutes. A winged vehicle that glides or cruises must withstand heating for far longer: the Space Shuttle's entry lasted roughly half an hour, with surface temperatures peaking near 1,650 &deg;C (Curry and Synofzik, 1983; Columbia Accident Investigation Board, 2003), and a hypersonic cruise vehicle could face high temperatures for longer still. For these vehicles, the total heat absorbed and the gradual damage to the surface from reacting with oxygen matter as much as the peak temperature (Hankey, 1988; Bertin, 1994).
             </p>
 
             <h4>2.3 Scope of Paper</h4>
             <p>
-                This paper evaluates whether surviving hypersonic heating is a enough for practical reusability, focusing on three linking questions. Firstly, degradation limits of the thermal protection materials, comparing the silica tiles and reinforced carbon-carbon used on the Space Shuttle (Curry and Synofzik, 1983) with the emerging ultra-high temperature ceramics (Fahrenholtz and Hilmas, 2017). Secondly, it examines the maintenance and inspection bottlenecks that determine turnaround time, looking at the Space Shuttle's operational experience in itself (Heppenheimer, 2002; Jenkins, 2001). Thirdly, it compares vehicles together, namely the Space Shuttle Orbiter, SpaceX Starship (Musk, 2017), Sierra Space's Dream Chaser (McKinnon et al., 2016) and future (conceptual) hypersonic glide designs. The paper is to look at the engineering and logistical paradox that a future rapid airline-styled turnaround, which depends on materials and maintenance advances as much as on heat survival.
+                This paper evaluates whether surviving hypersonic heating is enough for practical reusability. It uses a literature-based comparative analysis, because published work tends to treat heat-resistant materials and maintenance logistics separately, and it focuses on three linked questions. Firstly, what are the degradation limits of thermal protection materials, comparing the silica tiles and reinforced carbon-carbon used on the Space Shuttle (Curry and Synofzik, 1983) with emerging ultra-high temperature ceramics (Fahrenholtz and Hilmas, 2017)? Secondly, which maintenance and inspection bottlenecks determine turnaround time, judging by the Space Shuttle's operational experience (Heppenheimer, 2002; Jenkins, 2001)? Thirdly, how do the Space Shuttle Orbiter, SpaceX Starship (Musk, 2017), Sierra Space's Dream Chaser (McKinnon et al., 2016) and future conceptual hypersonic glide designs compare? Re-entry vehicles and hypersonic glide or cruise vehicles are treated together because both face extreme heating and the same reuse problem, although they differ in how long they are exposed to it. Section 3 analyses these questions, Section 4 presents supporting data, and Section 5 concludes that rapid, airline-style turnaround depends on advances in materials and maintenance as much as on surviving the heat.
             </p>
         </div>
     </div>
@@ -221,7 +229,7 @@
 
     <!-- Analysis and Discussion (Paragraphs here are also counted by your JS word counter) -->
     <div class="section-block">
-        <h3><b>3. Analysis and Discussion</b></h3>
+        <h3 id="analysis-heading"><b>3. Analysis and Discussion</b></h3>
         <div id="analysis">
             <h4>3.1 Thermal Protection System (TPS) Trade-offs</h4>
             <p>
@@ -309,6 +317,9 @@
     <!-- Charts Section -->
     <div class="section-block" id="visuals">
         <h3><b>4. Data Visualisations</b></h3>
+        <p>
+            Figure 2 gives an illustrative breakdown of where post-flight turnaround time goes for a reusable vehicle, and Figure 3 shows approximately how the temperature of air at the nose of a vehicle rises with Mach number. Both use approximate values intended to show the trends discussed in Sections 2 and 3.
+        </p>
 
         <h4>Figure 2: Post-Flight Turnaround Time Breakdown</h4>
         <div id="chart_div" class="chart-container"></div>
@@ -319,37 +330,44 @@
 
     <hr>
 
+    <!-- Conclusion -->
+    <div class="section-block">
+        <h3 id="conclusion-heading"><b>5. Conclusion</b></h3>
+        <div id="conclusion">
+            <p>
+                [Insert conclusion: restate that surviving the heat is necessary but not sufficient, summarise the thermal protection and turnaround findings from Section 3, state whether airline-style turnaround is realistic and over what timescale, and note limitations and future work.]
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
     <!-- References -->
     <div class="section-block">
-        <h3 id="references"><b>5. References</b></h3>
+        <h3 id="references"><b>6. References</b></h3>
         <ol>
 <li>Anderson, J.D. (2019) <a href="https://arc.aiaa.org/doi/book/10.2514/4.105142" target="_blank"><i>Hypersonic and high-temperature gas dynamics</i></a>. 3rd edn. Reston, VA: AIAA Education Series.</li>
-            <li>Berry, S.A. and Horvath, T.J. (2008) '<a href="https://doi.org/10.2514/1.30930" target="_blank">Aerothermodynamic design of lifting bodies for hypersonic flight</a>', <i>Journal of Spacecraft and Rockets</i>, 45(3), pp. 433–445.</li>
             <li>Bertin, J.J. (1994) <a href="https://arc.aiaa.org/doi/book/10.2514/4.861956" target="_blank"><i>Hypersonic aerothermodynamics</i></a>. Washington, DC: AIAA Education Series.</li>
-            <li>Bowcutt, K.G. (2013) '<a href="https://doi.org/10.2514/1.J051823" target="_blank">Multidisciplinary optimization of hypersonic vehicles</a>', <i>AIAA Journal</i>, 51(3), pp. 513–526.</li>
-            <li>Chapman, G.T. (2001) '<a href="https://doi.org/10.1016/S0376-0421(01)00004-5" target="_blank">Aerodynamics of high-speed lifting bodies and waveriders</a>', <i>Progress in Aerospace Sciences</i>, 37(3), pp. 251–284.</li>
+            <li>Columbia Accident Investigation Board (2003) <a href="https://www.nasa.gov/wp-content/uploads/static/history/columbia/reports/CAIBreportv1.pdf" target="_blank"><i>Report Volume I</i></a>. Washington, DC: National Aeronautics and Space Administration and the Government Printing Office.</li>
             <li>Curry, D.M. and Synofzik, C.K. (1983) '<a href="https://doi.org/10.2514/3.28353" target="_blank">Shuttle Orbiter thermal protection system—A material and structural overview</a>', <i>Journal of Spacecraft and Rockets</i>, 20(1), pp. 25–31.</li>
             <li>Fahrenholtz, W.G. and Hilmas, G.E. (2017) '<a href="https://doi.org/10.1016/j.scriptamat.2016.10.037" target="_blank">Ultra-high temperature ceramics: Materials for extreme environments</a>', <i>Scripta Materialia</i>, 129, pp. 94–99.</li>
             <li>Fay, J.A. and Riddell, F.R. (1958) '<a href="https://doi.org/10.2514/8.7517" target="_blank">Theory of stagnation point heat transfer in dissociated air</a>', <i>Journal of the Aeronautical Sciences</i>, 25(2), pp. 73–85.</li>
             <li>Garwood, R. and Bowles, J.V. (2012) '<a href="https://doi.org/10.2514/6.2012-1120" target="_blank">Systems analysis of reusable launch vehicles operating in the hypersonic regime</a>', <i>50th AIAA Aerospace Sciences Meeting</i>, Nashville, TN, 9–12 January. Reston, VA: AIAA, Paper 2012-1120.</li>
             <li>Glass, D.E. (2008) '<a href="https://doi.org/10.1243/09544100JAERO319" target="_blank">Ceramic matrix composites for thermal protection systems and hot structures</a>', <i>Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering</i>, 221(6), pp. 1105–1117.</li>
             <li>Glass, D.E. and Camarda, C.J. (2001) <a href="https://ntrs.nasa.gov/citations/20010074074" target="_blank"><i>Advanced metallic and ceramic thermal protection systems for reusable launch vehicles</i></a>. NASA Technical Memorandum NASA/TM-2001-211039. Hampton, VA: NASA Langley Research Center.</li>
-            <li>Gupta, R.N., Lee, K.P. and Thompson, R.A. (1990) <a href="https://ntrs.nasa.gov/citations/19910006378" target="_blank"><i>Calculative methods for stagnation-point heat transfer for planetary entry applications</i></a>. NASA Technical Paper NASA-TP-3020. Hampton, VA: NASA Langley Research Center.</li>
             <li>Hankey, W.L. (1988) <a href="https://arc.aiaa.org/doi/book/10.2514/4.862328" target="_blank"><i>Re-entry aerodynamics</i></a>. Washington, DC: AIAA Education Series.</li>
-            <li>Hannigan, J.E. and Spencer, D.B. (2018) '<a href="https://doi.org/10.2514/1.A34085" target="_blank">History and evolution of lifting-body re-entry vehicles</a>', <i>Journal of Spacecraft and Rockets</i>, 55(4), pp. 812–828.</li>
             <li>Hayes, W.D. and Probstein, R.F. (1959) <i>Hypersonic flow theory</i>. New York: Academic Press.</li>
             <li>Heppenheimer, T.A. (2002) <a href="https://ntrs.nasa.gov/citations/20020068808" target="_blank"><i>The Space Shuttle decision: NASA's search for a reusable space vehicle</i></a>. Washington, DC: NASA History Division.</li>
             <li>Jenkins, D.R. (2001) <i>Space Shuttle: The history of developing the National Space Transportation System</i>. 3rd edn. Cape Canaveral, FL: Specialty Press.</li>
             <li>Kemp, N.H., Rose, P.H. and Detra, R.W. (1959) '<a href="https://doi.org/10.2514/8.8133" target="_blank">Laminar heat transfer around blunt bodies in dissociated air</a>', <i>Journal of the Aero/Space Sciences</i>, 26(7), pp. 421–430.</li>
-            <li>Kulkarni, A. et al. (2004) '<a href="https://doi.org/10.1016/S1359-6454(03)00030-2" target="_blank">Comprehensive microstructural characterization and predictive property modeling of plasma-sprayed zirconia coatings</a>', <i>Acta Materialia</i>, 51(9), pp. 2457–2475.</li>
+            <li>Manned Spacecraft Center (1968) <a href="https://www.ibiblio.org/apollo/Documents/46145200-Apollo-4-Mission-Report.pdf" target="_blank"><i>Apollo 4 mission report</i></a>. MSC-PA-R-68-1. Houston, TX: NASA Manned Spacecraft Center.</li>
             <li>McKinnon, M.R. et al. (2016) '<a href="https://doi.org/10.2514/6.2016-5234" target="_blank">Sierra Nevada Corporation's Dream Chaser: Design, testing, and flight readiness of a reusable lifting body</a>', <i>AIAA SPACE and Astronautics Forum and Exposition</i>, Long Beach, CA, 13–16 September. Reston, VA: AIAA, Paper 2016-5234.</li>
             <li>Musk, E. (2017) '<a href="https://doi.org/10.1089/space.2017.29009.emu" target="_blank">Making life multi-planetary</a>', <i>New Space</i>, 5(2), pp. 46–61.</li>
             <li>NASA (2003) <i>Columbia Debris</i>, NASA Image KSC-03pd2767. Kennedy Space Center, FL: NASA. Available at: <a href="https://images.nasa.gov/details/KSC-03pd2767" target="_blank">https://images.nasa.gov/details/KSC-03pd2767</a> (Accessed: [insert date]).</li>
             <li>Opeka, M.M., Talmy, I.G. and Zaykoski, J.A. (2004) '<a href="https://doi.org/10.1023/B:JMSC.0000041686.21788.77" target="_blank">Oxidation-based materials selection for 2000°C+ hypersonic aerosurfaces: Theoretical considerations and historical experience</a>', <i>Journal of Materials Science</i>, 39(19), pp. 5887–5904.</li>
             <li>Paul, A. et al. (2012) 'UHTC composites for hypersonic applications', <i>American Ceramic Society Bulletin</i>, 91(1), pp. 22–28.</li>
             <li>Sciti, D., Guicciardi, S., Bellosi, A. and Pezzotti, G. (2006) '<a href="https://doi.org/10.1111/j.1551-2916.2006.00999.x" target="_blank">Properties of a pressureless-sintered ZrB<sub>2</sub>–MoSi<sub>2</sub> ceramic composite</a>', <i>Journal of the American Ceramic Society</i>, 89(7), pp. 2320–2322.</li>
-            <li>Smart, M.K. (2012) '<a href="https://doi.org/10.2514/1.J051526" target="_blank">How much compressibility transformation is needed for hypersonic boundary layers?</a>', <i>AIAA Journal</i>, 50(9), pp. 1995–2001.</li>
-            <li>Sutton, K. and Graves, R.A. (1977) <a href="https://ntrs.nasa.gov/citations/19770021536" target="_blank"><i>A general stagnation-point convective-heating equation for arbitrary gas mixtures</i></a>. NASA Technical Report NASA-TR-R-376. Washington, DC: NASA.</li>
+            <li>Sutton, K. and Graves, R.A. (1971) <a href="https://ntrs.nasa.gov/citations/19720003329" target="_blank"><i>A general stagnation-point convective-heating equation for arbitrary gas mixtures</i></a>. NASA Technical Report NASA-TR-R-376. Washington, DC: NASA.</li>
             <li>Vincenti, W.G. and Kruger, C.H. (1965) <i>Introduction to physical gas dynamics</i>. New York: John Wiley & Sons.</li>
             <li>Wang, X., Zhang, X. and Han, J. (2015) '<a href="https://doi.org/10.1007/s40145-015-0136-2" target="_blank">Research progress on ultra-high temperature ceramic matrix composites for hypersonic vehicles</a>', <i>Journal of Advanced Ceramics</i>, 4(1), pp. 1–13.</li>
         </ol>
@@ -431,7 +449,7 @@
         ]);
 
         var options = {
-            title: 'Estimated Reusable Hypersonic Turnaround Bottlenecks (Replace with your data)'
+            title: 'Illustrative Estimate of Post-Flight Turnaround Time by Phase'
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
@@ -439,7 +457,7 @@
     }
 
     function drawScatterChart() {
-        var data = google.visualization.DataTable();
+        var data = new google.visualization.DataTable();
         data.addColumn('number', 'Mach Number');
         data.addColumn('number', 'Stagnation Temp (K)');
 
@@ -453,7 +471,7 @@
         ]);
 
         var options = {
-            title: 'Mach Number vs. Approximate Stagnation Temperature (Replace with your data)',
+            title: 'Mach Number vs. Approximate Stagnation Temperature (illustrative)',
             hAxis: { title: 'Mach Number' },
             vAxis: { title: 'Stagnation Temperature (K)' },
             legend: 'none'
@@ -487,7 +505,8 @@
     function displayTotalWordCount() {
         const IntroductionCount = displayWordCount("intro");
         const AnalysisCount = displayWordCount("analysis");
-        const totalWordCount = IntroductionCount + AnalysisCount;
+        const ConclusionCount = displayWordCount("conclusion");
+        const totalWordCount = IntroductionCount + AnalysisCount + ConclusionCount;
 
         document.getElementById("totalWordCount").innerHTML = `<b>Total word count:</b> ${totalWordCount}`;
     }
