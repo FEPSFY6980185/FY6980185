@@ -11,10 +11,13 @@
         html { scroll-behavior: smooth; }
         body { font-family: Arial, sans-serif; background-color: #f9f9f9; color: #222; line-height: 1.6; }
         .page-container { max-width: 960px; margin: 24px auto; background-color: #ffffff; padding: 32px 40px; border: 1px solid #dddddd; }
-        h1, h2, h3, h4 { font-family: Calibri, Arial, sans-serif; color: #111; }
-        .header-banner { display: block; max-width: 40%; height: auto; margin-bottom: 16px; }
+        
+        /* Centered Header and Titles */
+        h1, h2, h3, h4 { font-family: Calibri, Arial, sans-serif; color: #111; text-align: center; }
+        .header-banner { display: block; max-width: 40%; height: auto; margin: 0 auto 16px auto; }
 
-        .toc-bar { display: flex; align-items: center; flex-wrap: wrap; background-color: #f4f4f4; border: 1px solid #dddddd; padding: 6px 12px; margin: 16px 0; }
+        /* Centered TOC Bar */
+        .toc-bar { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; background-color: #f4f4f4; border: 1px solid #dddddd; padding: 6px 12px; margin: 16px 0; }
         .toc-btn { display: inline-block; padding: 6px 12px; color: #222; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 3px; transition: background-color 0.15s ease; }
         .toc-btn:hover { background-color: #e2e2e2; color: #000; }
         .toc-divider { color: #bbbbbb; padding: 0 4px; user-select: none; font-weight: normal; }
@@ -30,13 +33,19 @@
         .section-block { margin-top: 24px; margin-bottom: 24px; }
         
         /* Unified Figure Box Styling */
-        .figure-box { background-color: #fcfcfc; border: 1px solid #e0e0e0; padding: 16px; margin: 20px 0; border-radius: 4px; }
-        .figure-box img { display: block; margin: 0 auto; max-width: 45%; height: auto; border: 1px solid #eeeeee; }
+        .figure-box { background-color: #fcfcfc; border: 1px solid #e0e0e0; padding: 16px; margin: 20px 0; border-radius: 4px; overflow: hidden; }
         
-        .chart-container { width: 100%; max-width: 850px; height: 420px; margin: 8px 0; }
-        .math-box { display: flex; justify-content: space-between; align-items: center; max-width: 420px; background-color: #fafafa; border: 1px solid #e0e0e0; padding: 12px 16px; margin: 12px 0; }
+        /* Standard Images: ~30% width and floated left with text wrap */
+        .figure-box.standard-img img { float: left; width: 30%; height: auto; margin-right: 20px; margin-bottom: 10px; border: 1px solid #eeeeee; }
+        .figure-box.standard-img figcaption { clear: both; }
+
+        /* Full width for charts, diagrams, and tables */
+        .figure-box.full-width { text-align: center; }
+        
+        .chart-container { width: 100%; max-width: 850px; height: 420px; margin: 8px auto; }
+        .math-box { display: flex; justify-content: space-between; align-items: center; max-width: 420px; background-color: #fafafa; border: 1px solid #e0e0e0; padding: 12px 16px; margin: 12px auto; }
         figure { margin: 0; }
-        figcaption { font-size: 14px; color: #444; margin-top: 8px; }
+        figcaption { font-size: 14px; color: #444; margin-top: 8px; text-align: left; }
         .footer-meta { background-color: #f4f4f4; padding: 16px; border: 1px solid #dddddd; margin-top: 24px; }
         .btn { background-color: #555; color: #fff; border: none; padding: 6px 14px; font-size: 14px; cursor: pointer; margin-top: 10px; }
         .btn:hover { background-color: #333; }
@@ -50,7 +59,7 @@
         .references li { scroll-margin-top: 16px; padding: 2px 6px; margin-bottom: 4px; }
         .references li:target { background-color: #fff3b0; outline: 1px solid #e6c84c; }
         figure:target, .figure-box:target, table:target { outline: 2px solid #fff3b0; }
-        svg.diagram { width: 100%; max-width: 900px; height: auto; border: 1px solid #eeeeee; background: #fcfcfc; }
+        svg.diagram { width: 100%; max-width: 900px; height: auto; border: 1px solid #eeeeee; background: #fcfcfc; margin: 0 auto; display: block; }
     </style>
 </head>
 
@@ -90,7 +99,6 @@
             <p>
                 Reusable spacecraft must survive intense heating during atmospheric re-entry and then fly again quickly. This paper uses a literature-based comparison of the Space Shuttle, SpaceX Starship, Dream Chaser and concept ultra-high-temperature ceramic vehicles to examine this reusability paradox for orbital re-entry. Ideal stagnation temperatures rise from about 1,030 °C at Mach 5 to above 4,000 °C at Mach 10, and newer materials extend the temperatures heat shields can tolerate. However, the Shuttle's thermal protection required nearly 32,000 maintenance hours per mission, and experts doubt that Starship's tile-based shield can support rapid reuse. Falcon 9 shows that fast reuse is achievable under moderate heating. The paper argues that surviving re-entry is necessary but no longer sufficient: turnaround, through inspection, repair and certification, is the binding constraint. Airline-style reuse of orbital vehicles remains unproven.
             </p>
-            <p><b>Keywords:</b> reusability; thermal protection systems; hypersonic re-entry; turnaround; Starship</p>
         </div>
     </div>
 
@@ -109,7 +117,7 @@
             The Space Shuttle introduced reusable silica tiles and reinforced carbon-carbon (RCC) panels, yet each flight still demanded extensive inspection and repair (<a class="cite" href="#ref-curry1993">Curry, 1993</a>). On launch, foam shed from the external tank struck Columbia's left wing (<a class="fig-link" href="#fig1">Figure 1</a>). The resulting RCC damage let superheated gas into the wing during re-entry and destroyed the vehicle (<a class="cite" href="#ref-caib2003">Columbia Accident Investigation Board, 2003</a>). <a class="fig-link" href="#fig2">Figure 2</a> shows the RCC leading-edge panels involved (<a class="cite" href="#ref-nasakennedy2004">NASA Kennedy Space Center, 2004</a>).
             </p>
 
-            <figure class="figure-box" id="fig1">
+            <figure class="figure-box standard-img" id="fig1">
                 <img src="columbia-foam-debris.png"
                      alt="Launch image of Space Shuttle Columbia on STS-107 with a circle and label marking foam debris near the external tank and orbiter">
                 <figcaption>
@@ -117,7 +125,7 @@
                 </figcaption>
             </figure>
 
-            <figure class="figure-box" id="fig2">
+            <figure class="figure-box standard-img" id="fig2">
                 <img src="columbia-rcc-panels.jpg"
                      alt="Row of white mobile stands holding a mockup of the leading edge of Space Shuttle Columbia's left wing, with transparent panels showing the wing's internal structure">
                 <figcaption>
@@ -162,7 +170,7 @@
             With T<sub>∞</sub> = 216.65 K, Mach 5 gives about 1,030 °C and Mach 10 about 4,280 °C (<a class="fig-link" href="#fig3">Figure 3</a>). Real values are lower because energy is absorbed by molecular dissociation (<a class="cite" href="#ref-hayes1959">Hayes and Probstein, 1959</a>), and a vehicle's surface settles well below the air's stagnation temperature because it radiates heat away. Figure 3 is therefore an indicator of thermal severity, not a failure prediction: the Shuttle survived re-entry at orbital speed, far above Mach 6. It does show that thermal load grows with the square of Mach number, so small speed increases demand disproportionately more of a heat shield.
             </p>
 
-            <figure class="figure-box" id="fig3">
+            <figure class="figure-box full-width" id="fig3">
                 <div id="limits_div" class="chart-container" role="img" aria-label="Line chart of ideal stagnation temperature in degrees Celsius against Mach number from 1 to 12, rising steeply and crossing horizontal lines for Shuttle RCC and TUFROC limits near Mach 6.2"></div>
                 <figcaption>
                     <b>Figure 3:</b> Ideal stagnation temperature against Mach number, compared with reusable TPS limits. Calculated with Equation 1 (γ = 1.4, T<sub>∞</sub> = 216.65 K; <a class="cite" href="#ref-ames1953">Ames Research Staff, 1953</a>). Dashed lines mark about 1,650 °C for Shuttle RCC (<a class="cite" href="#ref-nasakennedy2004">NASA Kennedy Space Center, 2004</a>) and about 1,600 °C for TUFROC (<a class="cite" href="#ref-nasaames2019">NASA Ames Research Center, 2019</a>). The curve crosses both near Mach 6.2, just above the Mach 5 hypersonic threshold. This is a simplified comparison: the ideal-gas curve over-predicts real temperatures (<a class="cite" href="#ref-hayes1959">Hayes and Probstein, 1959</a>), and surfaces are cooler than the air.
@@ -184,7 +192,7 @@
         <div id="analysis">
             <h4>2.1 Thermal Protection System (TPS) Trade-offs</h4>
             <p>
-            Every thermal protection system (TPS) trades temperature capability against durability, mass and maintenance (<a class="cite" href="#ref-stackpoole2022">Stackpoole, 2022</a>). Apollo's ablator was effective but single-use (<a class="cite" href="#ref-msc1968">Manned Spacecraft Center, 1968</a>), while the Shuttle's tiles and RCC were reusable but maintenance-heavy (<a class="cite" href="#ref-curry1993">Curry, 1993</a>). Newer materials such as TUFROC (<a class="cite" href="#ref-nasaames2019">NASA Ames Research Center, 2019</a>) and UHTCs (<a class="cite" href="#ref-fahrenholtz2017">Fahrenholtz and Hilmas, 2017</a>) extend temperature capability, although many remain costly, brittle or hard to manufacture (<a class="cite" href="#ref-ni2022">Ni <i>et al.</i>, 2022</a>).
+            Every thermal protection system (TPS) trades temperature capability against durability, mass and maintenance (<a class="cite" href="#ref-stackpoole2022">Stackpoole, 2022</a>). Apollo's ablator was effective but single-use (<a class="cite" href="#ref-msc1968">Manned Spacecraft Center, 1968</a>), while the Shuttle's tiles and RCC were reusable but maintenance-heavy (<a class="cite" href="#ref-curry1993">Curry, 1993</a>). Newer materials such as TUFROC (<a class="cite" href="#ref-nasaames2019">NASA Ames Research Center, 2019</a>) and UHTCs (<a class="cite" href="#ref-fahrenholtz2017">Fahrenholtz and Hilmas, 2017</a>) extend temperature capability, although many remain costly, brittle or hard to manufacture (<a class="cite" href="#ref-ni2022">Ni <i>et al.</i>, 2022</a>). Furthermore, transitioning these materials from laboratory coupons to full-scale aerospace structures introduces structural integration challenges that can exacerbate thermal stress concentrations during high-enthalpy flows.
             </p>
 
             <p>
@@ -196,7 +204,7 @@
             Heat shields must be inspected after every mission for cracks, impacts and degradation. One NASA estimate put Shuttle TPS maintenance at nearly 32,000 labour hours per mission (<a class="cite" href="#ref-scotti2003">Scotti, Clay and Rezin, 2003</a>), which made rapid turnaround impractical. In 2005, protruding gap filler on Discovery's underside had to be pulled out by an astronaut during a spacewalk (<a class="fig-link" href="#fig4">Figure 4</a>; <a class="cite" href="#ref-nasasts114">NASA, no date</a>). After Columbia, NASA expanded non-destructive evaluation, such as infrared thermography, to find hidden RCC damage (<a class="cite" href="#ref-nasalangley">NASA Langley Research Center, no date</a>).
             </p>
 
-            <figure class="figure-box" id="fig4">
+            <figure class="figure-box standard-img" id="fig4">
                 <img src="discovery-tile-damage.png"
                      alt="Inspection imagery of the underside of Space Shuttle Discovery, with circles marking protruding gap filler and tile damage">
                 <figcaption>
@@ -208,7 +216,7 @@
             Starship faces the same problem at larger scale. Its heat shield uses roughly 18,000 hexagonal ceramic tiles (<a class="fig-link" href="#fig5">Figure 5</a>; <a class="cite" href="#ref-techcrunch2024">TechCrunch, 2024</a>), and former NASA specialists argue that this tile approach is not viable for rapid reuse (<a class="cite" href="#ref-aiaa2026">AIAA, 2026</a>). Metallic hot structures aim to simplify inspection (<a class="cite" href="#ref-scotti2003">Scotti, Clay and Rezin, 2003</a>). <a class="fig-link" href="#fig6">Figure 6</a> places inspection, repair and certification within the re-entry-to-relaunch cycle, and <a class="fig-link" href="#table1">Table 1</a> compares how each vehicle handles them.
             </p>
 
-            <figure class="figure-box" id="fig5">
+            <figure class="figure-box standard-img" id="fig5">
                 <img src="starship-heat-tiles.png"
                      alt="Close view of black hexagonal heat-shield tiles on a Starship panel, with a white insulating layer behind the tiles and rows of metal pins on the bare surface beside them">
                 <figcaption>
@@ -216,7 +224,7 @@
                 </figcaption>
             </figure>
 
-            <figure class="figure-box" id="fig6">
+            <figure class="figure-box full-width" id="fig6">
                 <svg class="diagram" viewBox="0 0 900 250" role="img" aria-label="Cycle diagram: re-entry, inspect, repair, certify, launch, with inspect, repair and certify marked as the turnaround bottleneck">
                     <defs>
                         <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
@@ -422,7 +430,6 @@
     google.charts.load('current', { packages: ['corechart'] });
     google.charts.setOnLoadCallback(drawLimitsChart);
 
-    // Equation 1: T0 = Tinf * (1 + 0.2 * M^2), Tinf = 216.65 K, gamma = 1.4. Plotted in deg C.
     var AMBIENT_K = 216.65;
     function stagnationC(m) { return AMBIENT_K * (1 + 0.2 * m * m) - 273.15; }
 
@@ -459,7 +466,7 @@
     });
 </script>
 
-<!-- Word Count Script (Introduction + Analysis only; abstract and conclusion excluded) -->
+<!-- Word Count Script -->
 <script>
     function displayWordCount(sectionId) {
         const section = document.getElementById(sectionId);
