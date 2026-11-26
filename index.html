@@ -195,61 +195,67 @@
         <div id="intro">
             <h4>2.1 Defining the Reusability Paradox</h4>
             <p>
-                The "Space Race" was a pivotal moment in the history of aerospace, locking both the United States and the USSR in a fierce competition to reach the Moon first. When the uncrewed Apollo 4 capsule returned from its 1967 test flight at lunar-return speed, its heat shield reached about 5,000 &deg;F (roughly 2,760 &deg;C) and was left visibly charred, having worn away as designed (Manned Spacecraft Center, 1968). That ablative shield was deliberately sacrificial, which was acceptable to a determined government in the 1960s trying to win a race, but throwing away a heat shield after every single flight is unsustainable in an era transitioning toward commercial spaceflight and space tourism (Heppenheimer, 1999). Yet when NASA later introduced reusable ceramic tiles on the Space Shuttle to avoid rebuilding the shield after each flight, technicians still had to carry out extensive inspection and repair work on thousands of fragile tiles between flights (Curry, 1993; Heppenheimer, 1999). The cost of an undetected fault became clear in 2003, when a piece of insulating foam broke off Columbia's external tank during launch and damaged a reinforced carbon-carbon (RCC) panel on the leading edge of the left wing. During re-entry, superheated air entered through the breach and progressively melted the wing's aluminium structure until the orbiter broke apart, killing all seven crew (Columbia Accident Investigation Board, 2003). RCC panels like these, represented by the mockup in Figure 1, protect the hottest parts of the wing. Columbia shows that a reusable vehicle can only be trusted if its heat shield can be thoroughly checked after every flight. This is the core of the reusability paradox: surviving the extreme heat of hypersonic flight is no longer the hardest part. Doing so while staying quick to inspect, repair and fly again is.
+            The Space Race accelerated advances in spacecraft technology but relied heavily on expendable systems. During the Apollo 4 mission, the capsule returned from lunar-return velocity protected by an ablative heat shield that was intentionally consumed during re-entry (Manned Spacecraft Center, 1968). While this approach provided excellent thermal protection, replacing major components after every flight is unsuitable for routine commercial space operations.
+            </p>
+
+            <p>
+            NASA's Space Shuttle introduced reusable thermal protection using silica tiles and reinforced carbon-carbon (RCC) panels. However, these systems still required extensive inspection and repair between flights (Curry, 1993; Heppenheimer, 1999). The Columbia accident demonstrated the risks involved when damage to an RCC panel allowed superheated gases to penetrate the wing during re-entry, ultimately leading to vehicle loss (Columbia Accident Investigation Board, 2003).
+            </p>
+
+            <p>
+            Figure 1 shows the RCC panels used to protect the Shuttle's most thermally demanding regions. The lesson from Columbia is clear: surviving hypersonic conditions is only part of the challenge. A spacecraft must also be inspected, repaired and certified for flight quickly enough to make reuse economically practical. This conflict forms the reusability paradox.
             </p>
 
             <figure>
                 <img src="columbia-rcc-panels.jpg"
                      alt="Row of white mobile stands holding a mockup of the leading edge of Space Shuttle Columbia's left wing, with transparent panels showing the wing's internal structure"
-                     style="max-width:100%; height:auto;">
+                     style="max-width:40%; height:auto;">
                 <figcaption>
                     <b>Figure 1:</b> Mockup of the leading edge of Space Shuttle Columbia's left wing, displayed in the Vehicle Assembly Building, Kennedy Space Center, following the accident. Source: NASA (2003), image KSC-03pd2767.
                 </figcaption>
             </figure>
 
             <h4>2.2 Why Hypersonic Flight Is So Hot</h4>
-            <p>
-                Speed in flight is often measured by the Mach number, which compares a vehicle's speed with the speed of sound (Mach 1, roughly 1,200 km/h at sea level). "Hypersonic" usually means faster than Mach 5 (NASA Glenn Research Center, no date). At these speeds the air cannot flow smoothly out of the way. It piles up in front of the vehicle as a shock wave, and compressing air this violently heats it enormously. Most of the heating of a re-entering vehicle comes from this squeezing of the air rather than from friction (Tauber, 1989; Hayes and Probstein, 1959).
-            </p>
-            <p>
-                A simple formula shows how fast the temperature at the nose rises with speed:
-            </p>
-            <div class="math-box">
-                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-                    <msub><mi>T</mi><mn>0</mn></msub>
-                    <mo>=</mo>
-                    <msub><mi>T</mi><mi>&infin;</mi></msub>
-                    <mo>&#x2062;</mo>
-                    <mrow><mo>(</mo><mn>1</mn><mo>+</mo>
-                        <mfrac><mrow><mi>&gamma;</mi><mo>&minus;</mo><mn>1</mn></mrow><mn>2</mn></mfrac>
-                        <msup><mi>M</mi><mn>2</mn></msup><mo>)</mo></mrow>
-                </math>
-            </div>
-            <p>
-                Here T<sub>0</sub> is the air temperature at the nose, T<sub>&infin;</sub> is the temperature of the surrounding air, M is the Mach number and &gamma; is a constant that is about 1.4 for air (Ames Research Staff, 1953). For air at about 217 K (&minus;56 &deg;C), a typical temperature high in the atmosphere, Mach 5 gives about 1,300 K (roughly 1,000 &deg;C), and Mach 10 gives about 4,600 K. Figure 2 plots this relationship. Real temperatures at the highest speeds are lower than this formula suggests, because the energy starts splitting oxygen and nitrogen molecules into single atoms, and at extreme speeds knocks electrons off atoms to create a glowing, electrically charged gas called a plasma (NASA Glenn Research Center, no date; Tauber, 1989).
-            </p>
-            <p>
-                Heat reaches the vehicle's surface in two main ways. The first is direct contact with the very hot gas flowing over it. The second is chemical: when the split atoms touch the cooler surface and recombine into molecules, they release the energy stored in them as extra heat, which is why the surface material can change the heating a vehicle experiences (Tauber, 1989). At very high speeds, such as a return from the Moon, the glowing gas also radiates heat onto the vehicle (Tauber, 1989). The heating is worst at the point where the air hits head-on, usually the nose, and a widely used equation estimates it:
-            </p>
-            <div class="math-box">
-                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-                    <msub><mi>q</mi><mi>s</mi></msub>
-                    <mo>=</mo>
-                    <mi>k</mi>
-                    <msqrt><mfrac><msub><mi>&rho;</mi><mi>&infin;</mi></msub><msub><mi>R</mi><mi>n</mi></msub></mfrac></msqrt>
-                    <msup><msub><mi>V</mi><mi>&infin;</mi></msub><mn>3</mn></msup>
-                </math>
-            </div>
-            <p>
-                In this equation q<sub>s</sub> is the heat arriving per unit area at the nose, &rho;<sub>&infin;</sub> is the density of the surrounding air, R<sub>n</sub> is the radius of the nose, V<sub>&infin;</sub> is the vehicle's speed and k is a constant that depends on the gas (Sutton and Graves, 1971). The speed is cubed, so doubling the speed raises the heating about eightfold. The nose radius is under a square root, so a more rounded nose spreads the heat out and reduces it: making the nose four times as rounded halves the heating.
-            </p>
-            <p>
-                Re-entry and sustained hypersonic flight also differ in how long the heat lasts. A capsule falling back to Earth endures an intense burst lasting minutes. A winged vehicle that glides home, such as the Space Shuttle, is heated for far longer, with its entry lasting roughly half an hour (Columbia Accident Investigation Board, 2003), and a hypersonic cruise vehicle could be heated for longer still. For these vehicles, the total heat absorbed and the gradual damage to the surface from reacting with oxygen matter as much as the peak temperature (Curry, 1993; Böhrk, no date).
-            </p>
+<p>
+Hypersonic flight generally refers to speeds above Mach 5 (NASA Glenn Research Center, no date). At these velocities, air is compressed into a powerful shock wave ahead of the vehicle. This compression generates extreme temperatures, meaning most heating comes from compressed air rather than surface friction (Tauber, 1989).
+</p>
+
+<p>
+The stagnation-temperature equation below illustrates how temperature rises with increasing Mach number:
+</p>
+
+<div class="math-box">
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+<msub><mi>T</mi><mn>0</mn></msub>
+<mo>=</mo>
+<msub><mi>T</mi><mi>&infin;</mi></msub>
+<mrow>
+<mo>(</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mfrac>
+<mrow><mi>&gamma;</mi><mo>&minus;</mo><mn>1</mn></mrow>
+<mn>2</mn>
+</mfrac>
+<msup><mi>M</mi><mn>2</mn></msup>
+<mo>)</mo>
+</mrow>
+</math>
+</div>
+
+<p>
+For atmospheric air at approximately 217 K, Mach 5 produces a stagnation temperature of around 1,300 K, while Mach 10 exceeds 4,500 K. Figure 2 demonstrates this relationship. The curve rises sharply because temperature increases with the square of Mach number, meaning relatively small increases in velocity create substantially larger thermal loads.
+</p>
+
+<p>
+Although real vehicles experience somewhat lower temperatures because energy is consumed through molecular dissociation and ionisation, the trend remains the same. Increasing speed rapidly increases thermal stress, making advanced thermal protection systems essential for reusable hypersonic flight.
+</p>
 
             <h4>2.3 Scope of Paper</h4>
             <p>
-                This paper asks a simple question: if a spacecraft can survive the heat of re-entry or hypersonic flight, can it also be turned around quickly enough to fly like an airliner? To answer it, the paper reviews published technical sources and compares vehicles, rather than running new experiments. It looks at three things. First, how well different heat-shield materials resist wear and damage, from the Space Shuttle's silica tiles and reinforced carbon-carbon (Scotti, Clay and Rezin, 2003) to newer materials such as TUFROC (NASA Ames Research Center, 2019) and ultra-high temperature ceramics (Fahrenholtz and Hilmas, 2017). Second, what inspection and maintenance work keeps vehicles on the ground, mainly using Shuttle experience (Scotti, Clay and Rezin, 2003; NASA Kennedy Space Center, 2004). Third, how the Space Shuttle, SpaceX's Starship (Lapointe, 2026), Sierra Space's Dream Chaser (NASA Ames Research Center, 2019) and future hypersonic glide vehicles compare. Re-entry vehicles and hypersonic gliders are discussed together because both face extreme heating and the same reuse problem, although they are exposed to the heat for different lengths of time. Section 3 analyses these questions, Section 4 presents supporting data, and Section 5 concludes that rapid, airline-style turnaround depends on advances in materials and maintenance as much as on surviving the heat.
+                <p>
+This paper investigates whether spacecraft can achieve rapid reuse while operating in extreme thermal environments. It compares historical and modern thermal protection technologies, examines inspection and maintenance requirements, and evaluates examples including the Space Shuttle, SpaceX Starship and Dream Chaser. The central argument is that successful reusability depends as much on maintenance and turnaround efficiency as on thermal resistance.
+</p>
             </p>
         </div>
     </div>
@@ -261,23 +267,27 @@
         <h3 id="analysis-heading"><b>3. Analysis and Discussion</b></h3>
         <div id="analysis">
             <h4>3.1 Thermal Protection System (TPS) Trade-offs</h4>
-            <p>
-                A thermal protection system (TPS) is the heat shield that stops a vehicle's structure from melting or weakening. No design is best at everything, so engineers trade between how hot a material can get, how much it weighs, how easily it is damaged and how much work it needs between flights. Table 1 compares the main approaches.
-            </p>
-            <p>
-                Ablative shields, like the one on Apollo 4, protect the vehicle by charring and wearing away (Manned Spacecraft Center, 1968). They work well, but a shield that is consumed cannot easily be reused. The Space Shuttle instead used silica tiles and blankets over most of its surface, with the blankets limited to about 650 &deg;C (1,200 &deg;F) and the tiles damaged fairly easily (Scotti, Clay and Rezin, 2003). Its hottest areas, the nose and wing leading edges, used reinforced carbon-carbon (RCC), which can withstand surface temperatures of about 1,650 &deg;C (3,000 &deg;F) but conducts heat, so it needs insulation behind it (NASA Kennedy Space Center, 2004).
-            </p>
-            <p>
-                Newer options try to be tougher or easier to maintain. Metallic panels are more damage tolerant and avoid re-waterproofing, and the cancelled X-33 programme aimed to cut inspection and maintenance by a factor of ten compared with the Shuttle (Scotti, Clay and Rezin, 2003). TUFROC, a carbon-based cap on a silica-based insulating base, flew on the wing leading edge of the X-37B and can be reused at about 1,600 &deg;C (2,900 &deg;F). NASA licensed it to Sierra Nevada Corporation for Dream Chaser (NASA Ames Research Center, 2019). Ultra-high temperature ceramics have the highest melting points of any known materials (Fahrenholtz and Hilmas, 2017), but they are brittle and hard to manufacture, and are still being developed (Ni <i>et al.</i>, 2022). The trade-off is consistent: the more heat a material survives, the less proven or more fragile it tends to be.
-            </p>
+<p>
+Thermal protection systems prevent spacecraft structures from reaching temperatures that would cause failure during atmospheric entry. Every TPS design involves trade-offs between temperature capability, durability, mass and maintenance requirements.
+</p>
 
-            <h4>3.2 Turnaround Time vs. Inspection and Damage</h4>
-            <p>
-                Surviving the heat is only half the story, because between flights a reusable heat shield must be inspected, repaired and, for the Shuttle's tiles, re-waterproofed. One study quoted by NASA engineers put the heat-shield maintenance alone at nearly 32,000 hours per mission, which they judged impossible for a commercial vehicle. Waterproofing meant injecting compound into every tile and blanket with syringes (Scotti, Clay and Rezin, 2003). Heating, cooling, weather and handling also erode surfaces and cause impact damage, so a heat shield that survived one flight is not automatically ready for the next (Scotti, Clay and Rezin, 2003).
-            </p>
-            <p>
-                Columbia made inspection a safety matter. Before each mission the RCC panels were inspected three times (NASA Kennedy Space Center, 2004), and afterwards NASA adopted infrared thermography, which uses a thermal camera to reveal hidden damage, as the first inspection step for these panels (NASA Langley Research Center, no date). This is an example of non-destructive evaluation (NDE), meaning inspection that does not damage the part. Starship faces the same issue with about 18,000 hexagonal ceramic tiles. In 2026 two tiles from a recovered ship were flown again, its first tile reuse (Lapointe, 2026), but former NASA experts argue that a tile-based shield remains too inspection-heavy for rapid turnaround (Tech Times, 2026). By contrast, metal "hot structures" can be inspected readily and may offer more airline-like operations (Scotti, Clay and Rezin, 2003).
-            </p>
+<p>
+Apollo's ablative shield provided excellent protection but could not be reused. The Space Shuttle introduced reusable silica tiles and RCC panels but required extensive maintenance. Newer technologies such as TUFROC and ultra-high-temperature ceramics seek to improve durability while maintaining resistance to extreme heat.
+</p>
+
+<p>
+Figure 2 helps explain these challenges. As Mach number increases, thermal loading rises rapidly. Materials that perform adequately at lower hypersonic speeds may be insufficient at higher velocities. Although modern materials can survive greater temperatures, many remain expensive, difficult to manufacture or relatively unproven. Consequently, no current TPS completely resolves the balance between thermal performance and rapid reuse.
+</p>
+
+<h4>3.2 Turnaround Time vs. Inspection and Damage</h4>
+
+<p>
+Thermal survival alone does not guarantee economical reusability. Following each mission, heat-shield systems must be inspected for cracks, impact damage and material degradation. NASA studies estimated that Shuttle thermal protection maintenance required nearly 32,000 labour hours per mission (Scotti, Clay and Rezin, 2003), making rapid turnaround impractical.
+</p>
+
+<p>
+Following the Columbia accident, NASA expanded the use of non-destructive evaluation methods such as infrared thermography to identify hidden damage within RCC panels (NASA Langley Research Center, no date). Modern vehicles face similar challenges. Starship relies on thousands of ceramic tiles that must be evaluated after flight, while proposed metallic hot structures aim to reduce inspection requirements. The evidence suggests that maintenance demands, rather than maximum temperature capability, remain the greatest obstacle to airline-style operations.
+</p>
 
             <h4><b>Table 1: Comparison of Reusable Re-entry and Hypersonic Heat-Shield Approaches</b></h4>
             <table>
@@ -320,9 +330,9 @@
     <!-- Charts Section -->
     <div class="section-block" id="visuals">
         <h3><b>4. Data Visualisations</b></h3>
-        <p>
-            Figure 2 shows how the temperature of air at a vehicle's nose rises with Mach number, calculated from the equation in Section 2.2.
-        </p>
+<p>
+Figure 2 presents the predicted stagnation temperature for vehicles travelling between Mach 1 and Mach 25. The graph demonstrates the non-linear increase in thermal loading with speed and highlights why thermal protection becomes increasingly difficult at higher Mach numbers. This trend directly supports the material trade-offs discussed in Section 3.1.
+</p>
 
         <h4>Figure 2: Mach Number vs. Ideal-Gas Stagnation Temperature</h4>
         <div id="scatter_div" class="chart-container"></div>
@@ -337,9 +347,17 @@
     <div class="section-block">
         <h3 id="conclusion-heading"><b>5. Conclusion</b></h3>
         <div id="conclusion">
-            <p>
-                [Insert conclusion: restate that surviving the heat is necessary but not sufficient, summarise the thermal protection and turnaround findings from Section 3, state whether airline-style turnaround is realistic and over what timescale, and note limitations and future work.]
-            </p>
+<p>
+This paper has argued that the principal challenge facing reusable hypersonic spacecraft is no longer simply surviving extreme temperatures but achieving rapid and reliable turnaround between missions. Historical systems such as Apollo relied on ablative heat shields that could not be reused, while the Space Shuttle demonstrated that reusability was technically achievable but operationally expensive due to extensive inspection and repair requirements.
+</p>
+
+<p>
+The comparison of thermal protection technologies shows that newer solutions such as TUFROC and ultra-high-temperature ceramics provide improved thermal capability, yet Figure 2 demonstrates that heating increases rapidly with Mach number. As a result, increasing thermal resistance alone is unlikely to deliver airline-style operations.
+</p>
+
+<p>
+Future progress will depend on advances in inspection automation, non-destructive evaluation techniques and damage-tolerant structures alongside material development. Airline-like turnaround may become achievable within the coming decades, but only if spacecraft can be assessed and returned to service with maintenance requirements comparable to those of modern aircraft. The reusability paradox therefore remains one of the most significant engineering challenges in future hypersonic and space transportation systems.
+</p>
         </div>
     </div>
 
