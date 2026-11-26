@@ -28,9 +28,14 @@
 
         .abstract-box { background-color: #f4f6f8; border-left: 4px solid #555; padding: 14px 18px; margin: 12px 0; }
         .section-block { margin-top: 24px; margin-bottom: 24px; }
-        .chart-container { width: 100%; max-width: 850px; height: 420px; margin: 8px 0; border: 1px solid #eeeeee; }
+        
+        /* Unified Figure Box Styling */
+        .figure-box { background-color: #fcfcfc; border: 1px solid #e0e0e0; padding: 16px; margin: 20px 0; border-radius: 4px; }
+        .figure-box img { display: block; margin: 0 auto; max-width: 45%; height: auto; border: 1px solid #eeeeee; }
+        
+        .chart-container { width: 100%; max-width: 850px; height: 420px; margin: 8px 0; }
         .math-box { display: flex; justify-content: space-between; align-items: center; max-width: 420px; background-color: #fafafa; border: 1px solid #e0e0e0; padding: 12px 16px; margin: 12px 0; }
-        figure { margin: 20px 0; }
+        figure { margin: 0; }
         figcaption { font-size: 14px; color: #444; margin-top: 8px; }
         .footer-meta { background-color: #f4f4f4; padding: 16px; border: 1px solid #dddddd; margin-top: 24px; }
         .btn { background-color: #555; color: #fff; border: none; padding: 6px 14px; font-size: 14px; cursor: pointer; margin-top: 10px; }
@@ -44,7 +49,7 @@
         /* Reference list: highlight the entry that was clicked */
         .references li { scroll-margin-top: 16px; padding: 2px 6px; margin-bottom: 4px; }
         .references li:target { background-color: #fff3b0; outline: 1px solid #e6c84c; }
-        figure:target, .figure-block:target, table:target { outline: 2px solid #fff3b0; }
+        figure:target, .figure-box:target, table:target { outline: 2px solid #fff3b0; }
         svg.diagram { width: 100%; max-width: 900px; height: auto; border: 1px solid #eeeeee; background: #fcfcfc; }
     </style>
 </head>
@@ -55,19 +60,19 @@
 
     <img src="download.png" alt="University banner for the FEPS conference paper" class="header-banner">
 
-    <h1><b>ENG0018 Computer Laboratory 2026/27</b></h1>
+    <h1>ENG0018 Computer Laboratory 2026/27</h1>
     <h4>Student URN: 6980185</h4>
 
     <hr>
 
-    <h2><b>Conference Paper: The Reusability Paradox: Why Surviving Hypersonic Flight Is Not Enough</b></h2>
+    <h2>Conference Paper: The Reusability Paradox: Why Surviving Hypersonic Flight Is Not Enough</h2>
 
     <hr>
 
     <nav class="toc-bar" aria-label="Table of Contents">
         <a href="#abstract" class="toc-btn">Abstract</a>
         <span class="toc-divider">|</span>
-        <a href="#intro-heading" class="toc-btn">Introduction &amp; Background</a>
+        <a href="#intro-heading" class="toc-btn">Introduction & Background</a>
         <span class="toc-divider">|</span>
         <a href="#analysis-heading" class="toc-btn">Analysis and Discussion</a>
         <span class="toc-divider">|</span>
@@ -80,10 +85,10 @@
 
     <!-- Abstract (not included in word count) -->
     <div class="section-block">
-        <h3 id="abstract"><b>Abstract</b></h3>
+        <h3 id="abstract">Abstract</h3>
         <div class="abstract-box">
             <p>
-                Reusable spacecraft must survive intense heating during atmospheric re-entry and then fly again quickly. This paper uses a literature-based comparison of the Space Shuttle, SpaceX Starship, Dream Chaser and concept ultra-high-temperature ceramic vehicles to examine this reusability paradox for orbital re-entry. Ideal stagnation temperatures rise from about 1,030 &deg;C at Mach 5 to above 4,000 &deg;C at Mach 10, and newer materials extend the temperatures heat shields can tolerate. However, the Shuttle's thermal protection required nearly 32,000 maintenance hours per mission, and experts doubt that Starship's tile-based shield can support rapid reuse. Falcon 9 shows that fast reuse is achievable under moderate heating. The paper argues that surviving re-entry is necessary but no longer sufficient: turnaround, through inspection, repair and certification, is the binding constraint. Airline-style reuse of orbital vehicles remains unproven.
+                Reusable spacecraft must survive intense heating during atmospheric re-entry and then fly again quickly. This paper uses a literature-based comparison of the Space Shuttle, SpaceX Starship, Dream Chaser and concept ultra-high-temperature ceramic vehicles to examine this reusability paradox for orbital re-entry. Ideal stagnation temperatures rise from about 1,030 °C at Mach 5 to above 4,000 °C at Mach 10, and newer materials extend the temperatures heat shields can tolerate. However, the Shuttle's thermal protection required nearly 32,000 maintenance hours per mission, and experts doubt that Starship's tile-based shield can support rapid reuse. Falcon 9 shows that fast reuse is achievable under moderate heating. The paper argues that surviving re-entry is necessary but no longer sufficient: turnaround, through inspection, repair and certification, is the binding constraint. Airline-style reuse of orbital vehicles remains unproven.
             </p>
             <p><b>Keywords:</b> reusability; thermal protection systems; hypersonic re-entry; turnaround; Starship</p>
         </div>
@@ -93,7 +98,7 @@
 
     <!-- Introduction -->
     <div class="section-block">
-        <h3 id="intro-heading"><b>1. Introduction &amp; Background</b></h3>
+        <h3 id="intro-heading">1. Introduction & Background</h3>
         <div id="intro">
             <h4>1.1 Defining the Reusability Paradox</h4>
             <p>
@@ -104,19 +109,17 @@
             The Space Shuttle introduced reusable silica tiles and reinforced carbon-carbon (RCC) panels, yet each flight still demanded extensive inspection and repair (<a class="cite" href="#ref-curry1993">Curry, 1993</a>). On launch, foam shed from the external tank struck Columbia's left wing (<a class="fig-link" href="#fig1">Figure 1</a>). The resulting RCC damage let superheated gas into the wing during re-entry and destroyed the vehicle (<a class="cite" href="#ref-caib2003">Columbia Accident Investigation Board, 2003</a>). <a class="fig-link" href="#fig2">Figure 2</a> shows the RCC leading-edge panels involved (<a class="cite" href="#ref-nasakennedy2004">NASA Kennedy Space Center, 2004</a>).
             </p>
 
-            <figure id="fig1">
+            <figure class="figure-box" id="fig1">
                 <img src="columbia-foam-debris.png"
-                     alt="Launch image of Space Shuttle Columbia on STS-107 with a circle and label marking foam debris near the external tank and orbiter"
-                     style="width:40%; height:auto;">
+                     alt="Launch image of Space Shuttle Columbia on STS-107 with a circle and label marking foam debris near the external tank and orbiter">
                 <figcaption>
                     <b>Figure 1:</b> Launch image of STS-107 with the foam debris circled. Source: <a class="cite" href="#ref-caib2003">Columbia Accident Investigation Board (2003, p. 34)</a>; a US Government work.
                 </figcaption>
             </figure>
 
-            <figure id="fig2">
+            <figure class="figure-box" id="fig2">
                 <img src="columbia-rcc-panels.jpg"
-                     alt="Row of white mobile stands holding a mockup of the leading edge of Space Shuttle Columbia's left wing, with transparent panels showing the wing's internal structure"
-                     style="width:40%; height:auto;">
+                     alt="Row of white mobile stands holding a mockup of the leading edge of Space Shuttle Columbia's left wing, with transparent panels showing the wing's internal structure">
                 <figcaption>
                     <b>Figure 2:</b> Mockup of the leading edge of Columbia's left wing, displayed at Kennedy Space Center after the accident. Source: <a class="cite" href="#ref-nasa2003">NASA (2003)</a>, image KSC-03pd2767.
                 </figcaption>
@@ -135,13 +138,13 @@
             <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
             <msub><mi>T</mi><mn>0</mn></msub>
             <mo>=</mo>
-            <msub><mi>T</mi><mi>&infin;</mi></msub>
+            <msub><mi>T</mi><mi>∞</mi></msub>
             <mrow>
             <mo>(</mo>
             <mn>1</mn>
             <mo>+</mo>
             <mfrac>
-            <mrow><mi>&gamma;</mi><mo>&minus;</mo><mn>1</mn></mrow>
+            <mrow><mi>γ</mi><mo>−</mo><mn>1</mn></mrow>
             <mn>2</mn>
             </mfrac>
             <msup><mi>M</mi><mn>2</mn></msup>
@@ -152,17 +155,17 @@
             </div>
 
             <p>
-            Here T<sub>0</sub> is the stagnation temperature, T<sub>&infin;</sub> the freestream temperature, &gamma; the ratio of specific heats (1.4 for air) and M the Mach number.
+            Here T<sub>0</sub> is the stagnation temperature, T<sub>∞</sub> the freestream temperature, γ the ratio of specific heats (1.4 for air) and M the Mach number.
             </p>
 
             <p>
-            With T<sub>&infin;</sub> = 216.65 K, Mach 5 gives about 1,030 &deg;C and Mach 10 about 4,280 &deg;C (<a class="fig-link" href="#fig3">Figure 3</a>). Real values are lower because energy is absorbed by molecular dissociation (<a class="cite" href="#ref-hayes1959">Hayes and Probstein, 1959</a>), and a vehicle's surface settles well below the air's stagnation temperature because it radiates heat away. Figure 3 is therefore an indicator of thermal severity, not a failure prediction: the Shuttle survived re-entry at orbital speed, far above Mach 6. It does show that thermal load grows with the square of Mach number, so small speed increases demand disproportionately more of a heat shield.
+            With T<sub>∞</sub> = 216.65 K, Mach 5 gives about 1,030 °C and Mach 10 about 4,280 °C (<a class="fig-link" href="#fig3">Figure 3</a>). Real values are lower because energy is absorbed by molecular dissociation (<a class="cite" href="#ref-hayes1959">Hayes and Probstein, 1959</a>), and a vehicle's surface settles well below the air's stagnation temperature because it radiates heat away. Figure 3 is therefore an indicator of thermal severity, not a failure prediction: the Shuttle survived re-entry at orbital speed, far above Mach 6. It does show that thermal load grows with the square of Mach number, so small speed increases demand disproportionately more of a heat shield.
             </p>
 
-            <figure class="figure-block" id="fig3">
+            <figure class="figure-box" id="fig3">
                 <div id="limits_div" class="chart-container" role="img" aria-label="Line chart of ideal stagnation temperature in degrees Celsius against Mach number from 1 to 12, rising steeply and crossing horizontal lines for Shuttle RCC and TUFROC limits near Mach 6.2"></div>
                 <figcaption>
-                    <b>Figure 3:</b> Ideal stagnation temperature against Mach number, compared with reusable TPS limits. Calculated with Equation 1 (&gamma; = 1.4, T<sub>&infin;</sub> = 216.65 K; <a class="cite" href="#ref-ames1953">Ames Research Staff, 1953</a>). Dashed lines mark about 1,650 &deg;C for Shuttle RCC (<a class="cite" href="#ref-nasakennedy2004">NASA Kennedy Space Center, 2004</a>) and about 1,600 &deg;C for TUFROC (<a class="cite" href="#ref-nasaames2019">NASA Ames Research Center, 2019</a>). The curve crosses both near Mach 6.2, just above the Mach 5 hypersonic threshold. This is a simplified comparison: the ideal-gas curve over-predicts real temperatures (<a class="cite" href="#ref-hayes1959">Hayes and Probstein, 1959</a>), and surfaces are cooler than the air.
+                    <b>Figure 3:</b> Ideal stagnation temperature against Mach number, compared with reusable TPS limits. Calculated with Equation 1 (γ = 1.4, T<sub>∞</sub> = 216.65 K; <a class="cite" href="#ref-ames1953">Ames Research Staff, 1953</a>). Dashed lines mark about 1,650 °C for Shuttle RCC (<a class="cite" href="#ref-nasakennedy2004">NASA Kennedy Space Center, 2004</a>) and about 1,600 °C for TUFROC (<a class="cite" href="#ref-nasaames2019">NASA Ames Research Center, 2019</a>). The curve crosses both near Mach 6.2, just above the Mach 5 hypersonic threshold. This is a simplified comparison: the ideal-gas curve over-predicts real temperatures (<a class="cite" href="#ref-hayes1959">Hayes and Probstein, 1959</a>), and surfaces are cooler than the air.
                 </figcaption>
             </figure>
 
@@ -177,7 +180,7 @@
 
     <!-- Analysis and Discussion -->
     <div class="section-block">
-        <h3 id="analysis-heading"><b>2. Analysis and Discussion</b></h3>
+        <h3 id="analysis-heading">2. Analysis and Discussion</h3>
         <div id="analysis">
             <h4>2.1 Thermal Protection System (TPS) Trade-offs</h4>
             <p>
@@ -193,10 +196,9 @@
             Heat shields must be inspected after every mission for cracks, impacts and degradation. One NASA estimate put Shuttle TPS maintenance at nearly 32,000 labour hours per mission (<a class="cite" href="#ref-scotti2003">Scotti, Clay and Rezin, 2003</a>), which made rapid turnaround impractical. In 2005, protruding gap filler on Discovery's underside had to be pulled out by an astronaut during a spacewalk (<a class="fig-link" href="#fig4">Figure 4</a>; <a class="cite" href="#ref-nasasts114">NASA, no date</a>). After Columbia, NASA expanded non-destructive evaluation, such as infrared thermography, to find hidden RCC damage (<a class="cite" href="#ref-nasalangley">NASA Langley Research Center, no date</a>).
             </p>
 
-            <figure id="fig4">
+            <figure class="figure-box" id="fig4">
                 <img src="discovery-tile-damage.png"
-                     alt="Inspection imagery of the underside of Space Shuttle Discovery, with circles marking protruding gap filler and tile damage"
-                     style="width:40%; height:auto;">
+                     alt="Inspection imagery of the underside of Space Shuttle Discovery, with circles marking protruding gap filler and tile damage">
                 <figcaption>
                     <b>Figure 4:</b> Inspection imagery of Space Shuttle Discovery's underside (STS-114, 2005), with protruding gap filler and tile damage marked. Source: <a class="cite" href="#ref-nasasts114">NASA (no date)</a>.
                 </figcaption>
@@ -206,16 +208,15 @@
             Starship faces the same problem at larger scale. Its heat shield uses roughly 18,000 hexagonal ceramic tiles (<a class="fig-link" href="#fig5">Figure 5</a>; <a class="cite" href="#ref-techcrunch2024">TechCrunch, 2024</a>), and former NASA specialists argue that this tile approach is not viable for rapid reuse (<a class="cite" href="#ref-aiaa2026">AIAA, 2026</a>). Metallic hot structures aim to simplify inspection (<a class="cite" href="#ref-scotti2003">Scotti, Clay and Rezin, 2003</a>). <a class="fig-link" href="#fig6">Figure 6</a> places inspection, repair and certification within the re-entry-to-relaunch cycle, and <a class="fig-link" href="#table1">Table 1</a> compares how each vehicle handles them.
             </p>
 
-            <figure id="fig5">
+            <figure class="figure-box" id="fig5">
                 <img src="starship-heat-tiles.png"
-                     alt="Close view of black hexagonal heat-shield tiles on a Starship panel, with a white insulating layer behind the tiles and rows of metal pins on the bare surface beside them"
-                     style="width:40%; height:auto;">
+                     alt="Close view of black hexagonal heat-shield tiles on a Starship panel, with a white insulating layer behind the tiles and rows of metal pins on the bare surface beside them">
                 <figcaption>
                     <b>Figure 5:</b> SpaceX Starship hexagonal heat-shield tiles, with the layer behind and the mounting pins visible at the edge of the tiled area. Source: <a class="cite" href="#ref-stackexchange">Space Exploration Stack Exchange (no date)</a>, contributor [insert username], licensed under <a class="cite" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
                 </figcaption>
             </figure>
 
-            <figure class="figure-block" id="fig6">
+            <figure class="figure-box" id="fig6">
                 <svg class="diagram" viewBox="0 0 900 250" role="img" aria-label="Cycle diagram: re-entry, inspect, repair, certify, launch, with inspect, repair and certify marked as the turnaround bottleneck">
                     <defs>
                         <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
@@ -271,7 +272,7 @@
                 <tr>
                     <th scope="row">Space Shuttle Orbiter</th>
                     <td>Silica tiles and blankets; RCC on nose and wing leading edges (<a class="cite" href="#ref-curry1993">Curry, 1993</a>)</td>
-                    <td>Up to about 1,650 &deg;C on the hottest surfaces (<a class="cite" href="#ref-nasakennedy2004">NASA Kennedy Space Center, 2004</a>)</td>
+                    <td>Up to about 1,650 °C on the hottest surfaces (<a class="cite" href="#ref-nasakennedy2004">NASA Kennedy Space Center, 2004</a>)</td>
                     <td>Tile inspection and repair; nearly 32,000 maintenance hours per mission (<a class="cite" href="#ref-scotti2003">Scotti, Clay and Rezin, 2003</a>)</td>
                 </tr>
                 <tr>
@@ -283,7 +284,7 @@
                 <tr>
                     <th scope="row">Dream Chaser</th>
                     <td>TUFROC (carbon-based cap on silica insulating base), licensed from NASA (<a class="cite" href="#ref-nasaames2019">NASA Ames Research Center, 2019</a>)</td>
-                    <td>Reusable to about 1,600 &deg;C (<a class="cite" href="#ref-nasaames2019">NASA Ames Research Center, 2019</a>)</td>
+                    <td>Reusable to about 1,600 °C (<a class="cite" href="#ref-nasaames2019">NASA Ames Research Center, 2019</a>)</td>
                     <td>Little public turnaround data</td>
                 </tr>
                 <tr>
@@ -294,7 +295,7 @@
                 </tr>
                 </tbody>
             </table>
-            <p class="table-note" style="font-size:14px;color:#444;">Temperatures quoted in &deg;F by the sources are converted to &deg;C.</p>
+            <p class="table-note">Temperatures quoted in °F by the sources are converted to °C.</p>
 
             <h4>2.3 Counter-evidence: Falcon 9 and Starship Progress</h4>
             <p>
@@ -307,7 +308,7 @@
 
     <!-- Conclusion (not included in word count) -->
     <div class="section-block">
-        <h3 id="conclusion-heading"><b>3. Conclusion</b></h3>
+        <h3 id="conclusion-heading">3. Conclusion</h3>
         <div id="conclusion">
             <p>
             This paper has argued that, for orbital re-entry, surviving the heat is no longer the binding constraint on reusable spacecraft; turnaround is. Ideal stagnation temperatures climb steeply with Mach number (<a class="fig-link" href="#fig3">Figure 3</a>), and materials such as TUFROC and UHTCs raise the temperatures heat shields can tolerate. Yet the Shuttle's maintenance burden of nearly 32,000 hours per mission and the continuing inspection challenge of Starship's tiles show that thermal capability alone does not deliver rapid reuse.
@@ -327,7 +328,7 @@
 
     <!-- References -->
     <div class="section-block">
-        <h3 id="references"><b>References</b></h3>
+        <h3 id="references">References</h3>
         <ol class="references">
             <li id="ref-aiaa2026">AIAA (2026) '<a href="https://aiaa.org/2026/07/28/starship-heat-shield-tech-is-not-viable-for-rapid-reuse-say-experts/" target="_blank">Starship heat shield tech is not viable for rapid reuse, say experts</a>', <i>AIAA</i>, 28 July. Available at: https://aiaa.org/2026/07/28/starship-heat-shield-tech-is-not-viable-for-rapid-reuse-say-experts/ (Accessed: 26 November 2026).</li>
             <li id="ref-ames1953">Ames Research Staff (1953) <a href="https://www.nasa.gov/wp-content/uploads/2023/03/equations-tables-charts-compressibleflow-report-1135.pdf" target="_blank"><i>Equations, tables, and charts for compressible flow</i></a>. NACA Report 1135. Washington, DC: National Advisory Committee for Aeronautics.</li>
@@ -347,7 +348,7 @@
             <li id="ref-ni2022">Ni, D. <i>et al.</i> (2022) '<a href="https://doi.org/10.1007/s40145-021-0550-6" target="_blank">Advances in ultra-high temperature ceramics, composites, and coatings</a>', <i>Journal of Advanced Ceramics</i>, 11(1), pp. 1–56.</li>
             <li id="ref-scotti2003">Scotti, S.J., Clay, C. and Rezin, M. (2003) <a href="https://ntrs.nasa.gov/citations/20040008891" target="_blank">'Structures and materials technologies for extreme environments applied to reusable launch vehicles'</a>, <i>AIAA/ICAS International Symposium and Exposition</i>, Dayton, OH, 14–17 July. Reston, VA: AIAA, Paper 2003-2697.</li>
             <li id="ref-stackexchange">Space Exploration Stack Exchange (no date) '<a href="https://space.stackexchange.com/questions/50672/how-many-different-hexagonal-tiles-modules-are-required-to-pave-one-starship" target="_blank">How many different hexagonal tiles/modules are required to pave one Starship?</a>', question 50672. Available at: https://space.stackexchange.com/questions/50672/how-many-different-hexagonal-tiles-modules-are-required-to-pave-one-starship (Accessed: 26 November 2026). Image source only.</li>
-            <li id="ref-stackpoole2022">Stackpoole, M. (2022) '<a href="https://ntrs.nasa.gov/api/citations/20220008649/downloads/Stackpoole%20FAR%20Final.pdf" target="_blank">Thermal protection materials and systems at NASA Ames Research Center</a>', <i>2nd International Conference on Flight Vehicles, Aerothermodynamics and Re-entry Missions &amp; Engineering (FAR)</i>, Heilbronn, Germany, 19–23 June.</li>
+            <li id="ref-stackpoole2022">Stackpoole, M. (2022) '<a href="https://ntrs.nasa.gov/api/citations/20220008649/downloads/Stackpoole%20FAR%20Final.pdf" target="_blank">Thermal protection materials and systems at NASA Ames Research Center</a>', <i>2nd International Conference on Flight Vehicles, Aerothermodynamics and Re-entry Missions & Engineering (FAR)</i>, Heilbronn, Germany, 19–23 June.</li>
             <li id="ref-sutton1971">Sutton, K. and Graves, R.A. (1971) <a href="https://ntrs.nasa.gov/citations/19720003329" target="_blank"><i>A general stagnation-point convective-heating equation for arbitrary gas mixtures</i></a>. NASA Technical Report NASA-TR-R-376. Washington, DC: NASA.</li>
             <li id="ref-tauber1989">Tauber, M.E. (1989) <a href="https://ntrs.nasa.gov/api/citations/19890017745/downloads/19890017745.pdf" target="_blank"><i>A review of high-speed, convective, heat-transfer computation methods</i></a>. NASA Technical Paper 2914. Moffett Field, CA: NASA Ames Research Center.</li>
             <li id="ref-techcrunch2024">TechCrunch (2024) '<a href="https://techcrunch.com/2024/05/30/spacex-sent-starship-to-orbit-the-next-launch-will-try-to-bring-it-back/" target="_blank">SpaceX sent Starship to orbit; the next launch will try to bring it back</a>', <i>TechCrunch</i>, 30 May. Available at: https://techcrunch.com/2024/05/30/spacex-sent-starship-to-orbit-the-next-launch-will-try-to-bring-it-back/ (Accessed: 26 November 2026).</li>
