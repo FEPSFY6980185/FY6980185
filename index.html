@@ -157,7 +157,7 @@
             </div>
 
             <p>
-            For atmospheric air at approximately 217 K, Mach 5 produces a stagnation temperature of around 1,300 K, while Mach 10 exceeds 4,500 K. <a class="fig-link" href="#fig3">Figure 3</a> demonstrates this relationship. The curve rises sharply because temperature increases with the square of Mach number, meaning relatively small increases in velocity create substantially larger thermal loads.
+            For atmospheric air at approximately 217 K, Mach 5 produces a stagnation temperature of around 1,300 K, while Mach 10 exceeds 4,500 K. <a class="fig-link" href="#fig5">Figure 5</a> demonstrates this relationship. The curve rises sharply because temperature increases with the square of Mach number, meaning relatively small increases in velocity create substantially larger thermal loads.
             </p>
 
             <p>
@@ -179,7 +179,7 @@
         <div id="analysis">
             <h4>3.1 Thermal Protection System (TPS) Trade-offs</h4>
             <p>
-            Thermal protection systems prevent spacecraft structures from reaching temperatures that would cause failure during atmospheric entry. Every TPS design involves trade-offs between temperature capability, durability, mass and maintenance requirements (<a class="cite" href="#ref-bohrk">B&ouml;hrk, no date</a>).
+            Thermal protection systems prevent spacecraft structures from reaching temperatures that would cause failure during atmospheric entry. Every TPS design involves trade-offs between temperature capability, durability, mass and maintenance requirements (<a class="cite" href="#ref-stackpoole2022">Stackpoole, 2022</a>).
             </p>
 
             <p>
@@ -187,18 +187,37 @@
             </p>
 
             <p>
-            <a class="fig-link" href="#fig3">Figure 3</a> and <a class="fig-link" href="#fig4">Figure 4</a> help explain these challenges. As Mach number increases, thermal loading rises rapidly, and the ideal stagnation temperature passes the reusable limits of both Shuttle RCC and TUFROC at roughly Mach 6. Materials that perform adequately at lower hypersonic speeds may therefore be insufficient at higher velocities. Although modern materials can survive greater temperatures, many remain expensive, difficult to manufacture or relatively unproven (<a class="cite" href="#ref-ni2022">Ni <i>et al.</i>, 2022</a>). Consequently, no current TPS completely resolves the balance between thermal performance and rapid reuse.
+            <a class="fig-link" href="#fig5">Figure 5</a> and <a class="fig-link" href="#fig6">Figure 6</a> help explain these challenges. As Mach number increases, thermal loading rises rapidly, and the ideal stagnation temperature passes the reusable limits of both Shuttle RCC and TUFROC at roughly Mach 6. Materials that perform adequately at lower hypersonic speeds may therefore be insufficient at higher velocities. Although modern materials can survive greater temperatures, many remain expensive, difficult to manufacture or relatively unproven (<a class="cite" href="#ref-ni2022">Ni <i>et al.</i>, 2022</a>). Consequently, no current TPS completely resolves the balance between thermal performance and rapid reuse.
             </p>
 
             <h4>3.2 Turnaround Time vs. Inspection and Damage</h4>
 
             <p>
-            Thermal survival alone does not guarantee economical reusability. Following each mission, heat-shield systems must be inspected for cracks, impact damage and material degradation. NASA studies estimated that Shuttle thermal protection maintenance required nearly 32,000 labour hours per mission (<a class="cite" href="#ref-scotti2003">Scotti, Clay and Rezin, 2003</a>), making rapid turnaround impractical. <a class="fig-link" href="#fig5">Figure 5</a> shows where this effort sits in the re-entry-to-relaunch cycle.
+            Thermal survival alone does not guarantee economical reusability. Following each mission, heat-shield systems must be inspected for cracks, impact damage and material degradation. NASA studies estimated that Shuttle thermal protection maintenance required nearly 32,000 labour hours per mission (<a class="cite" href="#ref-scotti2003">Scotti, Clay and Rezin, 2003</a>), making rapid turnaround impractical. Inspection imagery of Discovery in 2005 revealed damaged tiles and protruding gap filler on its underside, and an astronaut had to remove the filler during a spacewalk (<a class="fig-link" href="#fig3">Figure 3</a>; <a class="cite" href="#ref-cbbc2005">CBBC Newsround, 2005</a>). <a class="fig-link" href="#fig7">Figure 7</a> shows where this effort sits in the re-entry-to-relaunch cycle.
             </p>
 
-            <p>
-            Following the Columbia accident, NASA expanded the use of non-destructive evaluation methods such as infrared thermography to identify hidden damage within RCC panels (<a class="cite" href="#ref-nasalangley">NASA Langley Research Center, no date</a>). Modern vehicles face similar challenges. Starship relies on thousands of ceramic tiles that must be evaluated after flight (<a class="cite" href="#ref-techtimes2026">Tech Times, 2026</a>; <a class="cite" href="#ref-lapointe2026">Lapointe, 2026</a>), while proposed metallic hot structures aim to reduce inspection requirements. The evidence suggests that maintenance demands, rather than maximum temperature capability, remain the greatest obstacle to airline-style operations.
+                        <figure id="fig3">
+                <img src="discovery-tile-damage.png"
+                     alt="Inspection imagery of the underside of Space Shuttle Discovery, with circles marking protruding gap filler and tile damage"
+                     style="width:40%; height:auto;">
+                <figcaption>
+                    <b>Figure 3:</b> Inspection imagery of Space Shuttle Discovery's underside (2005), with protruding gap filler and tile damage marked. Source: NASA, via <a class="cite" href="#ref-cbbc2005">CBBC Newsround (2005)</a>.
+                </figcaption>
+            </figure>
+
+<p>
+            Following the Columbia accident, NASA expanded the use of non-destructive evaluation methods such as infrared thermography to identify hidden damage within RCC panels (<a class="cite" href="#ref-nasalangley">NASA Langley Research Center, no date</a>). Modern vehicles face similar challenges. Starship relies on thousands of ceramic tiles that must be evaluated after flight (<a class="cite" href="#ref-techtimes2026">Tech Times, 2026</a>; <a class="cite" href="#ref-lapointe2026">Lapointe, 2026</a>). <a class="fig-link" href="#fig4">Figure 4</a> shows the hexagonal tile layout and the pins and layer beneath the tiles (<a class="cite" href="#ref-stackexchange">Space Exploration Stack Exchange, no date</a>). Proposed metallic hot structures aim to reduce inspection requirements. The evidence suggests that maintenance demands, rather than maximum temperature capability, remain the greatest obstacle to airline-style operations.
             </p>
+
+            <figure id="fig4">
+                <img src="starship-heat-tiles.png"
+                     alt="Close view of black hexagonal heat-shield tiles on a Starship panel, with a white insulating layer behind the tiles and rows of metal pins on the bare surface beside them"
+                     style="width:40%; height:auto;">
+                <figcaption>
+                    <b>Figure 4:</b> SpaceX Starship hexagonal heat-shield tiles, with the layer behind the tiles and the mounting pins visible at the edge of the tiled area. Source: <a class="cite" href="#ref-stackexchange">Space Exploration Stack Exchange (no date)</a>.
+                </figcaption>
+            </figure>
+
 
             <h4><b>Table 1: Comparison of Reusable Re-entry and Hypersonic Heat-Shield Approaches</b></h4>
             <table>
@@ -242,11 +261,11 @@
     <div class="section-block" id="visuals">
         <h3><b>4. Data Visualisations</b></h3>
         <p>
-        <a class="fig-link" href="#fig3">Figure 3</a> presents the predicted stagnation temperature for vehicles travelling between Mach 1 and Mach 25. The graph demonstrates the non-linear increase in thermal loading with speed and highlights why thermal protection becomes increasingly difficult at higher Mach numbers. This trend directly supports the material trade-offs discussed in Section 3.1.
+        <a class="fig-link" href="#fig5">Figure 5</a> presents the predicted stagnation temperature for vehicles travelling between Mach 1 and Mach 25. The graph demonstrates the non-linear increase in thermal loading with speed and highlights why thermal protection becomes increasingly difficult at higher Mach numbers. This trend directly supports the material trade-offs discussed in Section 3.1.
         </p>
 
-        <div class="figure-block" id="fig3">
-            <h4>Figure 3: Mach Number vs. Ideal-Gas Stagnation Temperature</h4>
+        <div class="figure-block" id="fig5">
+            <h4>Figure 5: Mach Number vs. Ideal-Gas Stagnation Temperature</h4>
             <div id="scatter_div" class="chart-container"></div>
             <p style="font-size:14px; color:#444;">
                 Calculated with the equation in Section 2.2, assuming air at 216.65 K and &gamma; = 1.4 (<a class="cite" href="#ref-ames1953">Ames Research Staff, 1953</a>). Real values at high Mach numbers are lower because energy goes into splitting air molecules (<a class="cite" href="#ref-hayes1959">Hayes and Probstein, 1959</a>).
@@ -254,23 +273,23 @@
         </div>
 
         <p>
-        <a class="fig-link" href="#fig4">Figure 4</a> zooms in on the low-hypersonic range and overlays the maximum temperatures quoted for reusable heat shields. The ideal stagnation temperature crosses both limits at roughly Mach 6, which is only just above the Mach 5 threshold at which hypersonic flight begins (<a class="cite" href="#ref-nasaglenn">NASA Glenn Research Center, no date</a>).
+        <a class="fig-link" href="#fig6">Figure 6</a> zooms in on the low-hypersonic range and overlays the maximum temperatures quoted for reusable heat shields. The ideal stagnation temperature crosses both limits at roughly Mach 6, which is only just above the Mach 5 threshold at which hypersonic flight begins (<a class="cite" href="#ref-nasaglenn">NASA Glenn Research Center, no date</a>).
         </p>
 
-        <div class="figure-block" id="fig4">
-            <h4>Figure 4: Ideal Stagnation Temperature Compared with Reusable TPS Limits</h4>
+        <div class="figure-block" id="fig6">
+            <h4>Figure 6: Ideal Stagnation Temperature Compared with Reusable TPS Limits</h4>
             <div id="limits_div" class="chart-container"></div>
             <p style="font-size:14px; color:#444;">
-                Stagnation temperature calculated as in Figure 3. Horizontal lines show about 1,650 &deg;C for Shuttle RCC (<a class="cite" href="#ref-nasakennedy2004">NASA Kennedy Space Center, 2004</a>) and about 1,600 &deg;C for TUFROC (<a class="cite" href="#ref-nasaames2019">NASA Ames Research Center, 2019</a>), converted to kelvin. This is a simplified comparison: the ideal-gas curve over-predicts real temperatures (<a class="cite" href="#ref-hayes1959">Hayes and Probstein, 1959</a>), and a vehicle surface is cooler than the stagnation temperature of the air.
+                Stagnation temperature calculated as in Figure 5. Horizontal lines show about 1,650 &deg;C for Shuttle RCC (<a class="cite" href="#ref-nasakennedy2004">NASA Kennedy Space Center, 2004</a>) and about 1,600 &deg;C for TUFROC (<a class="cite" href="#ref-nasaames2019">NASA Ames Research Center, 2019</a>), converted to kelvin. This is a simplified comparison: the ideal-gas curve over-predicts real temperatures (<a class="cite" href="#ref-hayes1959">Hayes and Probstein, 1959</a>), and a vehicle surface is cooler than the stagnation temperature of the air.
             </p>
         </div>
 
         <p>
-        <a class="fig-link" href="#fig5">Figure 5</a> summarises the reusability paradox as a cycle. Thermal survival only covers the re-entry stage; the inspection, repair and certification stages are where the Shuttle accumulated its maintenance burden (<a class="cite" href="#ref-scotti2003">Scotti, Clay and Rezin, 2003</a>).
+        <a class="fig-link" href="#fig7">Figure 7</a> summarises the reusability paradox as a cycle. Thermal survival only covers the re-entry stage; the inspection, repair and certification stages are where the Shuttle accumulated its maintenance burden (<a class="cite" href="#ref-scotti2003">Scotti, Clay and Rezin, 2003</a>).
         </p>
 
-        <div class="figure-block" id="fig5">
-            <h4>Figure 5: The Reusability Cycle and Its Turnaround Bottleneck</h4>
+        <div class="figure-block" id="fig7">
+            <h4>Figure 7: The Reusability Cycle and Its Turnaround Bottleneck</h4>
             <svg class="diagram" viewBox="0 0 900 250" role="img" aria-label="Cycle diagram: re-entry, inspect, repair, certify, launch, with inspect, repair and certify marked as the turnaround bottleneck">
                 <defs>
                     <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
@@ -324,7 +343,7 @@
             </p>
 
             <p>
-            The comparison of thermal protection technologies shows that newer solutions such as TUFROC and ultra-high-temperature ceramics provide improved thermal capability (<a class="cite" href="#ref-nasaames2019">NASA Ames Research Center, 2019</a>; <a class="cite" href="#ref-fahrenholtz2017">Fahrenholtz and Hilmas, 2017</a>), yet <a class="fig-link" href="#fig3">Figure 3</a> and <a class="fig-link" href="#fig4">Figure 4</a> demonstrate that heating increases rapidly with Mach number. As a result, increasing thermal resistance alone is unlikely to deliver airline-style operations.
+            The comparison of thermal protection technologies shows that newer solutions such as TUFROC and ultra-high-temperature ceramics provide improved thermal capability (<a class="cite" href="#ref-nasaames2019">NASA Ames Research Center, 2019</a>; <a class="cite" href="#ref-fahrenholtz2017">Fahrenholtz and Hilmas, 2017</a>), yet <a class="fig-link" href="#fig5">Figure 5</a> and <a class="fig-link" href="#fig6">Figure 6</a> demonstrate that heating increases rapidly with Mach number. As a result, increasing thermal resistance alone is unlikely to deliver airline-style operations.
             </p>
 
             <p>
@@ -340,8 +359,8 @@
         <h3 id="references"><b>6. References</b></h3>
         <ol class="references">
             <li id="ref-ames1953">Ames Research Staff (1953) <a href="https://www.nasa.gov/wp-content/uploads/2023/03/equations-tables-charts-compressibleflow-report-1135.pdf" target="_blank"><i>Equations, tables, and charts for compressible flow</i></a>. NACA Report 1135. Washington, DC: National Advisory Committee for Aeronautics.</li>
-            <li id="ref-bohrk">Böhrk, H. (no date) '<a href="https://www.sto.nato.int/publications/STO%20Educational%20Notes/RTO-EN-AVT-195/EN-AVT-195-04.pdf" target="_blank">Material-tailored thermo-mechanical design</a>', <i>NATO STO Educational Notes</i>, RTO-EN-AVT-195, Chapter 4. Neuilly-sur-Seine: NATO Science and Technology Organization.</li>
-            <li id="ref-caib2003">Columbia Accident Investigation Board (2003) <a href="https://www.nasa.gov/wp-content/uploads/static/history/columbia/reports/CAIBreportv1.pdf" target="_blank"><i>Report Volume I</i></a>. Washington, DC: National Aeronautics and Space Administration and the Government Printing Office.</li>
+                                    <li id="ref-cbbc2005">CBBC Newsround (2005) '<a href="http://news.bbc.co.uk/cbbcnews/hi/newsid_4740000/newsid_4741600/4741641.stm" target="_blank">Discovery is fixed by astronaut</a>', <i>CBBC Newsround</i>, 3 August. Available at: http://news.bbc.co.uk/cbbcnews/hi/newsid_4740000/newsid_4741600/4741641.stm (Accessed: [insert date]).</li>
+<li id="ref-caib2003">Columbia Accident Investigation Board (2003) <a href="https://www.nasa.gov/wp-content/uploads/static/history/columbia/reports/CAIBreportv1.pdf" target="_blank"><i>Report Volume I</i></a>. Washington, DC: National Aeronautics and Space Administration and the Government Printing Office.</li>
             <li id="ref-curry1993">Curry, D.M. (1993) <a href="https://ntrs.nasa.gov/api/citations/19930023009/downloads/19930023009.pdf" target="_blank"><i>Space Shuttle Orbiter thermal protection system design and flight experience</i></a>. NASA Technical Memorandum 104773. Houston, TX: NASA Lyndon B. Johnson Space Center.</li>
             <li id="ref-fahrenholtz2017">Fahrenholtz, W.G. and Hilmas, G.E. (2017) '<a href="https://doi.org/10.1016/j.scriptamat.2016.10.018" target="_blank">Ultra-high temperature ceramics: Materials for extreme environments</a>', <i>Scripta Materialia</i>, 129, pp. 94–99.</li>
             <li id="ref-hayes1959">Hayes, W.D. and Probstein, R.F. (1959) <i>Hypersonic flow theory</i>. New York: Academic Press.</li>
@@ -355,7 +374,9 @@
             <li id="ref-nasalangley">NASA Langley Research Center (no date) <a href="https://www.nasa.gov/langley/nesb/infrared-thermography-nesb" target="_blank"><i>Infrared thermography</i></a>. Available at: https://www.nasa.gov/langley/nesb/infrared-thermography-nesb (Accessed: [insert date]).</li>
             <li id="ref-ni2022">Ni, D. <i>et al.</i> (2022) '<a href="https://doi.org/10.1007/s40145-021-0550-6" target="_blank">Advances in ultra-high temperature ceramics, composites, and coatings</a>', <i>Journal of Advanced Ceramics</i>, 11(1), pp. 1–56.</li>
             <li id="ref-scotti2003">Scotti, S.J., Clay, C. and Rezin, M. (2003) <a href="https://ntrs.nasa.gov/citations/20040008891" target="_blank">'Structures and materials technologies for extreme environments applied to reusable launch vehicles'</a>, <i>AIAA/ICAS International Symposium and Exposition</i>, Dayton, OH, 14–17 July. Reston, VA: AIAA, Paper 2003-2697.</li>
-            <li id="ref-sutton1971">Sutton, K. and Graves, R.A. (1971) <a href="https://ntrs.nasa.gov/citations/19720003329" target="_blank"><i>A general stagnation-point convective-heating equation for arbitrary gas mixtures</i></a>. NASA Technical Report NASA-TR-R-376. Washington, DC: NASA.</li>
+                        <li id="ref-stackexchange">Space Exploration Stack Exchange (no date) '<a href="https://space.stackexchange.com/questions/50672/how-many-different-hexagonal-tiles-modules-are-required-to-pave-one-starship" target="_blank">How many different hexagonal tiles/modules are required to pave one Starship?</a>', question 50672. Available at: https://space.stackexchange.com/questions/50672/how-many-different-hexagonal-tiles-modules-are-required-to-pave-one-starship (Accessed: [insert date]).</li>
+            <li id="ref-stackpoole2022">Stackpoole, M. (2022) '<a href="https://ntrs.nasa.gov/api/citations/20220008649/downloads/Stackpoole%20FAR%20Final.pdf" target="_blank">Thermal protection materials and systems at NASA Ames Research Center</a>', <i>2nd International Conference on Flight Vehicles, Aerothermodynamics and Re-entry Missions &amp; Engineering (FAR)</i>, Heilbronn, Germany, 19–23 June.</li>
+<li id="ref-sutton1971">Sutton, K. and Graves, R.A. (1971) <a href="https://ntrs.nasa.gov/citations/19720003329" target="_blank"><i>A general stagnation-point convective-heating equation for arbitrary gas mixtures</i></a>. NASA Technical Report NASA-TR-R-376. Washington, DC: NASA.</li>
             <li id="ref-tauber1989">Tauber, M.E. (1989) <a href="https://ntrs.nasa.gov/api/citations/19890017745/downloads/19890017745.pdf" target="_blank"><i>A review of high-speed, convective, heat-transfer computation methods</i></a>. NASA Technical Paper 2914. Moffett Field, CA: NASA Ames Research Center.</li>
             <li id="ref-techtimes2026">Tech Times (2026) '<a href="https://www.techtimes.com/articles/322079/20260729/starship-heat-shield-tiles-are-dead-end-rapid-reuse-former-nasa-experts-warn.htm" target="_blank">Starship heat shield tiles are dead end for rapid reuse, former NASA experts warn</a>', <i>Tech Times</i>, 29 July. Available at: https://www.techtimes.com/articles/322079/20260729/starship-heat-shield-tiles-are-dead-end-rapid-reuse-former-nasa-experts-warn.htm (Accessed: [insert date]).</li>
         </ol>
