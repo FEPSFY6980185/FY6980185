@@ -1,5 +1,4 @@
-<!Page styling was given by ChatGPT, All work is written by me however it has been translated through AI to make it sound professional>
-
+<!-- Page styling was given by ChatGPT. All work is written by me; however, it has been translated through AI to make it sound professional. -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,132 +9,41 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #222;
-            line-height: 1.6;
-        }
+        html { scroll-behavior: smooth; }
+        body { font-family: Arial, sans-serif; background-color: #f9f9f9; color: #222; line-height: 1.6; }
+        .page-container { max-width: 960px; margin: 24px auto; background-color: #ffffff; padding: 32px 40px; border: 1px solid #dddddd; }
+        h1, h2, h3, h4 { font-family: Calibri, Arial, sans-serif; color: #111; }
+        .header-banner { display: block; max-width: 40%; height: auto; margin-bottom: 16px; }
 
-        .page-container {
-            max-width: 960px;
-            margin: 24px auto;
-            background-color: #ffffff;
-            padding: 32px 40px;
-            border: 1px solid #dddddd;
-        }
+        .toc-bar { display: flex; align-items: center; flex-wrap: wrap; background-color: #f4f4f4; border: 1px solid #dddddd; padding: 6px 12px; margin: 16px 0; }
+        .toc-btn { display: inline-block; padding: 6px 12px; color: #222; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 3px; transition: background-color 0.15s ease; }
+        .toc-btn:hover { background-color: #e2e2e2; color: #000; }
+        .toc-divider { color: #bbbbbb; padding: 0 4px; user-select: none; font-weight: normal; }
 
-        h1, h2, h3, h4 {
-            font-family: Calibri, Arial, sans-serif;
-            color: #111;
-        }
+        table { font-family: Arial, sans-serif; border-collapse: collapse; width: 100%; margin: 16px 0; }
+        td, th { border: 1px solid #dddddd; text-align: left; padding: 10px 12px; }
+        th { background-color: #f0f0f0; }
+        tr:nth-child(even) { background-color: #f7f7f7; }
 
-        .header-banner {
-            display: block;
-            max-width: 40%;
-            height: auto;
-            margin-bottom: 16px;
-        }
+        .abstract-box { background-color: #f4f6f8; border-left: 4px solid #555; padding: 14px 18px; margin: 12px 0; }
+        .section-block { margin-top: 24px; margin-bottom: 24px; }
+        .chart-container { width: 100%; max-width: 850px; height: 420px; margin: 16px 0; border: 1px solid #eeeeee; }
+        .math-box { background-color: #fafafa; border: 1px solid #e0e0e0; padding: 12px 16px; margin: 12px 0; display: inline-block; }
+        figure { margin: 20px 0; }
+        figcaption { font-size: 14px; color: #444; margin-top: 8px; }
+        .footer-meta { background-color: #f4f4f4; padding: 16px; border: 1px solid #dddddd; margin-top: 24px; }
 
-        /* Horizontal Single-Row Table of Contents with Divider Bars */
-        .toc-bar {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            background-color: #f4f4f4;
-            border: 1px solid #dddddd;
-            padding: 6px 12px;
-            margin: 16px 0;
-        }
+        /* In-text citation and figure links */
+        a.cite, a.fig-link { color: #1a4f8b; text-decoration: none; }
+        a.cite:hover, a.fig-link:hover { text-decoration: underline; }
+        a.fig-link { font-weight: bold; }
 
-        .toc-btn {
-            display: inline-block;
-            padding: 6px 12px;
-            color: #222;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: bold;
-            border-radius: 3px;
-            transition: background-color 0.15s ease;
-        }
-
-        .toc-btn:hover {
-            background-color: #e2e2e2;
-            color: #000;
-        }
-
-        .toc-divider {
-            color: #bbbbbb;
-            padding: 0 4px;
-            user-select: none;
-            font-weight: normal;
-        }
-
-        table {
-            font-family: Arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-            margin: 16px 0;
-        }
-
-        td, th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 10px 12px;
-        }
-
-        th {
-            background-color: #f0f0f0;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f7f7f7;
-        }
-
-        .abstract-box {
-            background-color: #f4f6f8;
-            border-left: 4px solid #555;
-            padding: 14px 18px;
-            margin: 12px 0;
-        }
-
-        .section-block {
-            margin-top: 24px;
-            margin-bottom: 24px;
-        }
-
-        .chart-container {
-            width: 100%;
-            max-width: 850px;
-            height: 420px;
-            margin: 16px 0;
-            border: 1px solid #eeeeee;
-        }
-
-        .math-box {
-            background-color: #fafafa;
-            border: 1px solid #e0e0e0;
-            padding: 12px 16px;
-            margin: 12px 0;
-            display: inline-block;
-        }
-
-        figure {
-            margin: 20px 0;
-        }
-
-        figcaption {
-            font-size: 14px;
-            color: #444;
-            margin-top: 8px;
-        }
-
-        .footer-meta {
-            background-color: #f4f4f4;
-            padding: 16px;
-            border: 1px solid #dddddd;
-            margin-top: 24px;
-        }
+        /* Reference list: highlight the entry that was clicked */
+        .references li { scroll-margin-top: 16px; padding: 2px 6px; margin-bottom: 4px; }
+        .references li:target { background-color: #fff3b0; outline: 1px solid #e6c84c; }
+        figure:target, .figure-block:target { outline: 2px solid #fff3b0; }
+        .figure-block { scroll-margin-top: 16px; }
+        svg.diagram { width: 100%; max-width: 900px; height: auto; border: 1px solid #eeeeee; background: #fcfcfc; }
     </style>
 </head>
 
@@ -143,7 +51,6 @@
 
 <div class="page-container">
 
-    <!-- Header & Student Info -->
     <img src="download.png" alt="Banner" class="header-banner">
 
     <h1><b>ENG0018 Computer Laboratory 2026/27</b></h1>
@@ -151,17 +58,14 @@
 
     <hr>
 
-    <h2>
-        <b>Conference Paper: The Reusability Paradox: Why Surviving Hypersonic Flight Is Not Enough</b>
-    </h2>
+    <h2><b>Conference Paper: The Reusability Paradox: Why Surviving Hypersonic Flight Is Not Enough</b></h2>
 
     <hr>
 
-    <!-- Single-Row Table of Contents with Divider Bars -->
     <nav class="toc-bar" aria-label="Table of Contents">
         <a href="#abstract" class="toc-btn">Abstract</a>
         <span class="toc-divider">|</span>
-        <a href="#intro-heading" class="toc-btn">Introduction & Background</a>
+        <a href="#intro-heading" class="toc-btn">Introduction &amp; Background</a>
         <span class="toc-divider">|</span>
         <a href="#analysis-heading" class="toc-btn">Analysis and Discussion</a>
         <span class="toc-divider">|</span>
@@ -189,105 +93,103 @@
 
     <hr>
 
-    <!-- Introduction (Paragraphs here are counted by your JS word counter) -->
+    <!-- Introduction -->
     <div class="section-block">
-        <h3 id="intro-heading"><b>2. Introduction & Background</b></h3>
+        <h3 id="intro-heading"><b>2. Introduction &amp; Background</b></h3>
         <div id="intro">
             <h4>2.1 Defining the Reusability Paradox</h4>
             <p>
-            The Space Race accelerated advances in spacecraft technology but relied heavily on expendable systems. During the Apollo 4 mission, the capsule returned from lunar-return velocity protected by an ablative heat shield that was intentionally consumed during re-entry (Manned Spacecraft Center, 1968). While this approach provided excellent thermal protection, replacing major components after every flight is unsuitable for routine commercial space operations.
+            The Space Race accelerated advances in spacecraft technology but relied heavily on expendable systems. During the Apollo 4 mission, the capsule returned from lunar-return velocity protected by an ablative heat shield that was intentionally consumed during re-entry (<a class="cite" href="#ref-msc1968">Manned Spacecraft Center, 1968</a>). While this approach provided excellent thermal protection, replacing major components after every flight is unsuitable for routine commercial space operations (<a class="cite" href="#ref-heppenheimer1999">Heppenheimer, 1999</a>).
             </p>
 
             <p>
-            NASA's Space Shuttle introduced reusable thermal protection using silica tiles and reinforced carbon-carbon (RCC) panels. However, these systems still required extensive inspection and repair between flights (Curry, 1993; Heppenheimer, 1999). The Columbia accident demonstrated the risks involved when damage to an RCC panel allowed superheated gases to penetrate the wing during re-entry, ultimately leading to vehicle loss (Columbia Accident Investigation Board, 2003).
+            NASA's Space Shuttle introduced reusable thermal protection using silica tiles and reinforced carbon-carbon (RCC) panels. However, these systems still required extensive inspection and repair between flights (<a class="cite" href="#ref-curry1993">Curry, 1993</a>; <a class="cite" href="#ref-heppenheimer1999">Heppenheimer, 1999</a>). The Columbia accident demonstrated the risks involved when damage to an RCC panel allowed superheated gases to penetrate the wing during re-entry, ultimately leading to vehicle loss (<a class="cite" href="#ref-caib2003">Columbia Accident Investigation Board, 2003</a>).
             </p>
 
             <p>
-            Figure 1 shows the RCC panels used to protect the Shuttle's most thermally demanding regions. The lesson from Columbia is clear: surviving hypersonic conditions is only part of the challenge. A spacecraft must also be inspected, repaired and certified for flight quickly enough to make reuse economically practical. This conflict forms the reusability paradox.
+            <a class="fig-link" href="#fig1">Figure 1</a> shows the RCC panels used to protect the Shuttle's most thermally demanding regions (<a class="cite" href="#ref-nasakennedy2004">NASA Kennedy Space Center, 2004</a>). The lesson from Columbia is clear: surviving hypersonic conditions is only part of the challenge. A spacecraft must also be inspected, repaired and certified for flight quickly enough to make reuse economically practical. This conflict forms the reusability paradox.
             </p>
 
-            <figure>
+            <figure id="fig1">
                 <img src="columbia-rcc-panels.jpg"
                      alt="Row of white mobile stands holding a mockup of the leading edge of Space Shuttle Columbia's left wing, with transparent panels showing the wing's internal structure"
                      style="max-width:40%; height:auto;">
                 <figcaption>
-                    <b>Figure 1:</b> Mockup of the leading edge of Space Shuttle Columbia's left wing, displayed in the Vehicle Assembly Building, Kennedy Space Center, following the accident. Source: NASA (2003), image KSC-03pd2767.
+                    <b>Figure 1:</b> Mockup of the leading edge of Space Shuttle Columbia's left wing, displayed in the Vehicle Assembly Building, Kennedy Space Center, following the accident. Source: <a class="cite" href="#ref-nasa2003">NASA (2003)</a>, image KSC-03pd2767.
                 </figcaption>
             </figure>
 
             <h4>2.2 Why Hypersonic Flight Is So Hot</h4>
-<p>
-Hypersonic flight generally refers to speeds above Mach 5 (NASA Glenn Research Center, no date). At these velocities, air is compressed into a powerful shock wave ahead of the vehicle. This compression generates extreme temperatures, meaning most heating comes from compressed air rather than surface friction (Tauber, 1989).
-</p>
+            <p>
+            Hypersonic flight generally refers to speeds above Mach 5 (<a class="cite" href="#ref-nasaglenn">NASA Glenn Research Center, no date</a>). At these velocities, air is compressed into a powerful shock wave ahead of the vehicle. This compression generates extreme temperatures, meaning most heating comes from compressed air rather than surface friction (<a class="cite" href="#ref-tauber1989">Tauber, 1989</a>; <a class="cite" href="#ref-sutton1971">Sutton and Graves, 1971</a>).
+            </p>
 
-<p>
-The stagnation-temperature equation below illustrates how temperature rises with increasing Mach number:
-</p>
+            <p>
+            The stagnation-temperature equation below illustrates how temperature rises with increasing Mach number (<a class="cite" href="#ref-ames1953">Ames Research Staff, 1953</a>; <a class="cite" href="#ref-hayes1959">Hayes and Probstein, 1959</a>):
+            </p>
 
-<div class="math-box">
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-<msub><mi>T</mi><mn>0</mn></msub>
-<mo>=</mo>
-<msub><mi>T</mi><mi>&infin;</mi></msub>
-<mrow>
-<mo>(</mo>
-<mn>1</mn>
-<mo>+</mo>
-<mfrac>
-<mrow><mi>&gamma;</mi><mo>&minus;</mo><mn>1</mn></mrow>
-<mn>2</mn>
-</mfrac>
-<msup><mi>M</mi><mn>2</mn></msup>
-<mo>)</mo>
-</mrow>
-</math>
-</div>
+            <div class="math-box">
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <msub><mi>T</mi><mn>0</mn></msub>
+            <mo>=</mo>
+            <msub><mi>T</mi><mi>&infin;</mi></msub>
+            <mrow>
+            <mo>(</mo>
+            <mn>1</mn>
+            <mo>+</mo>
+            <mfrac>
+            <mrow><mi>&gamma;</mi><mo>&minus;</mo><mn>1</mn></mrow>
+            <mn>2</mn>
+            </mfrac>
+            <msup><mi>M</mi><mn>2</mn></msup>
+            <mo>)</mo>
+            </mrow>
+            </math>
+            </div>
 
-<p>
-For atmospheric air at approximately 217 K, Mach 5 produces a stagnation temperature of around 1,300 K, while Mach 10 exceeds 4,500 K. Figure 2 demonstrates this relationship. The curve rises sharply because temperature increases with the square of Mach number, meaning relatively small increases in velocity create substantially larger thermal loads.
-</p>
+            <p>
+            For atmospheric air at approximately 217 K, Mach 5 produces a stagnation temperature of around 1,300 K, while Mach 10 exceeds 4,500 K. <a class="fig-link" href="#fig2">Figure 2</a> demonstrates this relationship. The curve rises sharply because temperature increases with the square of Mach number, meaning relatively small increases in velocity create substantially larger thermal loads.
+            </p>
 
-<p>
-Although real vehicles experience somewhat lower temperatures because energy is consumed through molecular dissociation and ionisation, the trend remains the same. Increasing speed rapidly increases thermal stress, making advanced thermal protection systems essential for reusable hypersonic flight.
-</p>
+            <p>
+            Although real vehicles experience somewhat lower temperatures because energy is consumed through molecular dissociation and ionisation (<a class="cite" href="#ref-hayes1959">Hayes and Probstein, 1959</a>), the trend remains the same. Increasing speed rapidly increases thermal stress, making advanced thermal protection systems essential for reusable hypersonic flight.
+            </p>
 
             <h4>2.3 Scope of Paper</h4>
             <p>
-                <p>
-This paper investigates whether spacecraft can achieve rapid reuse while operating in extreme thermal environments. It compares historical and modern thermal protection technologies, examines inspection and maintenance requirements, and evaluates examples including the Space Shuttle, SpaceX Starship and Dream Chaser. The central argument is that successful reusability depends as much on maintenance and turnaround efficiency as on thermal resistance.
-</p>
+            This paper investigates whether spacecraft can achieve rapid reuse while operating in extreme thermal environments. It compares historical and modern thermal protection technologies, examines inspection and maintenance requirements, and evaluates examples including the Space Shuttle, SpaceX Starship and Dream Chaser. The central argument is that successful reusability depends as much on maintenance and turnaround efficiency as on thermal resistance.
             </p>
         </div>
     </div>
 
     <hr>
 
-    <!-- Analysis and Discussion (Paragraphs here are also counted by your JS word counter) -->
+    <!-- Analysis and Discussion -->
     <div class="section-block">
         <h3 id="analysis-heading"><b>3. Analysis and Discussion</b></h3>
         <div id="analysis">
             <h4>3.1 Thermal Protection System (TPS) Trade-offs</h4>
-<p>
-Thermal protection systems prevent spacecraft structures from reaching temperatures that would cause failure during atmospheric entry. Every TPS design involves trade-offs between temperature capability, durability, mass and maintenance requirements.
-</p>
+            <p>
+            Thermal protection systems prevent spacecraft structures from reaching temperatures that would cause failure during atmospheric entry. Every TPS design involves trade-offs between temperature capability, durability, mass and maintenance requirements (<a class="cite" href="#ref-bohrk">B&ouml;hrk, no date</a>).
+            </p>
 
-<p>
-Apollo's ablative shield provided excellent protection but could not be reused. The Space Shuttle introduced reusable silica tiles and RCC panels but required extensive maintenance. Newer technologies such as TUFROC and ultra-high-temperature ceramics seek to improve durability while maintaining resistance to extreme heat.
-</p>
+            <p>
+            Apollo's ablative shield provided excellent protection but could not be reused (<a class="cite" href="#ref-msc1968">Manned Spacecraft Center, 1968</a>). The Space Shuttle introduced reusable silica tiles and RCC panels but required extensive maintenance (<a class="cite" href="#ref-curry1993">Curry, 1993</a>). Newer technologies such as TUFROC (<a class="cite" href="#ref-nasaames2019">NASA Ames Research Center, 2019</a>) and ultra-high-temperature ceramics (<a class="cite" href="#ref-fahrenholtz2017">Fahrenholtz and Hilmas, 2017</a>) seek to improve durability while maintaining resistance to extreme heat.
+            </p>
 
-<p>
-Figure 2 helps explain these challenges. As Mach number increases, thermal loading rises rapidly. Materials that perform adequately at lower hypersonic speeds may be insufficient at higher velocities. Although modern materials can survive greater temperatures, many remain expensive, difficult to manufacture or relatively unproven. Consequently, no current TPS completely resolves the balance between thermal performance and rapid reuse.
-</p>
+            <p>
+            <a class="fig-link" href="#fig2">Figure 2</a> and <a class="fig-link" href="#fig3">Figure 3</a> help explain these challenges. As Mach number increases, thermal loading rises rapidly, and the ideal stagnation temperature passes the reusable limits of both Shuttle RCC and TUFROC at roughly Mach 6. Materials that perform adequately at lower hypersonic speeds may therefore be insufficient at higher velocities. Although modern materials can survive greater temperatures, many remain expensive, difficult to manufacture or relatively unproven (<a class="cite" href="#ref-ni2022">Ni <i>et al.</i>, 2022</a>). Consequently, no current TPS completely resolves the balance between thermal performance and rapid reuse.
+            </p>
 
-<h4>3.2 Turnaround Time vs. Inspection and Damage</h4>
+            <h4>3.2 Turnaround Time vs. Inspection and Damage</h4>
 
-<p>
-Thermal survival alone does not guarantee economical reusability. Following each mission, heat-shield systems must be inspected for cracks, impact damage and material degradation. NASA studies estimated that Shuttle thermal protection maintenance required nearly 32,000 labour hours per mission (Scotti, Clay and Rezin, 2003), making rapid turnaround impractical.
-</p>
+            <p>
+            Thermal survival alone does not guarantee economical reusability. Following each mission, heat-shield systems must be inspected for cracks, impact damage and material degradation. NASA studies estimated that Shuttle thermal protection maintenance required nearly 32,000 labour hours per mission (<a class="cite" href="#ref-scotti2003">Scotti, Clay and Rezin, 2003</a>), making rapid turnaround impractical. <a class="fig-link" href="#fig4">Figure 4</a> shows where this effort sits in the re-entry-to-relaunch cycle.
+            </p>
 
-<p>
-Following the Columbia accident, NASA expanded the use of non-destructive evaluation methods such as infrared thermography to identify hidden damage within RCC panels (NASA Langley Research Center, no date). Modern vehicles face similar challenges. Starship relies on thousands of ceramic tiles that must be evaluated after flight, while proposed metallic hot structures aim to reduce inspection requirements. The evidence suggests that maintenance demands, rather than maximum temperature capability, remain the greatest obstacle to airline-style operations.
-</p>
+            <p>
+            Following the Columbia accident, NASA expanded the use of non-destructive evaluation methods such as infrared thermography to identify hidden damage within RCC panels (<a class="cite" href="#ref-nasalangley">NASA Langley Research Center, no date</a>). Modern vehicles face similar challenges. Starship relies on thousands of ceramic tiles that must be evaluated after flight (<a class="cite" href="#ref-techtimes2026">Tech Times, 2026</a>; <a class="cite" href="#ref-lapointe2026">Lapointe, 2026</a>), while proposed metallic hot structures aim to reduce inspection requirements. The evidence suggests that maintenance demands, rather than maximum temperature capability, remain the greatest obstacle to airline-style operations.
+            </p>
 
             <h4><b>Table 1: Comparison of Reusable Re-entry and Hypersonic Heat-Shield Approaches</b></h4>
             <table>
@@ -299,27 +201,27 @@ Following the Columbia accident, NASA expanded the use of non-destructive evalua
                 </tr>
                 <tr>
                     <td>Space Shuttle Orbiter</td>
-                    <td>Silica tiles and blankets; RCC on nose and wing leading edges</td>
-                    <td>Up to about 1,650 &deg;C (3,000 &deg;F) on the hottest surfaces (NASA Kennedy Space Center, 2004)</td>
-                    <td>Inspecting and waterproofing thousands of tiles; about 32,000 maintenance hours per mission (Scotti, Clay and Rezin, 2003)</td>
+                    <td>Silica tiles and blankets; RCC on nose and wing leading edges (<a class="cite" href="#ref-curry1993">Curry, 1993</a>)</td>
+                    <td>Up to about 1,650 &deg;C (3,000 &deg;F) on the hottest surfaces (<a class="cite" href="#ref-nasakennedy2004">NASA Kennedy Space Center, 2004</a>)</td>
+                    <td>Inspecting and waterproofing thousands of tiles; about 32,000 maintenance hours per mission (<a class="cite" href="#ref-scotti2003">Scotti, Clay and Rezin, 2003</a>)</td>
                 </tr>
                 <tr>
                     <td>SpaceX Starship</td>
-                    <td>About 18,000 hexagonal ceramic tiles over a stainless-steel hull (Tech Times, 2026)</td>
+                    <td>About 18,000 hexagonal ceramic tiles over a stainless-steel hull (<a class="cite" href="#ref-techtimes2026">Tech Times, 2026</a>)</td>
                     <td>Not confirmed in public sources</td>
-                    <td>Tile inspection and hot gas leaking through gaps; first tile reuse in 2026 (Lapointe, 2026)</td>
+                    <td>Tile inspection and hot gas leaking through gaps; first tile reuse in 2026 (<a class="cite" href="#ref-lapointe2026">Lapointe, 2026</a>)</td>
                 </tr>
                 <tr>
                     <td>Dream Chaser</td>
-                    <td>TUFROC (carbon-based cap on silica insulating base), licensed from NASA</td>
-                    <td>Reusable to about 1,600 &deg;C (2,900 &deg;F) (NASA Ames Research Center, 2019)</td>
+                    <td>TUFROC (carbon-based cap on silica insulating base), licensed from NASA (<a class="cite" href="#ref-nasaames2019">NASA Ames Research Center, 2019</a>)</td>
+                    <td>Reusable to about 1,600 &deg;C (2,900 &deg;F) (<a class="cite" href="#ref-nasaames2019">NASA Ames Research Center, 2019</a>)</td>
                     <td>Little public turnaround data</td>
                 </tr>
                 <tr>
                     <td>Future hypersonic glide vehicles (concept)</td>
                     <td>Ultra-high temperature ceramics (UHTCs)</td>
-                    <td>Highest known melting points; usable limits still being tested (Fahrenholtz and Hilmas, 2017)</td>
-                    <td>Brittleness and difficult manufacture (Ni <i>et al.</i>, 2022)</td>
+                    <td>Highest known melting points; usable limits still being tested (<a class="cite" href="#ref-fahrenholtz2017">Fahrenholtz and Hilmas, 2017</a>)</td>
+                    <td>Brittleness and difficult manufacture (<a class="cite" href="#ref-ni2022">Ni <i>et al.</i>, 2022</a>)</td>
                 </tr>
             </table>
         </div>
@@ -330,15 +232,76 @@ Following the Columbia accident, NASA expanded the use of non-destructive evalua
     <!-- Charts Section -->
     <div class="section-block" id="visuals">
         <h3><b>4. Data Visualisations</b></h3>
-<p>
-Figure 2 presents the predicted stagnation temperature for vehicles travelling between Mach 1 and Mach 25. The graph demonstrates the non-linear increase in thermal loading with speed and highlights why thermal protection becomes increasingly difficult at higher Mach numbers. This trend directly supports the material trade-offs discussed in Section 3.1.
-</p>
-
-        <h4>Figure 2: Mach Number vs. Ideal-Gas Stagnation Temperature</h4>
-        <div id="scatter_div" class="chart-container"></div>
-        <p style="font-size:14px; color:#444;">
-            Calculated with the equation in Section 2.2, assuming air at 216.65 K and &gamma; = 1.4 (Ames Research Staff, 1953). Real values at high Mach numbers are lower because energy goes into splitting air molecules.
+        <p>
+        <a class="fig-link" href="#fig2">Figure 2</a> presents the predicted stagnation temperature for vehicles travelling between Mach 1 and Mach 25. The graph demonstrates the non-linear increase in thermal loading with speed and highlights why thermal protection becomes increasingly difficult at higher Mach numbers. This trend directly supports the material trade-offs discussed in Section 3.1.
         </p>
+
+        <div class="figure-block" id="fig2">
+            <h4>Figure 2: Mach Number vs. Ideal-Gas Stagnation Temperature</h4>
+            <div id="scatter_div" class="chart-container"></div>
+            <p style="font-size:14px; color:#444;">
+                Calculated with the equation in Section 2.2, assuming air at 216.65 K and &gamma; = 1.4 (<a class="cite" href="#ref-ames1953">Ames Research Staff, 1953</a>). Real values at high Mach numbers are lower because energy goes into splitting air molecules (<a class="cite" href="#ref-hayes1959">Hayes and Probstein, 1959</a>).
+            </p>
+        </div>
+
+        <p>
+        <a class="fig-link" href="#fig3">Figure 3</a> zooms in on the low-hypersonic range and overlays the maximum temperatures quoted for reusable heat shields. The ideal stagnation temperature crosses both limits at roughly Mach 6, which is only just above the Mach 5 threshold at which hypersonic flight begins (<a class="cite" href="#ref-nasaglenn">NASA Glenn Research Center, no date</a>).
+        </p>
+
+        <div class="figure-block" id="fig3">
+            <h4>Figure 3: Ideal Stagnation Temperature Compared with Reusable TPS Limits</h4>
+            <div id="limits_div" class="chart-container"></div>
+            <p style="font-size:14px; color:#444;">
+                Stagnation temperature calculated as in Figure 2. Horizontal lines show about 1,650 &deg;C for Shuttle RCC (<a class="cite" href="#ref-nasakennedy2004">NASA Kennedy Space Center, 2004</a>) and about 1,600 &deg;C for TUFROC (<a class="cite" href="#ref-nasaames2019">NASA Ames Research Center, 2019</a>), converted to kelvin. This is a simplified comparison: the ideal-gas curve over-predicts real temperatures (<a class="cite" href="#ref-hayes1959">Hayes and Probstein, 1959</a>), and a vehicle surface is cooler than the stagnation temperature of the air.
+            </p>
+        </div>
+
+        <p>
+        <a class="fig-link" href="#fig4">Figure 4</a> summarises the reusability paradox as a cycle. Thermal survival only covers the re-entry stage; the inspection, repair and certification stages are where the Shuttle accumulated its maintenance burden (<a class="cite" href="#ref-scotti2003">Scotti, Clay and Rezin, 2003</a>).
+        </p>
+
+        <div class="figure-block" id="fig4">
+            <h4>Figure 4: The Reusability Cycle and Its Turnaround Bottleneck</h4>
+            <svg class="diagram" viewBox="0 0 900 250" role="img" aria-label="Cycle diagram: re-entry, inspect, repair, certify, launch, with inspect, repair and certify marked as the turnaround bottleneck">
+                <defs>
+                    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                        <path d="M0,0 L10,5 L0,10 z" fill="#555"/>
+                    </marker>
+                </defs>
+                <g font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#222">
+                    <rect x="20" y="70" width="140" height="70" rx="6" fill="#e8f0fa" stroke="#1a4f8b"/>
+                    <text x="90" y="100">Re-entry</text><text x="90" y="120" font-size="12">heat survived</text>
+
+                    <rect x="200" y="70" width="140" height="70" rx="6" fill="#fde8e0" stroke="#b5482a"/>
+                    <text x="270" y="100">Inspect</text><text x="270" y="120" font-size="12">cracks, impacts</text>
+
+                    <rect x="380" y="70" width="140" height="70" rx="6" fill="#fde8e0" stroke="#b5482a"/>
+                    <text x="450" y="100">Repair</text><text x="450" y="120" font-size="12">tiles, panels</text>
+
+                    <rect x="560" y="70" width="140" height="70" rx="6" fill="#fde8e0" stroke="#b5482a"/>
+                    <text x="630" y="100">Certify</text><text x="630" y="120" font-size="12">safe to fly</text>
+
+                    <rect x="740" y="70" width="140" height="70" rx="6" fill="#e8f0fa" stroke="#1a4f8b"/>
+                    <text x="810" y="100">Launch</text><text x="810" y="120" font-size="12">next mission</text>
+
+                    <g stroke="#555" stroke-width="2" fill="none" marker-end="url(#arr)">
+                        <line x1="160" y1="105" x2="198" y2="105"/>
+                        <line x1="340" y1="105" x2="378" y2="105"/>
+                        <line x1="520" y1="105" x2="558" y2="105"/>
+                        <line x1="700" y1="105" x2="738" y2="105"/>
+                        <path d="M810,70 V30 H90 V68"/>
+                    </g>
+                    <text x="450" y="22" font-size="12" fill="#555">Repeat every flight</text>
+
+                    <path d="M200,155 V165 H520 V155" stroke="#b5482a" stroke-width="2" fill="none"/>
+                    <text x="360" y="190" fill="#b5482a" font-weight="bold">Turnaround bottleneck</text>
+                    <text x="360" y="210" font-size="12" fill="#b5482a">Shuttle: about 32,000 maintenance hours per mission</text>
+                </g>
+            </svg>
+            <p style="font-size:14px; color:#444;">
+                Conceptual diagram by the author. The 32,000-hour figure is from <a class="cite" href="#ref-scotti2003">Scotti, Clay and Rezin (2003)</a>.
+            </p>
+        </div>
     </div>
 
     <hr>
@@ -347,17 +310,17 @@ Figure 2 presents the predicted stagnation temperature for vehicles travelling b
     <div class="section-block">
         <h3 id="conclusion-heading"><b>5. Conclusion</b></h3>
         <div id="conclusion">
-<p>
-This paper has argued that the principal challenge facing reusable hypersonic spacecraft is no longer simply surviving extreme temperatures but achieving rapid and reliable turnaround between missions. Historical systems such as Apollo relied on ablative heat shields that could not be reused, while the Space Shuttle demonstrated that reusability was technically achievable but operationally expensive due to extensive inspection and repair requirements.
-</p>
+            <p>
+            This paper has argued that the principal challenge facing reusable hypersonic spacecraft is no longer simply surviving extreme temperatures but achieving rapid and reliable turnaround between missions. Historical systems such as Apollo relied on ablative heat shields that could not be reused (<a class="cite" href="#ref-msc1968">Manned Spacecraft Center, 1968</a>), while the Space Shuttle demonstrated that reusability was technically achievable but operationally expensive due to extensive inspection and repair requirements (<a class="cite" href="#ref-scotti2003">Scotti, Clay and Rezin, 2003</a>).
+            </p>
 
-<p>
-The comparison of thermal protection technologies shows that newer solutions such as TUFROC and ultra-high-temperature ceramics provide improved thermal capability, yet Figure 2 demonstrates that heating increases rapidly with Mach number. As a result, increasing thermal resistance alone is unlikely to deliver airline-style operations.
-</p>
+            <p>
+            The comparison of thermal protection technologies shows that newer solutions such as TUFROC and ultra-high-temperature ceramics provide improved thermal capability (<a class="cite" href="#ref-nasaames2019">NASA Ames Research Center, 2019</a>; <a class="cite" href="#ref-fahrenholtz2017">Fahrenholtz and Hilmas, 2017</a>), yet <a class="fig-link" href="#fig2">Figure 2</a> and <a class="fig-link" href="#fig3">Figure 3</a> demonstrate that heating increases rapidly with Mach number. As a result, increasing thermal resistance alone is unlikely to deliver airline-style operations.
+            </p>
 
-<p>
-Future progress will depend on advances in inspection automation, non-destructive evaluation techniques and damage-tolerant structures alongside material development. Airline-like turnaround may become achievable within the coming decades, but only if spacecraft can be assessed and returned to service with maintenance requirements comparable to those of modern aircraft. The reusability paradox therefore remains one of the most significant engineering challenges in future hypersonic and space transportation systems.
-</p>
+            <p>
+            Future progress will depend on advances in inspection automation, non-destructive evaluation techniques (<a class="cite" href="#ref-nasalangley">NASA Langley Research Center, no date</a>) and damage-tolerant structures alongside material development. Airline-like turnaround may become achievable within the coming decades, but only if spacecraft can be assessed and returned to service with maintenance requirements comparable to those of modern aircraft. The reusability paradox therefore remains one of the most significant engineering challenges in future hypersonic and space transportation systems.
+            </p>
         </div>
     </div>
 
@@ -366,26 +329,26 @@ Future progress will depend on advances in inspection automation, non-destructiv
     <!-- References -->
     <div class="section-block">
         <h3 id="references"><b>6. References</b></h3>
-        <ol>
-            <li>Ames Research Staff (1953) <a href="https://www.nasa.gov/wp-content/uploads/2023/03/equations-tables-charts-compressibleflow-report-1135.pdf" target="_blank"><i>Equations, tables, and charts for compressible flow</i></a>. NACA Report 1135. Washington, DC: National Advisory Committee for Aeronautics.</li>
-            <li>Böhrk, H. (no date) '<a href="https://www.sto.nato.int/publications/STO%20Educational%20Notes/RTO-EN-AVT-195/EN-AVT-195-04.pdf" target="_blank">Material-tailored thermo-mechanical design</a>', <i>NATO STO Educational Notes</i>, RTO-EN-AVT-195, Chapter 4. Neuilly-sur-Seine: NATO Science and Technology Organization.</li>
-            <li>Columbia Accident Investigation Board (2003) <a href="https://www.nasa.gov/wp-content/uploads/static/history/columbia/reports/CAIBreportv1.pdf" target="_blank"><i>Report Volume I</i></a>. Washington, DC: National Aeronautics and Space Administration and the Government Printing Office.</li>
-            <li>Curry, D.M. (1993) <a href="https://ntrs.nasa.gov/api/citations/19930023009/downloads/19930023009.pdf" target="_blank"><i>Space Shuttle Orbiter thermal protection system design and flight experience</i></a>. NASA Technical Memorandum 104773. Houston, TX: NASA Lyndon B. Johnson Space Center.</li>
-            <li>Fahrenholtz, W.G. and Hilmas, G.E. (2017) '<a href="https://doi.org/10.1016/j.scriptamat.2016.10.018" target="_blank">Ultra-high temperature ceramics: Materials for extreme environments</a>', <i>Scripta Materialia</i>, 129, pp. 94–99.</li>
-            <li>Hayes, W.D. and Probstein, R.F. (1959) <i>Hypersonic flow theory</i>. New York: Academic Press.</li>
-            <li>Heppenheimer, T.A. (1999) <a href="https://www.nasa.gov/wp-content/uploads/2023/04/sp-4221.pdf" target="_blank"><i>The Space Shuttle decision: NASA's search for a reusable space vehicle</i></a>. NASA SP-4221. Washington, DC: NASA History Office.</li>
-            <li>Lapointe, E. (2026) '<a href="https://gizmodo.com/starship-is-about-to-attempt-something-its-never-done-in-13-flights-2000816743" target="_blank">Starship is about to attempt something it's never done in 13 flights</a>', <i>Gizmodo</i>, 24 September. Available at: https://gizmodo.com/starship-is-about-to-attempt-something-its-never-done-in-13-flights-2000816743 (Accessed: [insert date]).</li>
-            <li>Manned Spacecraft Center (1968) <a href="https://www.ibiblio.org/apollo/Documents/46145200-Apollo-4-Mission-Report.pdf" target="_blank"><i>Apollo 4 mission report</i></a>. MSC-PA-R-68-1. Houston, TX: NASA Manned Spacecraft Center.</li>
-            <li>NASA (2003) <i>Columbia Debris</i>, NASA Image KSC-03pd2767. Kennedy Space Center, FL: NASA. Available at: <a href="https://images.nasa.gov/details/KSC-03pd2767" target="_blank">https://images.nasa.gov/details/KSC-03pd2767</a> (Accessed: [insert date]).</li>
-            <li>NASA Ames Research Center (2019) <a href="https://ntrs.nasa.gov/citations/20190030273" target="_blank"><i>TUFROC thermal protection system</i></a>. NASA Technical Reports Server, ID 20190030273. Moffett Field, CA: NASA.</li>
-            <li>NASA Glenn Research Center (no date) <a href="https://www.grc.nasa.gov/www/BGH/" target="_blank"><i>Beginner's guide to hypersonics</i></a>. Available at: https://www.grc.nasa.gov/www/BGH/ (Accessed: [insert date]).</li>
-            <li>NASA Kennedy Space Center (2004) <a href="https://webharvest.gov/peth04/20041030060047/http:/www-pao.ksc.nasa.gov/kscpao/nasafact/pdf/RCCpanels2004.pdf" target="_blank"><i>Reinforced carbon-carbon (RCC) panels</i></a>. Fact Sheet FS-2004-01-001-KSC. Kennedy Space Center, FL: NASA.</li>
-            <li>NASA Langley Research Center (no date) <a href="https://www.nasa.gov/langley/nesb/infrared-thermography-nesb" target="_blank"><i>Infrared thermography</i></a>. Available at: https://www.nasa.gov/langley/nesb/infrared-thermography-nesb (Accessed: [insert date]).</li>
-            <li>Ni, D. <i>et al.</i> (2022) '<a href="https://doi.org/10.1007/s40145-021-0550-6" target="_blank">Advances in ultra-high temperature ceramics, composites, and coatings</a>', <i>Journal of Advanced Ceramics</i>, 11(1), pp. 1–56.</li>
-            <li>Scotti, S.J., Clay, C. and Rezin, M. (2003) <a href="https://ntrs.nasa.gov/citations/20040008891" target="_blank">'Structures and materials technologies for extreme environments applied to reusable launch vehicles'</a>, <i>AIAA/ICAS International Symposium and Exposition</i>, Dayton, OH, 14–17 July. Reston, VA: AIAA, Paper 2003-2697.</li>
-            <li>Sutton, K. and Graves, R.A. (1971) <a href="https://ntrs.nasa.gov/citations/19720003329" target="_blank"><i>A general stagnation-point convective-heating equation for arbitrary gas mixtures</i></a>. NASA Technical Report NASA-TR-R-376. Washington, DC: NASA.</li>
-            <li>Tauber, M.E. (1989) <a href="https://ntrs.nasa.gov/api/citations/19890017745/downloads/19890017745.pdf" target="_blank"><i>A review of high-speed, convective, heat-transfer computation methods</i></a>. NASA Technical Paper 2914. Moffett Field, CA: NASA Ames Research Center.</li>
-            <li>Tech Times (2026) '<a href="https://www.techtimes.com/articles/322079/20260729/starship-heat-shield-tiles-are-dead-end-rapid-reuse-former-nasa-experts-warn.htm" target="_blank">Starship heat shield tiles are dead end for rapid reuse, former NASA experts warn</a>', <i>Tech Times</i>, 29 July. Available at: https://www.techtimes.com/articles/322079/20260729/starship-heat-shield-tiles-are-dead-end-rapid-reuse-former-nasa-experts-warn.htm (Accessed: [insert date]).</li>
+        <ol class="references">
+            <li id="ref-ames1953">Ames Research Staff (1953) <a href="https://www.nasa.gov/wp-content/uploads/2023/03/equations-tables-charts-compressibleflow-report-1135.pdf" target="_blank"><i>Equations, tables, and charts for compressible flow</i></a>. NACA Report 1135. Washington, DC: National Advisory Committee for Aeronautics.</li>
+            <li id="ref-bohrk">Böhrk, H. (no date) '<a href="https://www.sto.nato.int/publications/STO%20Educational%20Notes/RTO-EN-AVT-195/EN-AVT-195-04.pdf" target="_blank">Material-tailored thermo-mechanical design</a>', <i>NATO STO Educational Notes</i>, RTO-EN-AVT-195, Chapter 4. Neuilly-sur-Seine: NATO Science and Technology Organization.</li>
+            <li id="ref-caib2003">Columbia Accident Investigation Board (2003) <a href="https://www.nasa.gov/wp-content/uploads/static/history/columbia/reports/CAIBreportv1.pdf" target="_blank"><i>Report Volume I</i></a>. Washington, DC: National Aeronautics and Space Administration and the Government Printing Office.</li>
+            <li id="ref-curry1993">Curry, D.M. (1993) <a href="https://ntrs.nasa.gov/api/citations/19930023009/downloads/19930023009.pdf" target="_blank"><i>Space Shuttle Orbiter thermal protection system design and flight experience</i></a>. NASA Technical Memorandum 104773. Houston, TX: NASA Lyndon B. Johnson Space Center.</li>
+            <li id="ref-fahrenholtz2017">Fahrenholtz, W.G. and Hilmas, G.E. (2017) '<a href="https://doi.org/10.1016/j.scriptamat.2016.10.018" target="_blank">Ultra-high temperature ceramics: Materials for extreme environments</a>', <i>Scripta Materialia</i>, 129, pp. 94–99.</li>
+            <li id="ref-hayes1959">Hayes, W.D. and Probstein, R.F. (1959) <i>Hypersonic flow theory</i>. New York: Academic Press.</li>
+            <li id="ref-heppenheimer1999">Heppenheimer, T.A. (1999) <a href="https://www.nasa.gov/wp-content/uploads/2023/04/sp-4221.pdf" target="_blank"><i>The Space Shuttle decision: NASA's search for a reusable space vehicle</i></a>. NASA SP-4221. Washington, DC: NASA History Office.</li>
+            <li id="ref-lapointe2026">Lapointe, E. (2026) '<a href="https://gizmodo.com/starship-is-about-to-attempt-something-its-never-done-in-13-flights-2000816743" target="_blank">Starship is about to attempt something it's never done in 13 flights</a>', <i>Gizmodo</i>, 24 September. Available at: https://gizmodo.com/starship-is-about-to-attempt-something-its-never-done-in-13-flights-2000816743 (Accessed: [insert date]).</li>
+            <li id="ref-msc1968">Manned Spacecraft Center (1968) <a href="https://www.ibiblio.org/apollo/Documents/46145200-Apollo-4-Mission-Report.pdf" target="_blank"><i>Apollo 4 mission report</i></a>. MSC-PA-R-68-1. Houston, TX: NASA Manned Spacecraft Center.</li>
+            <li id="ref-nasa2003">NASA (2003) <i>Columbia Debris</i>, NASA Image KSC-03pd2767. Kennedy Space Center, FL: NASA. Available at: <a href="https://images.nasa.gov/details/KSC-03pd2767" target="_blank">https://images.nasa.gov/details/KSC-03pd2767</a> (Accessed: [insert date]).</li>
+            <li id="ref-nasaames2019">NASA Ames Research Center (2019) <a href="https://ntrs.nasa.gov/citations/20190030273" target="_blank"><i>TUFROC thermal protection system</i></a>. NASA Technical Reports Server, ID 20190030273. Moffett Field, CA: NASA.</li>
+            <li id="ref-nasaglenn">NASA Glenn Research Center (no date) <a href="https://www.grc.nasa.gov/www/BGH/" target="_blank"><i>Beginner's guide to hypersonics</i></a>. Available at: https://www.grc.nasa.gov/www/BGH/ (Accessed: [insert date]).</li>
+            <li id="ref-nasakennedy2004">NASA Kennedy Space Center (2004) <a href="https://webharvest.gov/peth04/20041030060047/http:/www-pao.ksc.nasa.gov/kscpao/nasafact/pdf/RCCpanels2004.pdf" target="_blank"><i>Reinforced carbon-carbon (RCC) panels</i></a>. Fact Sheet FS-2004-01-001-KSC. Kennedy Space Center, FL: NASA.</li>
+            <li id="ref-nasalangley">NASA Langley Research Center (no date) <a href="https://www.nasa.gov/langley/nesb/infrared-thermography-nesb" target="_blank"><i>Infrared thermography</i></a>. Available at: https://www.nasa.gov/langley/nesb/infrared-thermography-nesb (Accessed: [insert date]).</li>
+            <li id="ref-ni2022">Ni, D. <i>et al.</i> (2022) '<a href="https://doi.org/10.1007/s40145-021-0550-6" target="_blank">Advances in ultra-high temperature ceramics, composites, and coatings</a>', <i>Journal of Advanced Ceramics</i>, 11(1), pp. 1–56.</li>
+            <li id="ref-scotti2003">Scotti, S.J., Clay, C. and Rezin, M. (2003) <a href="https://ntrs.nasa.gov/citations/20040008891" target="_blank">'Structures and materials technologies for extreme environments applied to reusable launch vehicles'</a>, <i>AIAA/ICAS International Symposium and Exposition</i>, Dayton, OH, 14–17 July. Reston, VA: AIAA, Paper 2003-2697.</li>
+            <li id="ref-sutton1971">Sutton, K. and Graves, R.A. (1971) <a href="https://ntrs.nasa.gov/citations/19720003329" target="_blank"><i>A general stagnation-point convective-heating equation for arbitrary gas mixtures</i></a>. NASA Technical Report NASA-TR-R-376. Washington, DC: NASA.</li>
+            <li id="ref-tauber1989">Tauber, M.E. (1989) <a href="https://ntrs.nasa.gov/api/citations/19890017745/downloads/19890017745.pdf" target="_blank"><i>A review of high-speed, convective, heat-transfer computation methods</i></a>. NASA Technical Paper 2914. Moffett Field, CA: NASA Ames Research Center.</li>
+            <li id="ref-techtimes2026">Tech Times (2026) '<a href="https://www.techtimes.com/articles/322079/20260729/starship-heat-shield-tiles-are-dead-end-rapid-reuse-former-nasa-experts-warn.htm" target="_blank">Starship heat shield tiles are dead end for rapid reuse, former NASA experts warn</a>', <i>Tech Times</i>, 29 July. Available at: https://www.techtimes.com/articles/322079/20260729/starship-heat-shield-tiles-are-dead-end-rapid-reuse-former-nasa-experts-warn.htm (Accessed: [insert date]).</li>
         </ol>
     </div>
 
@@ -412,9 +375,7 @@ Future progress will depend on advances in inspection automation, non-destructiv
         try {
             const response = await fetch(url, {
                 method: "GET",
-                headers: {
-                    "Accept": "application/vnd.github.v3+json"
-                }
+                headers: { "Accept": "application/vnd.github.v3+json" }
             });
 
             if (!response.ok) {
@@ -451,18 +412,25 @@ Future progress will depend on advances in inspection automation, non-destructiv
 <script src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
     google.charts.load('current', { packages: ['corechart'] });
-    google.charts.setOnLoadCallback(drawScatterChart);
+    google.charts.setOnLoadCallback(drawCharts);
+
+    // T0 = Tinf * (1 + 0.2 * M^2), Tinf = 216.65 K, gamma = 1.4
+    var AMBIENT = 216.65;
+    function stagnationT(m) { return AMBIENT * (1 + 0.2 * m * m); }
+
+    function drawCharts() {
+        drawScatterChart();
+        drawLimitsChart();
+    }
 
     function drawScatterChart() {
         var data = new google.visualization.DataTable();
         data.addColumn('number', 'Mach Number');
         data.addColumn('number', 'Stagnation Temp (K)');
 
-        // T0 = Tinf * (1 + 0.2 * M^2), Tinf = 216.65 K, gamma = 1.4
-        var ambient = 216.65;
         var rows = [];
         for (var m = 1; m <= 25; m++) {
-            rows.push([m, Math.round(ambient * (1 + 0.2 * m * m))]);
+            rows.push([m, Math.round(stagnationT(m))]);
         }
         data.addRows(rows);
 
@@ -475,9 +443,43 @@ Future progress will depend on advances in inspection automation, non-destructiv
             pointSize: 3
         };
 
-        var chart = new google.visualization.ScatterChart(document.getElementById('scatter_div'));
-        chart.draw(data, options);
+        new google.visualization.ScatterChart(document.getElementById('scatter_div')).draw(data, options);
     }
+
+    function drawLimitsChart() {
+        var RCC_K = 1650 + 273.15;     // Shuttle RCC, about 1,650 deg C
+        var TUFROC_K = 1600 + 273.15;  // TUFROC, about 1,600 deg C
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'Mach Number');
+        data.addColumn('number', 'Ideal stagnation temperature');
+        data.addColumn('number', 'Shuttle RCC limit (about 1,650 \u00B0C)');
+        data.addColumn('number', 'TUFROC limit (about 1,600 \u00B0C)');
+
+        var rows = [];
+        for (var m = 1; m <= 12; m += 0.5) {
+            rows.push([m, Math.round(stagnationT(m)), Math.round(RCC_K), Math.round(TUFROC_K)]);
+        }
+        data.addRows(rows);
+
+        var options = {
+            title: 'Ideal Stagnation Temperature vs. Reusable TPS Limits (Mach 1 to 12)',
+            hAxis: { title: 'Mach Number' },
+            vAxis: { title: 'Temperature (K)' },
+            legend: { position: 'bottom' },
+            series: {
+                0: { lineWidth: 3, color: '#1a4f8b' },
+                1: { lineWidth: 2, lineDashStyle: [6, 4], color: '#b5482a' },
+                2: { lineWidth: 2, lineDashStyle: [2, 3], color: '#2e8b57' }
+            }
+        };
+
+        new google.visualization.LineChart(document.getElementById('limits_div')).draw(data, options);
+    }
+
+    window.addEventListener('resize', function () {
+        if (window.google && google.visualization) { drawCharts(); }
+    });
 </script>
 
 <!-- Word Count Script -->
