@@ -173,7 +173,7 @@
             <figure class="figure-box full-width" id="fig3">
                 <div id="limits_div" class="chart-container" role="img" aria-label="Line chart of ideal stagnation temperature in degrees Celsius against Mach number from 1 to 12, rising steeply and crossing horizontal lines for Shuttle RCC and TUFROC limits near Mach 6.2"></div>
                 <figcaption>
-                    <b>Figure 3:</b> Ideal stagnation temperature against Mach number, compared with reusable TPS limits. Calculated with Equation 1 (γ = 1.4, T<sub>∞</sub> = 216.65 K; <a class="cite" href="#ref-ames1953">Ames Research Staff, 1953</a>). Dashed lines mark about 1,650 °C for Shuttle RCC (<a class="cite" href="#ref-nasakennedy2004">NASA Kennedy Space Center, 2004</a>) and about 1,600 °C for TUFROC (<a class="cite" href="#ref-nasaames2019">NASA Ames Research Center, 2019</a>). The curve crosses both near Mach 6.2, just above the Mach 5 hypersonic threshold. This is a simplified comparison: the ideal-gas curve over-predicts real temperatures (<a class="cite" href="#ref-hayes1959">Hayes and Probstein, 1959</a>), and surfaces are cooler than the air.
+                    <b>Figure 3:</b> Ideal stagnation temperature against Mach number, compared with reusable TPS limits. Calculated with Equation 1 (γ = 1.4, T<sub>∞</sub> = 216.65 K; <a class="cite" href="#ref-ames1953">Ames Research Staff, 1953</a>). The dashed line marks the approximate temperature capability range of current reusable thermal protection systems (around 1,600–1,650 °C), including Shuttle RCC (<a class="cite" href="#ref-nasakennedy2004">NASA Kennedy Space Center, 2004</a>) and TUFROC (<a class="cite" href="#ref-nasaames2019">NASA Ames Research Center, 2019</a>). The curve crosses this range near Mach 6.2, just above the Mach 5 hypersonic threshold. 
                 </figcaption>
             </figure>
 
@@ -192,7 +192,7 @@
         <div id="analysis">
             <h4>2.1 Thermal Protection System (TPS) Trade-offs</h4>
             <p>
-            Every thermal protection system (TPS) trades temperature capability against durability, mass and maintenance (<a class="cite" href="#ref-stackpoole2022">Stackpoole, 2022</a>). Apollo's ablator was effective but single-use (<a class="cite" href="#ref-msc1968">Manned Spacecraft Center, 1968</a>), while the Shuttle's tiles and RCC were reusable but maintenance-heavy (<a class="cite" href="#ref-curry1993">Curry, 1993</a>). Newer materials such as TUFROC (<a class="cite" href="#ref-nasaames2019">NASA Ames Research Center, 2019</a>) and UHTCs (<a class="cite" href="#ref-fahrenholtz2017">Fahrenholtz and Hilmas, 2017</a>) extend temperature capability, although many remain costly, brittle or hard to manufacture (<a class="cite" href="#ref-ni2022">Ni <i>et al.</i>, 2022</a>). Furthermore, transitioning these materials from laboratory coupons to full-scale aerospace structures introduces structural integration challenges that can exacerbate thermal stress concentrations during high-enthalpy flows.
+            Every thermal protection system (TPS) trades temperature capability against durability, mass and maintenance (<a class="cite" href="#ref-stackpoole2022">Stackpoole, 2022</a>). Apollo's ablator was effective but single-use (<a class="cite" href="#ref-msc1968">Manned Spacecraft Center, 1968</a>), while the Shuttle's tiles and RCC were reusable but maintenance-heavy (<a class="cite" href="#ref-curry1993">Curry, 1993</a>). Newer materials such as TUFROC (<a class="cite" href="#ref-nasaames2019">NASA Ames Research Center, 2019</a>) and UHTCs (<a class="cite" href="#ref-fahrenholtz2017">Fahrenholtz and Hilmas, 2017</a>) extend temperature capability, although many remain costly, brittle or hard to manufacture (<a class="cite" href="#ref-ni2022">Ni <i>et al.</i>, 2022</a>).
             </p>
 
             <p>
@@ -221,7 +221,8 @@
                 <img src="starship-heat-tiles.png"
                      alt="Close view of black hexagonal heat-shield tiles on a Starship panel, with a white insulating layer behind the tiles and rows of metal pins on the bare surface beside them">
                 <figcaption>
-                    <b>Figure 5:</b> SpaceX Starship hexagonal heat-shield tiles, with the layer behind and the mounting pins visible at the edge of the tiled area. Source: <a class="cite" href="#ref-stackexchange">Space Exploration Stack Exchange (no date)</a>, contributor user19132
+                    <b>Figure 5:</b> SpaceX Starship hexagonal heat-shield tiles, with the underlying insulation layer and attachment pins visible at the edge of the tiled area. Source: <a class="cite" href="#ref-stackexchange">Space Exploration Stack Exchange (no date)</a>, contributor user19132.
+                </figcaption>
             </figure>
 
             <figure class="figure-box full-width" id="fig6">
@@ -307,7 +308,7 @@
 
             <h4>2.3 Counter-evidence: Falcon 9 and Starship Progress</h4>
             <p>
-            The strongest counter-argument is that rapid reuse already works. Falcon 9 first stages are routinely refurbished, and one booster reached a record 37th flight in August 2026 (<a class="cite" href="#ref-upi2026">Keppeler, 2026</a>). Booster re-entry is much slower than orbital return, however, so this shows that maintenance can be engineered down when heating is moderate, which supports the turnaround argument rather than refuting it. Starship's progress is real: SpaceX caught the upper stage after orbital flight for the first time in November 2026, although reporting notes its heat shield is not yet fully reusable (<a class="cite" href="#ref-timeslive2026">TimesLIVE, 2026</a>).
+            The strongest counter-argument is that rapid reuse already works. Falcon 9 first stages are routinely refurbished, and one booster reached a record 37th flight in August 2026 (<a class="cite" href="#ref-upi2026">Keppeler, 2026</a>). Booster re-entry is much slower than orbital return, however, so this shows that maintenance can be engineered down when heating is moderate, which supports the turnaround argument rather than refuting it. Starship's progress is real: SpaceX reportedly caught the upper stage after orbital flight for the first time in November 2026, although reporting notes its heat shield is not yet fully reusable (<a class="cite" href="#ref-timeslive2026">TimesLIVE, 2026</a>).
             </p>
         </div>
     </div>
@@ -321,11 +322,12 @@
             <p>
             This paper has argued that, for orbital re-entry, surviving the heat is no longer the binding constraint on reusable spacecraft; turnaround is. Ideal stagnation temperatures climb steeply with Mach number (<a class="fig-link" href="#fig3">Figure 3</a>), and materials such as TUFROC and UHTCs raise the temperatures heat shields can tolerate. Yet the Shuttle's maintenance burden of nearly 32,000 hours per mission and the continuing inspection challenge of Starship's tiles show that thermal capability alone does not deliver rapid reuse.
             </p>
-
             <p>
-            Falcon 9 demonstrates that fast, repeated reuse is achievable under moderate heating, so the open question is whether the same can be done at orbital re-entry heating. The evidence reviewed suggests the answer depends less on a single hotter material than on heat shields that are quick to inspect, repair and certify, for example through metallic hot structures and non-destructive evaluation. Airline-style turnaround therefore remains a goal rather than a demonstrated capability.
+            Falcon 9 demonstrates that fast, repeated reuse is achievable under moderate heating, so the open question is whether the same can be done at orbital re-entry heating. The evidence reviewed suggests the answer depends less on a single hotter material than on heat shields that are quick to inspect, repair and certify, for example through metallic hot structures and non-destructive evaluation.
             </p>
-
+            <p>
+            Hence, the true reusability paradox is that modern spacecraft can increasingly survive hypersonic re-entry, yet still cannot be returned to service quickly enough for airline-style operations.
+            </p>
             <p>
             This review is limited to published sources: Starship evidence relies partly on press reports and Dream Chaser has little public turnaround data. The conclusions should be revisited as flight results are published.
             </p>
@@ -437,24 +439,29 @@
         var data = new google.visualization.DataTable();
         data.addColumn('number', 'Mach Number');
         data.addColumn('number', 'Ideal stagnation temperature');
-        data.addColumn('number', 'Shuttle RCC limit (about 1,650 \u00B0C)');
-        data.addColumn('number', 'TUFROC limit (about 1,600 \u00B0C)');
+        data.addColumn('number', 'Current reusable TPS capability range (~1,625 °C)');
 
         var rows = [];
         for (var m = 1; m <= 12; m += 0.5) {
-            rows.push([m, Math.round(stagnationC(m)), 1650, 1600]);
+            rows.push([m, Math.round(stagnationC(m)), 1625]);
         }
         data.addRows(rows);
 
         var options = {
-            title: 'Ideal Stagnation Temperature vs. Reusable TPS Limits (Mach 1 to 12)',
+            title: 'Ideal Stagnation Temperature vs. Current Reusable TPS Capability',
             hAxis: { title: 'Mach Number' },
             vAxis: { title: 'Temperature (\u00B0C)' },
             legend: { position: 'bottom' },
             series: {
-                0: { lineWidth: 3, color: '#1a4f8b' },
-                1: { lineWidth: 2, lineDashStyle: [6, 4], color: '#b5482a' },
-                2: { lineWidth: 2, lineDashStyle: [2, 3], color: '#2e8b57' }
+             0: {
+               lineWidth: 3,
+               color: '#1a4f8b'
+             },
+             1: {
+               lineWidth: 3,
+               lineDashStyle: [8, 4],
+               color: '#b5482a'
+             }
             }
         };
 
