@@ -439,18 +439,25 @@
         var data = new google.visualization.DataTable();
         data.addColumn('number', 'Mach Number');
         data.addColumn('number', 'Ideal stagnation temperature');
-        data.addColumn('number', 'Current reusable TPS capability range (~1,625 °C)');
+        data.addColumn('number', 'Shuttle RCC (~1650°C)');
+        data.addColumn('number', 'TUFROC (~1600°C)');
 
         var rows = [];
         for (var m = 1; m <= 12; m += 0.5) {
-            rows.push([m, Math.round(stagnationC(m)), 1625]);
+            rows.push([m, Math.round(stagnationC(m)), 1650, 1600]);
         }
         data.addRows(rows);
 
         var options = {
             title: 'Ideal Stagnation Temperature vs. Current Reusable TPS Capability',
             hAxis: { title: 'Mach Number' },
-            vAxis: { title: 'Temperature (\u00B0C)' },
+            vAxis: {
+              title: 'Temperature (°C)',
+              viewWindow: {
+                min: 0,
+                max: 5000
+              }
+            }
             legend: { position: 'bottom' },
             series: {
              0: {
@@ -458,9 +465,14 @@
                color: '#1a4f8b'
              },
              1: {
-               lineWidth: 3,
-               lineDashStyle: [8, 4],
-               color: '#b5482a'
+               lineWidth: 4,
+               lineDashStyle: [8,4],
+               color: '#d9534f'
+             },
+             2: {
+               lineWidth: 4,
+               lineDashStyle: [2,2],
+               color: '#2e8b57'
              }
             }
         };
